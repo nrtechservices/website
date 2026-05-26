@@ -1,0 +1,23 @@
+[
+    {
+        "username": "NR2021C0001A",
+        "title": "Welcome to N'RTECH ISP CLIENT PORTAL",
+        "message": "Thank you for Choosing N'RTECH ISP. Enjoy seamless browsing and thank you for trusting N'RTECH Internet Services.",
+        "date": "2026-05-20",
+        "active": true
+    },
+    {
+        "username": "juandela123",
+        "title": "Scheduled Service Maintenance",
+        "message": "Please be advised that there will be an upcoming system calibration targeting optimization points on your regional server sector from 2:00 AM to 4:00 AM.",
+        "date": "2026-05-26",
+        "active": false
+    },
+    {
+        "username": "mariasample",
+        "title": "Unpaid Balance Notice",
+        "message": "Dear Maria, this is a friendly reminder that you have a lacking balance of ₱150.00 from the previous billing cycle. Please settle this amount soon to avoid service interruption.",
+        "date": "2026-05-25",
+        "active": true
+    }
+]
