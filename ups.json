@@ -1,0 +1,70 @@
+{
+  "brand": "N'RTECH UPS",
+  "product_category": "Mini UPS / Backup Power Supply",
+  "general_description": "A line of compact, uninterruptible power supply (UPS) devices designed for indoor use. These power banks are used to provide backup power for small electronics during outages, ensuring continuous operation.",
+  "compatible_devices": [
+    "Camera",
+    "Router",
+    "Switch",
+    "Time Card Machine",
+    "Emergency Equipment"
+  ],
+  "products": [
+    {
+      "model_capacity": "3600mAh",
+      "tag": null,
+      "design_type": "Wall-plug adapter with integrated power cord",
+      "description": "Base model mini UPS suitable for keeping essential low-power devices running during brief power interruptions.",
+      "key_features": [
+        "3-Meters Power Line",
+        "Ultra-Long Endurance",
+        "Water Resistant",
+        "Fire Prevention",
+        "Charge and Discharge",
+        "Quick Switching"
+      ]
+    },
+    {
+      "model_capacity": "6000mAh",
+      "tag": "HOT! / 10K+ sold",
+      "design_type": "Wall-plug adapter with integrated power cord",
+      "description": "Highly popular mid-tier model with increased battery capacity for longer backup endurance. A highly rated seller with over 10,000 units sold.",
+      "key_features": [
+        "3-Meters Power Line",
+        "Ultra-Long Endurance",
+        "Water Resistant",
+        "Fire Prevention",
+        "Charge and Discharge",
+        "Quick Switching"
+      ]
+    },
+    {
+      "model_capacity": "7800mAh",
+      "tag": "HOT!",
+      "design_type": "Wall-plug adapter with integrated power cord",
+      "description": "High-capacity adapter-style UPS for extended power backup needs, ideal for continuous security camera or router operation.",
+      "key_features": [
+        "3-Meters Power Line",
+        "Ultra-Long Endurance",
+        "Water Resistant",
+        "Fire Prevention",
+        "Charge and Discharge",
+        "Quick Switching"
+      ]
+    },
+    {
+      "model_capacity": "10400mAh",
+      "tag": "TOP SALE",
+      "design_type": "Desktop block unit with integrated ports (12V DC)",
+      "description": "Large capacity indoor UPS designed for maximum backup power. Features a different desktop form factor with dedicated ports rather than a wall-plug design.",
+      "key_features": [
+        "Overcharge Protection",
+        "Overcurrent Protection",
+        "Short Circuit Protection",
+        "Fire Prevention",
+        "Ultra-Long Endurance",
+        "Quick Switching"
+      ]
+    }
+  ]
+}
