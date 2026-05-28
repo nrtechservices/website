@@ -842,6 +842,19 @@
             z-index: 3;
         }
         
+        /* Disabled Card Logic Styles */
+        .plan-tier-card.disabled {
+            opacity: 0.55;
+            cursor: not-allowed !important;
+            border-color: #cbd5e1 !important;
+            background: #f1f5f9 !important;
+            pointer-events: none !important;
+        }
+        .plan-tier-card.disabled:hover {
+            transform: none !important;
+            box-shadow: none !important;
+        }
+
         .plan-badge {
             position: absolute;
             top: -12px;
@@ -1163,16 +1176,11 @@
             
             <label style="display:block; font-weight:700; font-size:0.95rem; margin-bottom:10px;"><i class="fas fa-cubes" style="color:var(--primary)"></i> Select Available Packages</label>
             
-            <div class="plan-selection-grid" id="planSelectionGrid">
-                </div>
+            <div class="plan-selection-grid" id="planSelectionGrid"></div>
 
             <label style="display:block; font-weight:700; font-size:0.95rem; margin-top:20px; margin-bottom:10px;"><i class="fas fa-plus-circle" style="color:var(--primary)"></i> Optional Add-ups (Ask for Price)</label>
-            <div class="add-ups-grid">
-                <label class="add-up-item"><input type="checkbox" value="Mesh WiFi Router"> Mesh WiFi Router</label>
-                <label class="add-up-item"><input type="checkbox" value="Fiber Cable Extension"> Cable Extension</label>
-                <label class="add-up-item"><input type="checkbox" value="Static IP Address"> Static IP Address</label>
-                <label class="add-up-item"><input type="checkbox" value="Mini UPS (Power Backup)"> Mini UPS</label>
-            </div>
+            <div class="add-ups-grid" id="addUpsGrid"></div>
+            
             <input type="text" id="customAddUps" placeholder="Other add-ups? Type here..." class="nice-input-box" style="width:100%; font-size:0.9rem!important; text-align:left; padding:12px 15px!important; margin-bottom:20px; font-family: inherit!important; letter-spacing: normal;">
 
             <div class="modal-form-group" style="margin-top: 0;">
@@ -1200,6 +1208,18 @@
             { "name": "Premium", "badge": null, "price": "₱1,099", "billing_cycle": "/mo", "speed": "Up to 30 Mbps", "features": ["Heavy Usage", "Multiple HD Streams", "Fast Downloads", "Priority Support"] },
             { "name": "Business", "badge": null, "price": "₱1,299", "billing_cycle": "/mo", "speed": "Up to 40 Mbps", "features": ["Business Grade", "Maximum Reliability", "Connect 15+ Devices", "Dedicated Line"] },
             { "name": "VIP ULTIMATE", "badge": "POWERED BY N'RTECH", "price": "₱1,899", "billing_cycle": "/mo", "speed": "Up to 80 Mbps", "features": ["Extreme Speed", "Priority Bandwidth", "30+ Devices", "FREE Mini UPS!"] }
+          ]
+        };
+
+        // --- Dynamic UPS Inventory Data Setup ---
+        const embeddedUpsData = {
+          "brand": "N'RTECH UPS",
+          "product_category": "Mini UPS / Backup Power Supply",
+          "products": [
+            { "model_capacity": "3600mAh", "tag": null },
+            { "model_capacity": "6000mAh", "tag": "HOT!" },
+            { "model_capacity": "7800mAh", "tag": "HOT!" },
+            { "model_capacity": "10400mAh", "tag": "TOP SALE" }
           ]
         };
 
@@ -1509,29 +1529,40 @@
             }).catch(() => { window.open("https://m.me/ramirez.technician", "_blank"); });
         }
 
-        // --- UPDATED: Dynamic Subscription Plan & Add-up Loading Setup ---
+        // --- Dynamic Upgrade Modals Setup with Active Plan Verification & Dynamic UPS Parsing ---
         function openUpgradeModal() {
             document.getElementById('upgradeNotes').value = '';
-            
-            // Clear add-ups
             document.getElementById('customAddUps').value = '';
-            document.querySelectorAll('.add-up-item input').forEach(cb => cb.checked = false);
 
             const gridContainer = document.getElementById('planSelectionGrid');
+            const addUpsGrid = document.getElementById('addUpsGrid');
+            
+            // Extract the user's currently active plan text
+            const currentActivePlan = document.getElementById('planDisplay').textContent.trim();
+            
             selectedUpgradePackage = { name: "", speed: "", price: "" };
             upgradeModal.style.display = 'flex';
             playSound('info');
 
-            // Construct plans from embedded JSON
+            // 1. Populate Package Plans with Active Plan Detection
             gridContainer.innerHTML = '';
             embeddedPlansData.plans.forEach(plan => {
                 const card = document.createElement('div');
-                card.className = 'plan-tier-card';
+                const isCurrentPlan = plan.name.toLowerCase() === currentActivePlan.toLowerCase();
+                
+                if (isCurrentPlan) {
+                    card.className = 'plan-tier-card disabled';
+                } else {
+                    card.className = 'plan-tier-card';
+                    card.onclick = () => selectUpgradePlan(card, plan.name, plan.speed, plan.price);
+                }
                 
                 let badgeClass = "plan-badge";
                 if(plan.badge && plan.badge.includes("POWERED")) badgeClass += " accent";
                 
                 let badgeHTML = plan.badge ? `<div class="${badgeClass}">${plan.badge}</div>` : '';
+                if (isCurrentPlan) { badgeHTML = `<div class="plan-badge" style="background: var(--text-light); box-shadow: none;">ACTIVE PLAN</div>`; }
+                
                 let featuresHTML = plan.features.map(f => `<li><i class="fas fa-check"></i> ${f}</li>`).join('');
                 
                 card.innerHTML = `
@@ -1541,8 +1572,33 @@
                     <div class="plan-tier-price">${plan.price} <span style="font-size:0.75rem; color:var(--text-light); font-weight: 500;">${plan.billing_cycle}</span></div>
                     <ul class="plan-features-list">${featuresHTML}</ul>
                 `;
-                card.onclick = () => selectUpgradePlan(card, plan.name, plan.speed, plan.price);
                 gridContainer.appendChild(card);
+            });
+
+            // 2. Populate Optional Add-ups including Dynamic ups.json Parsing
+            addUpsGrid.innerHTML = `
+                <label class="add-up-item"><input type="checkbox" value="Mesh WiFi Router"> Mesh WiFi Router</label>
+                <label class="add-up-item"><input type="checkbox" value="Fiber Cable Extension"> Cable Extension</label>
+                <label class="add-up-item"><input type="checkbox" value="Static IP Address"> Static IP Address</label>
+            `;
+
+            embeddedUpsData.products.forEach(prod => {
+                const label = document.createElement('label');
+                label.className = 'add-up-item';
+                
+                let tagHTML = '';
+                if (prod.tag) {
+                    let tagBg = prod.tag === 'TOP SALE' ? 'var(--accent)' : 'var(--danger)';
+                    tagHTML = `<span style="background:${tagBg}; color:white; font-size:0.65rem; padding:2px 6px; border-radius:10px; font-weight:800; margin-left:6px; white-space:nowrap;">${prod.tag}</span>`;
+                }
+
+                label.innerHTML = `
+                    <input type="checkbox" value="Mini UPS (${prod.model_capacity})">
+                    <span style="display:flex; align-items:center; width:100%; justify-content:space-between; gap:2px;">
+                        <span>Mini UPS ${prod.model_capacity}${tagHTML}</span>
+                    </span>
+                `;
+                addUpsGrid.appendChild(label);
             });
         }
 
@@ -1562,8 +1618,7 @@
                 return;
             }
 
-            // Harvest selected add-ups
-            const checkedAddUps = Array.from(document.querySelectorAll('.add-up-item input:checked')).map(cb => cb.value);
+            const checkedAddUps = Array.from(document.querySelectorAll('#addUpsGrid input:checked')).map(cb => cb.value);
             const customAddUpText = document.getElementById('customAddUps').value.trim();
             if(customAddUpText) { checkedAddUps.push(customAddUpText); }
 
@@ -1571,7 +1626,7 @@
             let priceNoteString = "";
             if(checkedAddUps.length > 0) {
                 addUpsString = checkedAddUps.join(', ');
-                priceNoteString = `\nNote: Please provide the pricing for the requested add-ups.`;
+                priceNoteString = `\nNote: Please provide pricing metrics for the added equipment packages.`;
             }
 
             const notes = document.getElementById('upgradeNotes').value.trim();
