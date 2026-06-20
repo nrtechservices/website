@@ -8,7 +8,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
     
-
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="logo.png"> 
     
@@ -1405,9 +1404,10 @@
         // --- Globals for capturing User Session Data ---
         let sessionClientName = "Client";
         let sessionClientAcc = "N/A";
-        let sessionCurrentPlanName = ""; // Auto-hides existing matching profile plans
+        let sessionCurrentPlanName = ""; 
         let selectedUpgradePackage = { name: "", speed: "", price: "" };
-        let selectedUpsPackage = { model: "", design: "" }; // Mini UPS storage tracker
+        let selectedUpsPackage = { model: "", design: "" }; 
+        let globalSettings = {}; // NEW: Holds plans and notifications
 
         // --- Custom Toast Notification Function ---
         function showToast(message, type = 'success') {
@@ -1514,13 +1514,23 @@
             try {
                 const response = await fetch("data.json", { cache: "no-store" });
                 if (!response.ok) throw new Error("Network pool response issue"); 
-                const clients = await response.json();
-                const client = clients.find(c => String(c.clientUsername).toLowerCase() === usernameInput.toLowerCase() && String(c.clientPassword) === accPass);
+                
+                // NEW: Parse the root object
+                const db = await response.json(); 
+                const clients = db.accounts || []; // Target the accounts array
+                globalSettings = db.settings || {}; // Save settings globally
+                
+                // Find the client with safe null-checks
+                const client = clients.find(c => 
+                    c.clientUsername && c.clientPassword &&
+                    String(c.clientUsername).toLowerCase() === usernameInput.toLowerCase() && 
+                    String(c.clientPassword) === accPass
+                );
 
                 if (client) {
                     playSound('success');
                     fetchUpdates(); 
-                    fetchNotifications(client.clientUsername); 
+                    fetchNotifications(client); // CHANGED: Pass the whole client object
                     populateDashboard(client); 
 
                     loginView.style.display = 'none';
@@ -1555,21 +1565,16 @@
             } catch (error) {}
         }
 
-        async function fetchNotifications(clientUsername) {
+        async function fetchNotifications(client) {
             const notifList = document.getElementById('notificationList');
             notifList.innerHTML = '';
             let userNotifs = [];
 
-            try {
-                const resNotif = await fetch("notif.json", { cache: "no-store" });
-                const notifData = await resNotif.json();
-                
-                userNotifs = notifData.filter(n => 
-                    String(n.username).toLowerCase() === String(clientUsername).toLowerCase() && 
-                    n.active === true
+            // Target the global settings instead of an external file
+            if (globalSettings.notifications) {
+                userNotifs = globalSettings.notifications.filter(n => 
+                    n.dataId === client.accountNumber // Match via Account Number
                 );
-            } catch(e) {
-                console.log("Notification entry point response failed or file missing.");
             }
             
             if(userNotifs.length === 0) {
@@ -1584,11 +1589,16 @@
                 item.className = 'notification-item';
                 item.style.animation = `slideInNotification 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards ${0.1 + (index * 0.1)}s`;
                 
+                // Determine a title based on the notification type
+                let title = n.type === 'success' ? 'System Success' : 'System Alert';
+                if (n.message.includes('Upgrade Request')) title = 'Upgrade Request';
+                else if (n.message.includes('Login')) title = 'Login Alert';
+
                 item.innerHTML = `
-                    <div class="notification-title">${n.title}</div>
-                    <div class="notification-date"><i class="far fa-clock"></i> ${n.date}</div>
+                    <div class="notification-title">${title}</div>
+                    <div class="notification-date"><i class="far fa-clock"></i> ${new Date(n.date).toLocaleString()}</div>
                 `;
-                item.onclick = () => openNotifModal(n.title, n.date, n.message);
+                item.onclick = () => openNotifModal(title, new Date(n.date).toLocaleString(), n.message);
                 notifList.appendChild(item);
             });
         }
@@ -1772,7 +1782,7 @@
             });
         }
 
-        // --- Subscription Array Structural Builders from plans.json ---
+        // --- Subscription Array Structural Builders ---
         async function openUpgradeModal() {
             document.getElementById('upgradeNotes').value = '';
             const gridContainer = document.querySelector('.plan-selection-grid');
@@ -1782,25 +1792,28 @@
             upgradeModal.style.display = 'flex';
             playSound('info');
 
-            try {
-                const response = await fetch("plans.json", { cache: "no-store" });
-                if (!response.ok) throw new Error("File context missing");
-                const resData = await response.json();
-                const plans = resData.plans || [];
-                
-                renderPlansInGrid(plans, gridContainer);
-            } catch (error) {
-                console.log("Fallback execution triggered due to plans.json parsing anomaly.");
-                const staticFallbackPlans = [
-                    { "name": "Basic", "badge": null, "price": "₱499", "speed": "Up to 10 Mbps", "features": ["Unlimited Data", "Good for Browsing", "Social Media Ready", "3-7 Devices"] },
-                    { "name": "Family", "badge": "BEST SELLER", "price": "₱699", "speed": "Up to 15 Mbps", "features": ["Unlimited Data", "HD Streaming", "Online Classes", "5-12 Devices"] },
-                    { "name": "Gamer", "badge": null, "price": "₱899", "speed": "Up to 20 Mbps", "features": ["Low Latency Gaming", "4K Streaming", "Work from Home", "12+ Devices"] },
-                    { "name": "Premium", "badge": null, "price": "₱1,099", "speed": "Up to 30 Mbps", "features": ["Heavy Usage", "Multiple HD Streams", "Fast Downloads", "Priority Support"] },
-                    { "name": "Business", "badge": null, "price": "₱1,299", "speed": "Up to 40 Mbps", "features": ["Business Grade", "Maximum Reliability", "Connect 15+ Devices", "Dedicated Line"] },
-                    { "name": "VIP ULTIMATE", "badge": "POWERED BY N'RTECH", "price": "₱1,899", "speed": "Up to 80 Mbps", "features": ["Extreme Speed", "Priority Bandwidth", "30+ Devices", "FREE Mini UPS!"] }
-                ];
-                renderPlansInGrid(staticFallbackPlans, gridContainer);
-            }
+            setTimeout(() => {
+                // Read from globalSettings we captured during login
+                if (globalSettings.plans && globalSettings.plans.length > 0) {
+                    // Format the raw data.json plans into the UI format
+                    const formattedPlans = globalSettings.plans.map(p => ({
+                        name: p.name,
+                        speed: p.speed,
+                        price: "₱" + p.fee,
+                        features: ["Standard Support", "Unlimited Data", "No Data Cap"], // Default features
+                        badge: p.id === 2 ? "BEST SELLER" : null // Example badge logic
+                    }));
+                    renderPlansInGrid(formattedPlans, gridContainer);
+                } else {
+                    console.log("Fallback execution triggered: No plans in settings.");
+                    const staticFallbackPlans = [
+                        { "name": "Basic", "badge": null, "price": "₱499", "speed": "Up to 10 Mbps", "features": ["Unlimited Data", "Good for Browsing", "Social Media Ready", "3-7 Devices"] },
+                        { "name": "Family", "badge": "BEST SELLER", "price": "₱699", "speed": "Up to 15 Mbps", "features": ["Unlimited Data", "HD Streaming", "Online Classes", "5-12 Devices"] },
+                        { "name": "Gamer", "badge": null, "price": "₱899", "speed": "Up to 20 Mbps", "features": ["Low Latency Gaming", "4K Streaming", "Work from Home", "12+ Devices"] }
+                    ];
+                    renderPlansInGrid(staticFallbackPlans, gridContainer);
+                }
+            }, 300); // Slight delay for the loading animation effect
         }
 
         // Handles rendering logic and automatically screens out the currently subscribed plan
