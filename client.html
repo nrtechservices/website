@@ -2,13 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=1100">
     <title>N'RTECH Client Portal</title>
     
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
     
-
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="logo.png"> 
     
@@ -21,6 +20,7 @@
             --bg-light: #f8fafc;
             --white: #ffffff;
             --danger: #ef4444;
+            --danger-dark: #dc2626;
             --success: #10b981;
             --accent: #8b5cf6;
             --info: #3b82f6;
@@ -65,7 +65,7 @@
         /* --- Header --- */
         header {
             width: 100%;
-            max-width: 1000px;
+            max-width: 1050px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -118,6 +118,7 @@
         /* --- Main Containers --- */
         .portal-container {
             width: 100%;
+            max-width: 1050px;
             background: rgba(255, 255, 255, 0.9);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
@@ -148,7 +149,7 @@
         /* --- Login View --- */
         #loginView {
             max-width: 450px;
-            margin-top: 5vh;
+            margin: 5vh auto 0 auto;
         }
 
         .login-logo {
@@ -254,60 +255,71 @@
         }
 
         /* --- Dashboard View --- */
-        #dashboardView { display: none; max-width: 1050px; }
+        #dashboardView { display: none; }
 
+        /* --- HIGH VISIBILITY UPDATE BANNER --- */
         .announcement-bar {
-            background: linear-gradient(135deg, #1e293b, #0f172a);
+            background: linear-gradient(135deg, var(--danger-dark), var(--danger));
             color: white;
-            padding: 18px 25px;
+            padding: 20px 25px;
             border-radius: 18px;
             margin-bottom: 35px;
             display: flex;
             align-items: center;
             gap: 20px;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            box-shadow: 0 15px 35px rgba(220, 38, 38, 0.3);
             animation: slideDownFade 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-            position: relative;
-            overflow: hidden;
-            border: 1px solid rgba(255,255,255,0.1);
+            position: sticky;
+            top: 20px;
+            z-index: 100;
+            border: 2px solid rgba(255,255,255,0.4);
         }
         
         @keyframes slideDownFade {
-            from { opacity: 0; transform: translateY(-20px); }
+            from { opacity: 0; transform: translateY(-30px); }
             to { opacity: 1; transform: translateY(0); }
         }
 
-        .announcement-bar::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0;
-            width: 5px; height: 100%;
-            background: var(--primary);
-        }
-
         .announcement-icon {
-            background: rgba(212, 154, 55, 0.15);
-            color: var(--primary);
-            width: 50px;
-            height: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+            width: 55px;
+            height: 55px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.4rem;
+            font-size: 1.6rem;
             flex-shrink: 0;
-            border: 1px solid rgba(212, 154, 55, 0.3);
-            animation: pulseGlow 2.5s infinite cubic-bezier(0.4, 0, 0.6, 1);
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            animation: pulseAlert 2s infinite cubic-bezier(0.4, 0, 0.6, 1);
         }
 
-        @keyframes pulseGlow {
-            0% { box-shadow: 0 0 0 0 rgba(212, 154, 55, 0.5); }
-            70% { box-shadow: 0 0 0 15px rgba(212, 154, 55, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(212, 154, 55, 0); }
+        @keyframes pulseAlert {
+            0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.6); }
+            70% { box-shadow: 0 0 0 15px rgba(255, 255, 255, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
         }
 
-        .announcement-title { font-weight: 700; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; color: var(--primary); margin-bottom: 4px; }
-        .announcement-text { font-size: 0.95rem; line-height: 1.5; color: #f8fafc; }
+        .announcement-title { font-weight: 800; font-size: 1.05rem; text-transform: uppercase; letter-spacing: 1px; color: #ffffff; margin-bottom: 6px; text-shadow: 0 2px 4px rgba(0,0,0,0.2); }
+        .announcement-text { font-size: 0.95rem; line-height: 1.6; color: #fff5f5; font-weight: 500; }
+
+        /* --- Pulsing Notification Dot --- */
+        .pulse-dot {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background-color: var(--danger);
+            border-radius: 50%;
+            animation: pulse-animation 1.5s infinite;
+            border: 2px solid white;
+        }
+
+        @keyframes pulse-animation {
+            0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.8); }
+            70% { box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+        }
 
         .dashboard-header {
             display: flex;
@@ -560,7 +572,7 @@
         }
         table { 
             width: 100%; 
-            min-width: 750px; /* Ensures scrolling on phone screens */
+            min-width: 750px; 
             border-collapse: separate; 
             border-spacing: 0 8px; 
         }
@@ -949,20 +961,6 @@
             100% { transform: scale(0.9) translateY(20px); opacity: 0; }
         }
 
-        /* Responsive Overrides & Overlap Resolutions */
-        @media (max-width: 768px) {
-            body { padding: 15px 10px; }
-            .portal-container { padding: 30px 20px; border-radius: 20px; }
-            .dashboard-header { flex-direction: column; align-items: center; text-align: center; }
-            .client-profile-wrapper { flex-direction: column; }
-            .status-badge { width: 100%; justify-content: center; }
-            .stat-card { padding: 25px 20px; }
-            .dashboard-grid, .bottom-support-grid { grid-template-columns: 1fr; }
-            .modal-content { padding: 30px 20px; border-radius: 20px; max-width: 500px; }
-            #toastContainer { bottom: 20px; left: 20px; right: 20px; align-items: center; }
-            .toast { width: 100%; min-width: unset; max-width: 100%; }
-            .plan-selection-grid, .ups-selection-grid { grid-template-columns: 1fr; }
-        }
     </style>
 </head>
 <body>
@@ -1007,7 +1005,7 @@
 
     <div class="portal-container" id="dashboardView">
         <div id="announcementBar" class="announcement-bar" style="display: none;">
-            <div class="announcement-icon"><i class="fas fa-bullhorn"></i></div>
+            <div class="announcement-icon"><i class="fas fa-exclamation-triangle"></i></div>
             <div class="announcement-content">
                 <div class="announcement-title" id="announcementTitle">System Advisory</div>
                 <div class="announcement-text" id="announcementText">Checking for updates...</div>
@@ -1028,7 +1026,12 @@
         </div>
 
         <div class="notification-top-wrapper">
-            <h4>Notifications & Live Alerts <i class="fas fa-bell" style="color:var(--accent);"></i></h4>
+            <h4>Notifications & Live Alerts 
+                <div style="position:relative; display:inline-block;">
+                    <i class="fas fa-bell" style="color:var(--accent);"></i>
+                    <span id="notifPulse" class="pulse-dot" style="display:none; position:absolute; top:-4px; right:-6px;"></span>
+                </div>
+            </h4>
             <div id="notificationList" style="display: flex; flex-direction: column; max-height: 200px; overflow-y: auto; padding-right: 5px; overflow-x: hidden;">
                 <p style="color: var(--text-light); font-size: 0.95rem;">Loading notifications...</p>
             </div>
@@ -1405,9 +1408,9 @@
         // --- Globals for capturing User Session Data ---
         let sessionClientName = "Client";
         let sessionClientAcc = "N/A";
-        let sessionCurrentPlanName = ""; // Auto-hides existing matching profile plans
+        let sessionCurrentPlanName = ""; 
         let selectedUpgradePackage = { name: "", speed: "", price: "" };
-        let selectedUpsPackage = { model: "", design: "" }; // Mini UPS storage tracker
+        let selectedUpsPackage = { model: "", design: "" }; 
 
         // --- Custom Toast Notification Function ---
         function showToast(message, type = 'success') {
@@ -1516,7 +1519,6 @@
                 if (!response.ok) throw new Error("Network pool response issue"); 
                 const data = await response.json();
                 
-                // data.accounts holds the client list in the newly parsed format
                 const clients = data.accounts || data; 
                 const client = clients.find(c => String(c.clientUsername).toLowerCase() === usernameInput.toLowerCase() && String(c.clientPassword) === accPass);
 
@@ -1552,7 +1554,6 @@
                 const updateData = await response.json();
                 
                 if (Array.isArray(updateData)) {
-                    // Filter down to updates that are active
                     const activeUpdates = updateData.filter(u => u.active === true);
                     
                     if (activeUpdates.length > 0) {
@@ -1564,7 +1565,6 @@
                         document.getElementById('announcementBar').style.display = 'flex';
                     }
                 } else if (updateData.active !== false && (updateData.message || updateData.title)) {
-                    // Fallback block if it's a single object
                     document.getElementById('announcementTitle').textContent = updateData.title || "System Advisory";
                     document.getElementById('announcementText').innerHTML = updateData.message || "Important system update information.";
                     document.getElementById('announcementBar').style.display = 'flex';
@@ -1581,7 +1581,6 @@
                 const resNotif = await fetch("notif.json", { cache: "no-store" });
                 const notifData = await resNotif.json();
                 
-                // Matches either clientUsername OR the unique accountNumber string
                 userNotifs = notifData.filter(n => 
                     (String(n.username).toLowerCase() === String(clientObj.clientUsername).toLowerCase() ||
                      String(n.username).toLowerCase() === String(clientObj.accountNumber).toLowerCase()) && 
@@ -1593,9 +1592,11 @@
             
             if(userNotifs.length === 0) {
                 notifList.innerHTML = '<p style="color:var(--text-light); font-size:0.95rem; font-style:italic; padding-top: 5px;">No notifications recorded</p>';
+                document.getElementById('notifPulse').style.display = 'none';
                 return;
             }
 
+            document.getElementById('notifPulse').style.display = 'inline-block';
             userNotifs.sort((a,b) => new Date(b.date) - new Date(a.date));
 
             userNotifs.forEach((n, index) => {
@@ -1699,7 +1700,6 @@
                     tr.style.animation = `fadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards ${0.2 + (index * 0.1)}s`;
                     tr.style.opacity = '0';
                     
-                    // Priority checking for direct JSON attributes for covered month
                     let coveredMonthString = "Unknown";
                     
                     if (pay.coverageText) {
@@ -1735,7 +1735,6 @@
             }
         }
 
-        // --- Copy GCash Number Logic ---
         function copyGCashNumber() {
             const gcashNumber = document.getElementById('gcashNumberText').innerText;
             navigator.clipboard.writeText(gcashNumber).then(() => {
@@ -1745,7 +1744,6 @@
             });
         }
 
-        // --- Proof of Payment Modal Logic ---
         function openProofModal() {
             document.getElementById('popReferenceNum').value = '';
             proofModal.style.display = 'flex';
@@ -1777,7 +1775,6 @@
             });
         }
 
-        // --- Support Modal Logic ---
         function openSupportModal() {
             document.getElementById('issueDescription').value = '';
             document.getElementById('issueCategory').selectedIndex = 0;
@@ -1805,7 +1802,6 @@
             });
         }
 
-        // --- Subscription Array Structural Builders from plans.json ---
         async function openUpgradeModal() {
             document.getElementById('upgradeNotes').value = '';
             const gridContainer = document.querySelector('.plan-selection-grid');
@@ -1836,7 +1832,6 @@
             }
         }
 
-        // Handles rendering logic and automatically screens out the currently subscribed plan
         function renderPlansInGrid(plansArray, containerElement) {
             containerElement.innerHTML = '';
             let printedPlansCount = 0;
@@ -1908,7 +1903,6 @@
             });
         }
 
-        // --- Mini UPS Structural Request Modal Modules ---
         async function openUpsModal() {
             document.getElementById('upsNotes').value = '';
             const gridContainer = document.querySelector('.ups-selection-grid');
@@ -2018,18 +2012,15 @@
             });
         }
 
-        // --- FAQ Modal Logic ---
         function openFaqModal() { faqModal.style.display = 'flex'; playSound('info'); }
         function closeFaqModal() { faqModal.style.display = 'none'; }
 
-        // --- Other Modal Views ---
         function openReceiptModal(payment) {
             document.getElementById('modalPaymentMethod').innerHTML = `<i class="fas fa-wallet"></i> ${payment.method || 'Cash'} Transaction`;
             document.getElementById('modalPaymentDate').textContent = payment.date;
             document.getElementById('modalReference').textContent = payment.referenceNumber || 'N/A';
             document.getElementById('modalAmountPaid').textContent = `₱${payment.amount.toLocaleString(undefined, {minimumFractionDigits: 2})}`;
             
-            // Priority checking for direct JSON attributes for covered month
             let coveredMonthString = "Unknown";
             if (payment.coverageText) {
                 coveredMonthString = payment.coverageText.replace(/[()]/g, '');
