@@ -1,23 +1,401 @@
 [
-    {
-        "username": "NR2021C0001A",
-        "title": "Welcome to N'RTECH ISP CLIENT PORTAL",
-        "message": "Thank you for Choosing N'RTECH ISP. Enjoy seamless browsing and thank you for trusting N'RTECH Internet Services.",
-        "date": "2026-05-20",
-        "active": true
-    },
-    {
-        "username": "juandela123",
-        "title": "Scheduled Service Maintenance",
-        "message": "Please be advised that there will be an upcoming system calibration targeting optimization points on your regional server sector from 2:00 AM to 4:00 AM.",
-        "date": "2026-05-26",
-        "active": false
-    },
-    {
-        "username": "mariasample",
-        "title": "Unpaid Balance Notice",
-        "message": "Dear Maria, this is a friendly reminder that you have a lacking balance of ₱150.00 from the previous billing cycle. Please settle this amount soon to avoid service interruption.",
-        "date": "2026-05-25",
-        "active": true
-    }
+  {
+    "username": "NR2021C0001A",
+    "title": "Welcome to N'RTECH ISP CLIENT PORTAL",
+    "message": "Thank you for Choosing N'RTECH ISP. Enjoy seamless browsing and thank you for trusting N'RTECH Internet Services.",
+    "date": "2025-12-18",
+    "active": true
+  },
+  {
+    "username": "NR2021C0001A",
+    "title": "Good Morning, Curlito!",
+    "message": "Welcome back to your client portal! You logged in at 01:35 AM PST. Have a great day ahead!",
+    "date": "2026-06-21",
+    "active": true
+  },
+  {
+    "username": "NR2021C0002A",
+    "title": "Welcome to N'RTECH ISP CLIENT PORTAL",
+    "message": "Thank you for Choosing N'RTECH ISP. Enjoy seamless browsing and thank you for trusting N'RTECH Internet Services.",
+    "date": "2025-12-18",
+    "active": true
+  },
+  {
+    "username": "NR2021C0002A",
+    "title": "Good Morning, Ires!",
+    "message": "Welcome back to your client portal! You logged in at 01:35 AM PST. Have a great day ahead!",
+    "date": "2026-06-21",
+    "active": true
+  },
+  {
+    "username": "NR2021C0003A",
+    "title": "Welcome to N'RTECH ISP CLIENT PORTAL",
+    "message": "Thank you for Choosing N'RTECH ISP. Enjoy seamless browsing and thank you for trusting N'RTECH Internet Services.",
+    "date": "2025-12-18",
+    "active": true
+  },
+  {
+    "username": "NR2021C0003A",
+    "title": "Good Morning, Felan!",
+    "message": "Welcome back to your client portal! You logged in at 01:35 AM PST. Have a great day ahead!",
+    "date": "2026-06-21",
+    "active": true
+  },
+  {
+    "username": "NR2021C0004A",
+    "title": "Welcome to N'RTECH ISP CLIENT PORTAL",
+    "message": "Thank you for Choosing N'RTECH ISP. Enjoy seamless browsing and thank you for trusting N'RTECH Internet Services.",
+    "date": "2025-12-18",
+    "active": true
+  },
+  {
+    "username": "NR2021C0004A",
+    "title": "Good Morning, Anarie!",
+    "message": "Welcome back to your client portal! You logged in at 01:35 AM PST. Have a great day ahead!",
+    "date": "2026-06-21",
+    "active": true
+  },
+  {
+    "username": "NR2021C0005A",
+    "title": "Welcome to N'RTECH ISP CLIENT PORTAL",
+    "message": "Thank you for Choosing N'RTECH ISP. Enjoy seamless browsing and thank you for trusting N'RTECH Internet Services.",
+    "date": "2025-12-18",
+    "active": true
+  },
+  {
+    "username": "NR2021C0005A",
+    "title": "Good Morning, Vincent!",
+    "message": "Welcome back to your client portal! You logged in at 01:35 AM PST. Have a great day ahead!",
+    "date": "2026-06-21",
+    "active": true
+  },
+  {
+    "username": "NR2021C0005A",
+    "title": "Notice of Service Disconnection",
+    "message": "Dear Vincent, your account status is currently Terminated. Please contact our support team if you wish to apply for reconnection.",
+    "date": "2026-06-21",
+    "active": true
+  },
+  {
+    "username": "NR2021C0006A",
+    "title": "Welcome to N'RTECH ISP CLIENT PORTAL",
+    "message": "Thank you for Choosing N'RTECH ISP. Enjoy seamless browsing and thank you for trusting N'RTECH Internet Services.",
+    "date": "2025-12-18",
+    "active": true
+  },
+  {
+    "username": "NR2021C0006A",
+    "title": "Good Morning, Ariane!",
+    "message": "Welcome back to your client portal! You logged in at 01:35 AM PST. Have a great day ahead!",
+    "date": "2026-06-21",
+    "active": true
+  },
+  {
+    "username": "NR2021C0007A",
+    "title": "Welcome to N'RTECH ISP CLIENT PORTAL",
+    "message": "Thank you for Choosing N'RTECH ISP. Enjoy seamless browsing and thank you for trusting N'RTECH Internet Services.",
+    "date": "2025-12-18",
+    "active": true
+  },
+  {
+    "username": "NR2021C0007A",
+    "title": "Good Morning, Victoria!",
+    "message": "Welcome back to your client portal! You logged in at 01:35 AM PST. Have a great day ahead!",
+    "date": "2026-06-21",
+    "active": true
+  },
+  {
+    "username": "NR2021C0008A",
+    "title": "Welcome to N'RTECH ISP CLIENT PORTAL",
+    "message": "Thank you for Choosing N'RTECH ISP. Enjoy seamless browsing and thank you for trusting N'RTECH Internet Services.",
+    "date": "2025-12-18",
+    "active": true
+  },
+  {
+    "username": "NR2021C0008A",
+    "title": "Good Morning, Carolyn!",
+    "message": "Welcome back to your client portal! You logged in at 01:35 AM PST. Have a great day ahead!",
+    "date": "2026-06-21",
+    "active": true
+  },
+  {
+    "username": "NR2021C0009A",
+    "title": "Welcome to N'RTECH ISP CLIENT PORTAL",
+    "message": "Thank you for Choosing N'RTECH ISP. Enjoy seamless browsing and thank you for trusting N'RTECH Internet Services.",
+    "date": "2025-12-18",
+    "active": true
+  },
+  {
+    "username": "NR2021C0009A",
+    "title": "Good Morning, Frankie!",
+    "message": "Welcome back to your client portal! You logged in at 01:35 AM PST. Have a great day ahead!",
+    "date": "2026-06-21",
+    "active": true
+  },
+  {
+    "username": "NR2021C0010A",
+    "title": "Welcome to N'RTECH ISP CLIENT PORTAL",
+    "message": "Thank you for Choosing N'RTECH ISP. Enjoy seamless browsing and thank you for trusting N'RTECH Internet Services.",
+    "date": "2025-12-18",
+    "active": true
+  },
+  {
+    "username": "NR2021C0010A",
+    "title": "Good Morning, Lorifel!",
+    "message": "Welcome back to your client portal! You logged in at 01:35 AM PST. Have a great day ahead!",
+    "date": "2026-06-21",
+    "active": true
+  },
+  {
+    "username": "NR2021C0011A",
+    "title": "Welcome to N'RTECH ISP CLIENT PORTAL",
+    "message": "Thank you for Choosing N'RTECH ISP. Enjoy seamless browsing and thank you for trusting N'RTECH Internet Services.",
+    "date": "2025-12-18",
+    "active": true
+  },
+  {
+    "username": "NR2021C0011A",
+    "title": "Good Morning, Helen!",
+    "message": "Welcome back to your client portal! You logged in at 01:35 AM PST. Have a great day ahead!",
+    "date": "2026-06-21",
+    "active": true
+  },
+  {
+    "username": "NR2021C0012A",
+    "title": "Welcome to N'RTECH ISP CLIENT PORTAL",
+    "message": "Thank you for Choosing N'RTECH ISP. Enjoy seamless browsing and thank you for trusting N'RTECH Internet Services.",
+    "date": "2025-12-18",
+    "active": true
+  },
+  {
+    "username": "NR2021C0012A",
+    "title": "Good Morning, Thalia!",
+    "message": "Welcome back to your client portal! You logged in at 01:35 AM PST. Have a great day ahead!",
+    "date": "2026-06-21",
+    "active": true
+  },
+  {
+    "username": "NR2021C0012A",
+    "title": "Penalty Notice",
+    "message": "Dear Thalia, a late penalty fee of ₱55.92 has been applied to your account. Please settle this amount to keep your account updated.",
+    "date": "2026-03-23",
+    "active": true
+  },
+  {
+    "username": "NR2021C0012A",
+    "title": "Plan Change Notification",
+    "message": "Dear Thalia, your request to downgrade your plan to Basic has been processed successfully.",
+    "date": "2026-06-20",
+    "active": true
+  },
+  {
+    "username": "NR2021C0013A",
+    "title": "Welcome to N'RTECH ISP CLIENT PORTAL",
+    "message": "Thank you for Choosing N'RTECH ISP. Enjoy seamless browsing and thank you for trusting N'RTECH Internet Services.",
+    "date": "2025-12-18",
+    "active": true
+  },
+  {
+    "username": "NR2021C0013A",
+    "title": "Good Morning, Delmark!",
+    "message": "Welcome back to your client portal! You logged in at 01:35 AM PST. Have a great day ahead!",
+    "date": "2026-06-21",
+    "active": true
+  },
+  {
+    "username": "NR2021C0013A",
+    "title": "Penalty Notice",
+    "message": "Dear Delmark, a late penalty fee of ₱89.90 has been applied to your account. Please settle this amount to keep your account updated.",
+    "date": "2026-03-23",
+    "active": true
+  },
+  {
+    "username": "NR2021C0014A",
+    "title": "Welcome to N'RTECH ISP CLIENT PORTAL",
+    "message": "Thank you for Choosing N'RTECH ISP. Enjoy seamless browsing and thank you for trusting N'RTECH Internet Services.",
+    "date": "2025-12-18",
+    "active": true
+  },
+  {
+    "username": "NR2021C0014A",
+    "title": "Good Morning, Lucille!",
+    "message": "Welcome back to your client portal! You logged in at 01:35 AM PST. Have a great day ahead!",
+    "date": "2026-06-21",
+    "active": true
+  },
+  {
+    "username": "NR2021C0014A",
+    "title": "Plan Change Notification",
+    "message": "Dear Lucille, your request to change your plan to Gamer has been processed successfully.",
+    "date": "2026-06-05",
+    "active": true
+  },
+  {
+    "username": "NR2021C0015A",
+    "title": "Welcome to N'RTECH ISP CLIENT PORTAL",
+    "message": "Thank you for Choosing N'RTECH ISP. Enjoy seamless browsing and thank you for trusting N'RTECH Internet Services.",
+    "date": "2025-12-18",
+    "active": true
+  },
+  {
+    "username": "NR2021C0015A",
+    "title": "Good Morning, Arnilo!",
+    "message": "Welcome back to your client portal! You logged in at 01:35 AM PST. Have a great day ahead!",
+    "date": "2026-06-21",
+    "active": true
+  },
+  {
+    "username": "NR2021C0016A",
+    "title": "Welcome to N'RTECH ISP CLIENT PORTAL",
+    "message": "Thank you for Choosing N'RTECH ISP. Enjoy seamless browsing and thank you for trusting N'RTECH Internet Services.",
+    "date": "2025-12-18",
+    "active": true
+  },
+  {
+    "username": "NR2021C0016A",
+    "title": "Good Morning, Susan!",
+    "message": "Welcome back to your client portal! You logged in at 01:35 AM PST. Have a great day ahead!",
+    "date": "2026-06-21",
+    "active": true
+  },
+  {
+    "username": "NR2021C0017A",
+    "title": "Welcome to N'RTECH ISP CLIENT PORTAL",
+    "message": "Thank you for Choosing N'RTECH ISP. Enjoy seamless browsing and thank you for trusting N'RTECH Internet Services.",
+    "date": "2025-12-18",
+    "active": true
+  },
+  {
+    "username": "NR2021C0017A",
+    "title": "Good Morning, Zacarias!",
+    "message": "Welcome back to your client portal! You logged in at 01:35 AM PST. Have a great day ahead!",
+    "date": "2026-06-21",
+    "active": true
+  },
+  {
+    "username": "NR2021C0017A",
+    "title": "Notice of Service Disconnection",
+    "message": "Dear Zacarias, your account status is currently Terminated. Please contact our support team if you wish to apply for reconnection.",
+    "date": "2026-06-21",
+    "active": true
+  },
+  {
+    "username": "NR2021C0018A",
+    "title": "Welcome to N'RTECH ISP CLIENT PORTAL",
+    "message": "Thank you for Choosing N'RTECH ISP. Enjoy seamless browsing and thank you for trusting N'RTECH Internet Services.",
+    "date": "2025-12-18",
+    "active": true
+  },
+  {
+    "username": "NR2021C0018A",
+    "title": "Good Morning, Sarah!",
+    "message": "Welcome back to your client portal! You logged in at 01:35 AM PST. Have a great day ahead!",
+    "date": "2026-06-21",
+    "active": true
+  },
+  {
+    "username": "NR2021C0019A",
+    "title": "Welcome to N'RTECH ISP CLIENT PORTAL",
+    "message": "Thank you for Choosing N'RTECH ISP. Enjoy seamless browsing and thank you for trusting N'RTECH Internet Services.",
+    "date": "2025-12-19",
+    "active": true
+  },
+  {
+    "username": "NR2021C0019A",
+    "title": "Good Morning, Lenster!",
+    "message": "Welcome back to your client portal! You logged in at 01:35 AM PST. Have a great day ahead!",
+    "date": "2026-06-21",
+    "active": true
+  },
+  {
+    "username": "NR2021C0020A",
+    "title": "Welcome to N'RTECH ISP CLIENT PORTAL",
+    "message": "Thank you for Choosing N'RTECH ISP. Enjoy seamless browsing and thank you for trusting N'RTECH Internet Services.",
+    "date": "2025-12-19",
+    "active": true
+  },
+  {
+    "username": "NR2021C0020A",
+    "title": "Good Morning, Clarita!",
+    "message": "Welcome back to your client portal! You logged in at 01:35 AM PST. Have a great day ahead!",
+    "date": "2026-06-21",
+    "active": true
+  },
+  {
+    "username": "NR2021C0021A",
+    "title": "Welcome to N'RTECH ISP CLIENT PORTAL",
+    "message": "Thank you for Choosing N'RTECH ISP. Enjoy seamless browsing and thank you for trusting N'RTECH Internet Services.",
+    "date": "2026-01-19",
+    "active": true
+  },
+  {
+    "username": "NR2021C0021A",
+    "title": "Good Morning, Melissa!",
+    "message": "Welcome back to your client portal! You logged in at 01:35 AM PST. Have a great day ahead!",
+    "date": "2026-06-21",
+    "active": true
+  },
+  {
+    "username": "NR2021C0022A",
+    "title": "Welcome to N'RTECH ISP CLIENT PORTAL",
+    "message": "Thank you for Choosing N'RTECH ISP. Enjoy seamless browsing and thank you for trusting N'RTECH Internet Services.",
+    "date": "2026-02-03",
+    "active": true
+  },
+  {
+    "username": "NR2021C0022A",
+    "title": "Good Morning, Jamaica!",
+    "message": "Welcome back to your client portal! You logged in at 01:35 AM PST. Have a great day ahead!",
+    "date": "2026-06-21",
+    "active": true
+  },
+  {
+    "username": "NR2021C0023A",
+    "title": "Welcome to N'RTECH ISP CLIENT PORTAL",
+    "message": "Thank you for Choosing N'RTECH ISP. Enjoy seamless browsing and thank you for trusting N'RTECH Internet Services.",
+    "date": "2026-02-17",
+    "active": true
+  },
+  {
+    "username": "NR2021C0023A",
+    "title": "Good Morning, Lynrose!",
+    "message": "Welcome back to your client portal! You logged in at 01:35 AM PST. Have a great day ahead!",
+    "date": "2026-06-21",
+    "active": true
+  },
+  {
+    "username": "NR2021C0023A",
+    "title": "Notice of Service Disconnection",
+    "message": "Dear Lynrose, your account status is currently Terminated. Please contact our support team if you wish to apply for reconnection.",
+    "date": "2026-06-21",
+    "active": true
+  },
+  {
+    "username": "NR2021C0024A",
+    "title": "Welcome to N'RTECH ISP CLIENT PORTAL",
+    "message": "Thank you for Choosing N'RTECH ISP. Enjoy seamless browsing and thank you for trusting N'RTECH Internet Services.",
+    "date": "2026-05-28",
+    "active": true
+  },
+  {
+    "username": "NR2021C0024A",
+    "title": "Good Morning, Loyda!",
+    "message": "Welcome back to your client portal! You logged in at 01:35 AM PST. Have a great day ahead!",
+    "date": "2026-06-21",
+    "active": true
+  },
+  {
+    "username": "NR2021C0025A",
+    "title": "Welcome to N'RTECH ISP CLIENT PORTAL",
+    "message": "Thank you for Choosing N'RTECH ISP. Enjoy seamless browsing and thank you for trusting N'RTECH Internet Services.",
+    "date": "2026-05-28",
+    "active": true
+  },
+  {
+    "username": "NR2021C0025A",
+    "title": "Good Morning, Jeffrey!",
+    "message": "Welcome back to your client portal! You logged in at 01:35 AM PST. Have a great day ahead!",
+    "date": "2026-06-21",
+    "active": true
+  }
 ]
