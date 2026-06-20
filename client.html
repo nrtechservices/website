@@ -8,6 +8,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
     
+
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="logo.png"> 
     
@@ -1404,10 +1405,9 @@
         // --- Globals for capturing User Session Data ---
         let sessionClientName = "Client";
         let sessionClientAcc = "N/A";
-        let sessionCurrentPlanName = ""; 
+        let sessionCurrentPlanName = ""; // Auto-hides existing matching profile plans
         let selectedUpgradePackage = { name: "", speed: "", price: "" };
-        let selectedUpsPackage = { model: "", design: "" }; 
-        let globalSettings = {}; // NEW: Holds plans and notifications
+        let selectedUpsPackage = { model: "", design: "" }; // Mini UPS storage tracker
 
         // --- Custom Toast Notification Function ---
         function showToast(message, type = 'success') {
@@ -1514,23 +1514,16 @@
             try {
                 const response = await fetch("data.json", { cache: "no-store" });
                 if (!response.ok) throw new Error("Network pool response issue"); 
+                const data = await response.json();
                 
-                // NEW: Parse the root object
-                const db = await response.json(); 
-                const clients = db.accounts || []; // Target the accounts array
-                globalSettings = db.settings || {}; // Save settings globally
-                
-                // Find the client with safe null-checks
-                const client = clients.find(c => 
-                    c.clientUsername && c.clientPassword &&
-                    String(c.clientUsername).toLowerCase() === usernameInput.toLowerCase() && 
-                    String(c.clientPassword) === accPass
-                );
+                // data.accounts holds the client list in the newly parsed format
+                const clients = data.accounts || data; 
+                const client = clients.find(c => String(c.clientUsername).toLowerCase() === usernameInput.toLowerCase() && String(c.clientPassword) === accPass);
 
                 if (client) {
                     playSound('success');
                     fetchUpdates(); 
-                    fetchNotifications(client); // CHANGED: Pass the whole client object
+                    fetchNotifications(client); 
                     populateDashboard(client); 
 
                     loginView.style.display = 'none';
@@ -1557,24 +1550,45 @@
             try {
                 const response = await fetch("update.json", { cache: "no-store" });
                 const updateData = await response.json();
-                if (updateData.active !== false && (updateData.message || updateData.title)) {
+                
+                if (Array.isArray(updateData)) {
+                    // Filter down to updates that are active
+                    const activeUpdates = updateData.filter(u => u.active === true);
+                    
+                    if (activeUpdates.length > 0) {
+                        const titleStr = activeUpdates.length > 1 ? "System Advisories" : activeUpdates[0].title;
+                        const messageStr = activeUpdates.map(u => `<strong>${u.title}:</strong> ${u.message}`).join('<br><br>');
+                        
+                        document.getElementById('announcementTitle').textContent = titleStr;
+                        document.getElementById('announcementText').innerHTML = messageStr;
+                        document.getElementById('announcementBar').style.display = 'flex';
+                    }
+                } else if (updateData.active !== false && (updateData.message || updateData.title)) {
+                    // Fallback block if it's a single object
                     document.getElementById('announcementTitle').textContent = updateData.title || "System Advisory";
                     document.getElementById('announcementText').innerHTML = updateData.message || "Important system update information.";
                     document.getElementById('announcementBar').style.display = 'flex';
                 }
-            } catch (error) {}
+            } catch (error) { console.log("Update check bypassed"); }
         }
 
-        async function fetchNotifications(client) {
+        async function fetchNotifications(clientObj) {
             const notifList = document.getElementById('notificationList');
             notifList.innerHTML = '';
             let userNotifs = [];
 
-            // Target the global settings instead of an external file
-            if (globalSettings.notifications) {
-                userNotifs = globalSettings.notifications.filter(n => 
-                    n.dataId === client.accountNumber // Match via Account Number
+            try {
+                const resNotif = await fetch("notif.json", { cache: "no-store" });
+                const notifData = await resNotif.json();
+                
+                // Matches either clientUsername OR the unique accountNumber string
+                userNotifs = notifData.filter(n => 
+                    (String(n.username).toLowerCase() === String(clientObj.clientUsername).toLowerCase() ||
+                     String(n.username).toLowerCase() === String(clientObj.accountNumber).toLowerCase()) && 
+                    n.active === true
                 );
+            } catch(e) {
+                console.log("Notification entry point response failed or file missing.");
             }
             
             if(userNotifs.length === 0) {
@@ -1589,16 +1603,11 @@
                 item.className = 'notification-item';
                 item.style.animation = `slideInNotification 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards ${0.1 + (index * 0.1)}s`;
                 
-                // Determine a title based on the notification type
-                let title = n.type === 'success' ? 'System Success' : 'System Alert';
-                if (n.message.includes('Upgrade Request')) title = 'Upgrade Request';
-                else if (n.message.includes('Login')) title = 'Login Alert';
-
                 item.innerHTML = `
-                    <div class="notification-title">${title}</div>
-                    <div class="notification-date"><i class="far fa-clock"></i> ${new Date(n.date).toLocaleString()}</div>
+                    <div class="notification-title">${n.title}</div>
+                    <div class="notification-date"><i class="far fa-clock"></i> ${n.date}</div>
                 `;
-                item.onclick = () => openNotifModal(title, new Date(n.date).toLocaleString(), n.message);
+                item.onclick = () => openNotifModal(n.title, n.date, n.message);
                 notifList.appendChild(item);
             });
         }
@@ -1690,17 +1699,31 @@
                     tr.style.animation = `fadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards ${0.2 + (index * 0.1)}s`;
                     tr.style.opacity = '0';
                     
-                    const paymentDateObj = new Date(pay.date);
+                    // Priority checking for direct JSON attributes for covered month
                     let coveredMonthString = "Unknown";
-                    if (!isNaN(paymentDateObj.getTime())) {
-                        coveredMonthString = paymentDateObj.toLocaleString('default', { month: 'short', year: 'numeric' });
+                    
+                    if (pay.coverageText) {
+                        coveredMonthString = pay.coverageText.replace(/[()]/g, ''); 
+                    } else if (pay.billingMonth) {
+                        const [year, month] = pay.billingMonth.split('-');
+                        const dateObj = new Date(year, month - 1);
+                        if (!isNaN(dateObj.getTime())) {
+                            coveredMonthString = dateObj.toLocaleString('default', { month: 'short', year: 'numeric' });
+                        } else {
+                            coveredMonthString = pay.billingMonth;
+                        }
+                    } else {
+                        const paymentDateObj = new Date(pay.date);
+                        if (!isNaN(paymentDateObj.getTime())) {
+                            coveredMonthString = paymentDateObj.toLocaleString('default', { month: 'short', year: 'numeric' });
+                        }
                     }
                     
                     tr.innerHTML = `
                         <td style="font-weight: 600; white-space: nowrap;">${pay.date || 'N/A'}</td>
                         <td style="color: var(--primary-dark); font-weight: 700; white-space: nowrap;">${coveredMonthString}</td>
                         <td style="color: var(--success); font-weight: 800; white-space: nowrap;">₱${pay.amount.toLocaleString(undefined, {minimumFractionDigits: 2})}</td>
-                        <td style="font-weight: 500; white-space: nowrap;">${pay.method}</td>
+                        <td style="font-weight: 500; white-space: nowrap;">${pay.method || '-'}</td>
                         <td style="white-space: nowrap;"><span class="ref-badge"><i class="fas fa-hashtag" style="font-size: 0.75rem; color: var(--text-light);"></i> ${pay.referenceNumber || 'N/A'}</span></td>
                         <td style="color: var(--text-light); font-size: 0.9rem;">${pay.note || '-'}</td>
                     `;
@@ -1782,7 +1805,7 @@
             });
         }
 
-        // --- Subscription Array Structural Builders ---
+        // --- Subscription Array Structural Builders from plans.json ---
         async function openUpgradeModal() {
             document.getElementById('upgradeNotes').value = '';
             const gridContainer = document.querySelector('.plan-selection-grid');
@@ -1792,28 +1815,25 @@
             upgradeModal.style.display = 'flex';
             playSound('info');
 
-            setTimeout(() => {
-                // Read from globalSettings we captured during login
-                if (globalSettings.plans && globalSettings.plans.length > 0) {
-                    // Format the raw data.json plans into the UI format
-                    const formattedPlans = globalSettings.plans.map(p => ({
-                        name: p.name,
-                        speed: p.speed,
-                        price: "₱" + p.fee,
-                        features: ["Standard Support", "Unlimited Data", "No Data Cap"], // Default features
-                        badge: p.id === 2 ? "BEST SELLER" : null // Example badge logic
-                    }));
-                    renderPlansInGrid(formattedPlans, gridContainer);
-                } else {
-                    console.log("Fallback execution triggered: No plans in settings.");
-                    const staticFallbackPlans = [
-                        { "name": "Basic", "badge": null, "price": "₱499", "speed": "Up to 10 Mbps", "features": ["Unlimited Data", "Good for Browsing", "Social Media Ready", "3-7 Devices"] },
-                        { "name": "Family", "badge": "BEST SELLER", "price": "₱699", "speed": "Up to 15 Mbps", "features": ["Unlimited Data", "HD Streaming", "Online Classes", "5-12 Devices"] },
-                        { "name": "Gamer", "badge": null, "price": "₱899", "speed": "Up to 20 Mbps", "features": ["Low Latency Gaming", "4K Streaming", "Work from Home", "12+ Devices"] }
-                    ];
-                    renderPlansInGrid(staticFallbackPlans, gridContainer);
-                }
-            }, 300); // Slight delay for the loading animation effect
+            try {
+                const response = await fetch("plans.json", { cache: "no-store" });
+                if (!response.ok) throw new Error("File context missing");
+                const resData = await response.json();
+                const plans = resData.plans || [];
+                
+                renderPlansInGrid(plans, gridContainer);
+            } catch (error) {
+                console.log("Fallback execution triggered due to plans.json parsing anomaly.");
+                const staticFallbackPlans = [
+                    { "name": "Basic", "badge": null, "price": "₱499", "speed": "Up to 10 Mbps", "features": ["Unlimited Data", "Good for Browsing", "Social Media Ready", "3-7 Devices"] },
+                    { "name": "Family", "badge": "BEST SELLER", "price": "₱699", "speed": "Up to 15 Mbps", "features": ["Unlimited Data", "HD Streaming", "Online Classes", "5-12 Devices"] },
+                    { "name": "Gamer", "badge": null, "price": "₱899", "speed": "Up to 20 Mbps", "features": ["Low Latency Gaming", "4K Streaming", "Work from Home", "12+ Devices"] },
+                    { "name": "Premium", "badge": null, "price": "₱1,099", "speed": "Up to 30 Mbps", "features": ["Heavy Usage", "Multiple HD Streams", "Fast Downloads", "Priority Support"] },
+                    { "name": "Business", "badge": null, "price": "₱1,299", "speed": "Up to 40 Mbps", "features": ["Business Grade", "Maximum Reliability", "Connect 15+ Devices", "Dedicated Line"] },
+                    { "name": "VIP ULTIMATE", "badge": "POWERED BY N'RTECH", "price": "₱1,899", "speed": "Up to 80 Mbps", "features": ["Extreme Speed", "Priority Bandwidth", "30+ Devices", "FREE Mini UPS!"] }
+                ];
+                renderPlansInGrid(staticFallbackPlans, gridContainer);
+            }
         }
 
         // Handles rendering logic and automatically screens out the currently subscribed plan
@@ -2004,15 +2024,28 @@
 
         // --- Other Modal Views ---
         function openReceiptModal(payment) {
-            document.getElementById('modalPaymentMethod').innerHTML = `<i class="fas fa-wallet"></i> ${payment.method} Transaction`;
+            document.getElementById('modalPaymentMethod').innerHTML = `<i class="fas fa-wallet"></i> ${payment.method || 'Cash'} Transaction`;
             document.getElementById('modalPaymentDate').textContent = payment.date;
             document.getElementById('modalReference').textContent = payment.referenceNumber || 'N/A';
             document.getElementById('modalAmountPaid').textContent = `₱${payment.amount.toLocaleString(undefined, {minimumFractionDigits: 2})}`;
             
-            const paymentDateObj = new Date(payment.date);
+            // Priority checking for direct JSON attributes for covered month
             let coveredMonthString = "Unknown";
-            if (!isNaN(paymentDateObj.getTime())) {
-                coveredMonthString = paymentDateObj.toLocaleString('default', { month: 'long', year: 'numeric' });
+            if (payment.coverageText) {
+                coveredMonthString = payment.coverageText.replace(/[()]/g, '');
+            } else if (payment.billingMonth) {
+                const [year, month] = payment.billingMonth.split('-');
+                const dateObj = new Date(year, month - 1);
+                if (!isNaN(dateObj.getTime())) {
+                    coveredMonthString = dateObj.toLocaleString('default', { month: 'long', year: 'numeric' });
+                } else {
+                    coveredMonthString = payment.billingMonth;
+                }
+            } else {
+                const paymentDateObj = new Date(payment.date);
+                if (!isNaN(paymentDateObj.getTime())) {
+                    coveredMonthString = paymentDateObj.toLocaleString('default', { month: 'long', year: 'numeric' });
+                }
             }
             document.getElementById('modalCoveredMonth').textContent = coveredMonthString;
             
