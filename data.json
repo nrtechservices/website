@@ -1,1793 +1,2013 @@
-[
-  {
-    "messengerId": "curlito.albarote",
-    "clientUsername": "C0001A",
-    "clientPassword": "ALBAROTE",
-    "accountNumber": "NR2021C0001A",
-    "name": "Curlito Albarote",
-    "address": "San Vicente Patudan Tubod LDN",
-    "contact": "0917-000-0000",
-    "plan": {
-      "name": "Basic",
-      "fee": 499,
-      "speed": "Up to 10 Mbps"
+{
+  "timestamp": "2026-06-20T17:14:59.239Z",
+  "accounts": [
+    {
+      "messengerId": "curlito.albarote",
+      "clientUsername": "C0001A",
+      "clientPassword": "ALBAROTE",
+      "accountNumber": "NR2021C0001A",
+      "name": "Curlito Albarote",
+      "address": "San Vicente Patudan Tubod LDN",
+      "contact": "0917-000-0000",
+      "plan": {
+        "name": "Basic",
+        "fee": 499,
+        "speed": "Up to 10 Mbps"
+      },
+      "billingDay": 20,
+      "status": "Active",
+      "pppoeUsername": "C0001A",
+      "pppoePassword": "ALBAROTE",
+      "payments": [
+        {
+          "date": "2025-11-20",
+          "amount": 500,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "5D838CF6",
+          "billingMonth": "2025-11",
+          "type": "bill"
+        },
+        {
+          "date": "2025-12-20",
+          "amount": 500,
+          "note": "",
+          "method": "Cash",
+          "referenceNumber": "6KT6JPEF",
+          "billingMonth": "2025-12",
+          "type": "bill"
+        },
+        {
+          "date": "2026-01-20",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "XAC5W47K"
+        },
+        {
+          "date": "2026-02-20",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "2P5G9QMR"
+        },
+        {
+          "date": "2026-03-20",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "44REH67D"
+        },
+        {
+          "date": "2026-04-20",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "EJK7K2KH"
+        },
+        {
+          "date": "2026-05-20",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "2K9CKB7B"
+        }
+      ],
+      "points": {
+        "advance": 0,
+        "ontime": 7,
+        "lost": 0
+      },
+      "nextDue": "2026-06-20",
+      "excessLackingBalance": 7,
+      "createdAt": "2025-12-18T20:47:21.424Z",
+      "charges": [],
+      "discounts": []
     },
-    "billingDay": 20,
-    "status": "Active",
-    "pppoeUsername": "C0001A",
-    "pppoePassword": "ALBAROTE",
-    "payments": [
+    {
+      "messengerId": "ires.pepito",
+      "clientUsername": "C0002A",
+      "clientPassword": "PEPITO",
+      "accountNumber": "NR2021C0002A",
+      "name": "Ires Pepito",
+      "address": "San Vicente Patudan Tubod LDN",
+      "contact": "0917-000-0001",
+      "plan": {
+        "name": "Basic",
+        "fee": 499,
+        "speed": "Up to 10 Mbps"
+      },
+      "billingDay": 20,
+      "status": "Active",
+      "pppoeUsername": "C0002A",
+      "pppoePassword": "PEPITO",
+      "payments": [
+        {
+          "date": "2026-01-26",
+          "amount": 499,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "2HBNQ57P",
+          "billingMonth": "2026-01",
+          "type": "bill"
+        },
+        {
+          "date": "2026-02-28",
+          "amount": 500,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "6Y4Q3B8P",
+          "billingMonth": "2026-02",
+          "type": "bill"
+        },
+        {
+          "date": "2026-03-25",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "ZQV33KYZ"
+        },
+        {
+          "date": "2026-04-10",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "7JM87G5F"
+        },
+        {
+          "date": "2026-05-25",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "K9DV9Q2W"
+        }
+      ],
+      "points": {
+        "advance": 1,
+        "ontime": 0,
+        "lost": 2
+      },
+      "nextDue": "2026-06-20",
+      "excessLackingBalance": 4,
+      "createdAt": "2025-12-18T20:47:21.424Z",
+      "charges": []
+    },
+    {
+      "messengerId": "felan.noya",
+      "clientUsername": "C0003A",
+      "clientPassword": "NOYA",
+      "accountNumber": "NR2021C0003A",
+      "name": "Felan Noya",
+      "address": "San Vicente Patudan Tubod LDN",
+      "contact": "0917-000-0002",
+      "plan": {
+        "name": "Basic",
+        "fee": 499,
+        "speed": "Up to 10 Mbps"
+      },
+      "billingDay": 20,
+      "status": "Active",
+      "pppoeUsername": "C0003A",
+      "pppoePassword": "NOYA",
+      "payments": [
+        {
+          "date": "2025-11-20",
+          "amount": 500,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "9CBG4WKN",
+          "billingMonth": "2025-11",
+          "type": "bill"
+        },
+        {
+          "date": "2025-12-20",
+          "amount": 500,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "K8LWUT6W",
+          "billingMonth": "2025-12",
+          "type": "bill"
+        },
+        {
+          "date": "2026-01-20",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "FXWVUHKH"
+        },
+        {
+          "date": "2026-02-20",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "35B9Z3E6"
+        },
+        {
+          "date": "2026-04-19",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "AA8EPSMT"
+        },
+        {
+          "date": "2026-03-20",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "97XEL3PU"
+        },
+        {
+          "date": "2026-05-20",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "YWUWXFBX"
+        },
+        {
+          "date": "2026-06-20",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "UNLWRKMB",
+          "planFeeAtTime": 499,
+          "planNameAtTime": "Basic",
+          "coverageText": "(Jun 2026)"
+        }
+      ],
+      "points": {
+        "advance": 1,
+        "ontime": 7,
+        "lost": 0
+      },
+      "nextDue": "2026-07-20",
+      "excessLackingBalance": 8,
+      "createdAt": "2025-12-18T20:47:21.424Z"
+    },
+    {
+      "messengerId": "anarie.bacalso",
+      "clientUsername": "C0004A",
+      "clientPassword": "BACALSO",
+      "accountNumber": "NR2021C0004A",
+      "name": "Anarie Bacalso",
+      "address": "San Vicente Patudan Tubod LDN",
+      "contact": "0917-000-0003",
+      "plan": {
+        "name": "Basic",
+        "fee": 499,
+        "speed": "Up to 10 Mbps"
+      },
+      "billingDay": 20,
+      "status": "Active",
+      "pppoeUsername": "C0004A",
+      "pppoePassword": "BACALSO",
+      "payments": [
+        {
+          "date": "2025-11-20",
+          "amount": 500,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "YLUUKDFS",
+          "billingMonth": "2025-11",
+          "type": "bill"
+        },
+        {
+          "date": "2025-12-20",
+          "amount": 499,
+          "note": "",
+          "referenceNumber": "YRS74XT5"
+        },
+        {
+          "date": "2026-01-20",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "SXCAG28F"
+        },
+        {
+          "date": "2026-02-20",
+          "amount": 500,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "V9EUNTQ8",
+          "billingMonth": "2026-02",
+          "type": "bill"
+        },
+        {
+          "date": "2026-03-20",
+          "amount": 500,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "6SNFHRM3",
+          "billingMonth": "2026-03",
+          "type": "bill"
+        },
+        {
+          "date": "2026-04-19",
+          "amount": 500,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "USWE2EE8",
+          "billingMonth": "2026-04",
+          "type": "bill"
+        },
+        {
+          "date": "2026-05-21",
+          "amount": 500,
+          "note": "Monthly Bill Payment",
+          "method": "GCash",
+          "referenceNumber": "NLK8BJ3C",
+          "billingMonth": "2026-05",
+          "type": "bill"
+        },
+        {
+          "date": "2026-06-20",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "9EKDH6SQ",
+          "planFeeAtTime": 499,
+          "planNameAtTime": "Basic",
+          "coverageText": "(Jun 2026)"
+        }
+      ],
+      "points": {
+        "advance": 1,
+        "ontime": 6,
+        "lost": 1
+      },
+      "nextDue": "2026-07-20",
+      "excessLackingBalance": 7,
+      "createdAt": "2025-12-18T20:47:21.424Z"
+    },
+    {
+      "messengerId": "vincent.pepito",
+      "clientUsername": null,
+      "clientPassword": null,
+      "accountNumber": "NR2021C0005A",
+      "name": "Vincent Pepito",
+      "address": "San Vicente Patudan Tubod LDN",
+      "contact": "0917-000-0004",
+      "plan": {
+        "name": "Basic",
+        "fee": 499,
+        "speed": "Up to 10 Mbps"
+      },
+      "billingDay": 20,
+      "status": "Terminated",
+      "pppoeUsername": "C0005A",
+      "pppoePassword": "PEPITO",
+      "payments": [],
+      "points": {
+        "advance": 0,
+        "ontime": 0,
+        "lost": 0
+      },
+      "nextDue": "2026-07-19",
+      "excessLackingBalance": 0,
+      "createdAt": "2025-12-18T20:47:21.424Z"
+    },
+    {
+      "messengerId": "ariane.albarote",
+      "clientUsername": "C0006A",
+      "clientPassword": "ALBAROTE2",
+      "accountNumber": "NR2021C0006A",
+      "name": "Ariane Jean Albarote",
+      "address": "San Vicente Patudan Tubod LDN",
+      "contact": "0917-000-0005",
+      "plan": {
+        "name": "Basic",
+        "fee": 499,
+        "speed": "Up to 10 Mbps"
+      },
+      "billingDay": 20,
+      "status": "Active",
+      "pppoeUsername": "C0006A",
+      "pppoePassword": "ALBAROTE",
+      "payments": [
+        {
+          "date": "2025-11-21",
+          "amount": 500,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "BZV4P3XZ",
+          "billingMonth": "2025-11",
+          "type": "bill"
+        },
+        {
+          "date": "2025-12-20",
+          "amount": 500,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "NJHCXFCY",
+          "billingMonth": "2025-12",
+          "type": "bill"
+        },
+        {
+          "date": "2026-01-20",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "Y86GCZ6M"
+        },
+        {
+          "date": "2026-02-20",
+          "amount": 500,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "ML7ZMW4X",
+          "billingMonth": "2026-02",
+          "type": "bill"
+        },
+        {
+          "date": "2026-03-20",
+          "amount": 500,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "5BYL2FXU",
+          "billingMonth": "2026-03",
+          "type": "bill"
+        },
+        {
+          "date": "2026-04-20",
+          "amount": 500,
+          "note": "Monthly Bill Payment",
+          "method": "GCash",
+          "referenceNumber": "R4HKNHDB",
+          "billingMonth": "2026-04",
+          "type": "bill"
+        },
+        {
+          "date": "2026-05-20",
+          "amount": 500,
+          "note": "Monthly Bill Payment",
+          "method": "GCash",
+          "referenceNumber": "TK7N2JC2",
+          "billingMonth": "2026-05",
+          "type": "bill"
+        },
+        {
+          "date": "2026-06-20",
+          "amount": 500,
+          "note": "Monthly Bill Payment",
+          "method": "GCash",
+          "referenceNumber": "NDWZSW2N",
+          "billingMonth": "2026-06",
+          "type": "bill",
+          "planFeeAtTime": 499,
+          "planNameAtTime": "Basic",
+          "coverageText": "(Jun 2026)"
+        }
+      ],
+      "points": {
+        "advance": 0,
+        "ontime": 7,
+        "lost": 1
+      },
+      "nextDue": "2026-07-20",
+      "excessLackingBalance": 8,
+      "createdAt": "2025-12-18T20:47:21.424Z"
+    },
+    {
+      "messengerId": "victoria.espra",
+      "clientUsername": "C0007A",
+      "clientPassword": "ESPRA",
+      "accountNumber": "NR2021C0007A",
+      "name": "Victoria Espra",
+      "address": "San Vicente Patudan Tubod LDN",
+      "contact": "N/a",
+      "plan": {
+        "name": "Basic",
+        "fee": 499,
+        "speed": "Up to 10 Mbps"
+      },
+      "billingDay": 20,
+      "status": "Active",
+      "pppoeUsername": "C0007A",
+      "pppoePassword": "ESPRA",
+      "payments": [
+        {
+          "date": "2025-11-12",
+          "amount": 500,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "HZYNGURW",
+          "billingMonth": "2025-11",
+          "type": "bill"
+        },
+        {
+          "date": "2025-12-20",
+          "amount": 499,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "L8FUFR6Q",
+          "billingMonth": "2025-12",
+          "type": "bill"
+        },
+        {
+          "date": "2026-01-19",
+          "amount": 499,
+          "note": "",
+          "referenceNumber": "Q6ERTH68"
+        },
+        {
+          "date": "2026-03-20",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "YMAUCCUS"
+        },
+        {
+          "date": "2026-04-20",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "RJFFE5KC"
+        },
+        {
+          "date": "2026-02-21",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "2WMKAPGD"
+        },
+        {
+          "date": "2026-05-20",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "EY8MVNFB"
+        },
+        {
+          "date": "2026-06-20",
+          "amount": 499,
+          "note": "",
+          "referenceNumber": "VC4NSFYN",
+          "planFeeAtTime": 499,
+          "planNameAtTime": "Basic",
+          "coverageText": "(Jun 2026)"
+        }
+      ],
+      "points": {
+        "advance": 2,
+        "ontime": 5,
+        "lost": 1
+      },
+      "nextDue": "2026-07-20",
+      "excessLackingBalance": 5,
+      "createdAt": "2025-12-18T20:47:21.424Z"
+    },
+    {
+      "messengerId": "carolyn.sarabia",
+      "clientUsername": "C0008A",
+      "clientPassword": "SARABIA",
+      "accountNumber": "NR2021C0008A",
+      "name": "Carolyn Sarabia",
+      "address": "P5, Patudan Tubod LDN",
+      "contact": "0917-000-0007",
+      "plan": {
+        "name": "Basic",
+        "fee": 499,
+        "speed": "Up to 10 Mbps"
+      },
+      "billingDay": 20,
+      "status": "Active",
+      "pppoeUsername": "C0008A",
+      "pppoePassword": "SARABIA",
+      "payments": [
+        {
+          "date": "2025-11-28",
+          "amount": 802,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "JWP29RPM",
+          "billingMonth": "2025-11",
+          "type": "bill"
+        },
+        {
+          "date": "2025-12-20",
+          "amount": 500,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "WNUDBAUF",
+          "billingMonth": "2025-12",
+          "type": "bill"
+        },
+        {
+          "date": "2026-01-30",
+          "amount": 650,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "46N4KEBN",
+          "billingMonth": "2026-01",
+          "type": "bill"
+        },
+        {
+          "date": "2026-02-28",
+          "amount": 650,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "XPPFSY7R",
+          "billingMonth": "2026-02",
+          "type": "bill"
+        },
+        {
+          "date": "2026-03-19",
+          "amount": 499,
+          "note": "Monthly Bill Payment",
+          "method": "GCash",
+          "referenceNumber": "5JGMRLCY",
+          "billingMonth": "2026-03",
+          "type": "bill"
+        },
+        {
+          "date": "2026-04-20",
+          "amount": 500,
+          "note": "Monthly Bill Payment",
+          "method": "GCash",
+          "referenceNumber": "SG2SQAPQ",
+          "billingMonth": "2026-04",
+          "type": "bill"
+        },
+        {
+          "date": "2026-05-20",
+          "amount": 500,
+          "note": "Monthly Bill Payment",
+          "method": "GCash",
+          "referenceNumber": "2Y9BS2AP",
+          "billingMonth": "2026-05",
+          "type": "bill"
+        }
+      ],
+      "points": {
+        "advance": 1,
+        "ontime": 3,
+        "lost": 0
+      },
+      "nextDue": "2026-06-20",
+      "excessLackingBalance": 5.9,
+      "createdAt": "2025-12-18T20:47:21.424Z",
+      "charges": [
+        {
+          "date": "2025-10-20",
+          "note": "Bal. ",
+          "amount": 153,
+          "category": "charge"
+        },
+        {
+          "date": "2025-11-28",
+          "note": "Reconnection Fee",
+          "amount": 149.7,
+          "category": "reconnect"
+        },
+        {
+          "date": "2026-01-30",
+          "note": "Reconnection Fee",
+          "amount": 149.7,
+          "category": "reconnect"
+        },
+        {
+          "date": "2026-02-28",
+          "note": "Reconnection Fee",
+          "amount": 149.7,
+          "category": "reconnect"
+        }
+      ],
+      "discounts": []
+    },
+    {
+      "messengerId": "frankie.sarabia",
+      "clientUsername": "C0009A",
+      "clientPassword": "SARABIA2",
+      "accountNumber": "NR2021C0009A",
+      "name": "Frankie Sarabia",
+      "address": "Patudan Tubod LDN",
+      "contact": "0917-000-0008",
+      "plan": {
+        "name": "Family",
+        "fee": 699,
+        "speed": "Up to 15 Mbps"
+      },
+      "billingDay": 20,
+      "status": "Active",
+      "pppoeUsername": "C0009A",
+      "pppoePassword": "SARABIA",
+      "payments": [
+        {
+          "date": "2025-11-21",
+          "amount": 600,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "9RSKAVAG",
+          "billingMonth": "2025-11",
+          "type": "bill"
+        },
+        {
+          "date": "2025-12-20",
+          "amount": 700,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "48ARK6L8",
+          "billingMonth": "2025-12",
+          "type": "bill"
+        },
+        {
+          "date": "2026-01-20",
+          "amount": 700,
+          "note": "",
+          "referenceNumber": "GTG3AVGE"
+        },
+        {
+          "date": "2026-02-20",
+          "amount": 687,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "9G89657C",
+          "billingMonth": "2026-02",
+          "type": "bill"
+        },
+        {
+          "date": "2026-03-20",
+          "amount": 699,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "TSSAVU5H",
+          "billingMonth": "2026-03",
+          "type": "bill"
+        },
+        {
+          "date": "2026-03-20",
+          "amount": 700,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "AB7W9FNY",
+          "billingMonth": "2026-03",
+          "type": "bill"
+        },
+        {
+          "date": "2026-04-19",
+          "amount": 700,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "UD75DLVS",
+          "billingMonth": "2026-04",
+          "type": "bill"
+        },
+        {
+          "date": "2026-05-21",
+          "amount": 700,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "38AXMQPK",
+          "billingMonth": "2026-05",
+          "type": "bill"
+        }
+      ],
+      "points": {
+        "advance": 1,
+        "ontime": 5,
+        "lost": 2
+      },
+      "nextDue": "2026-06-20",
+      "excessLackingBalance": 3,
+      "createdAt": "2025-12-18T20:47:21.424Z",
+      "discounts": [
+        {
+          "date": "2025-10-20",
+          "note": "Prev. Bal",
+          "amount": 109,
+          "ref": "AHTNDLAU"
+        }
+      ]
+    },
+    {
+      "messengerId": "lorifel.bacalso",
+      "clientUsername": "C0010A",
+      "clientPassword": "BACALSO2",
+      "accountNumber": "NR2021C0010A",
+      "name": "Lorifel Bacalso",
+      "address": "San Vicente Patudan Tubod LDN",
+      "contact": "0917-000-0009",
+      "plan": {
+        "name": "Basic",
+        "fee": 499,
+        "speed": "Up to 10 Mbps"
+      },
+      "billingDay": 20,
+      "status": "Active",
+      "pppoeUsername": "C0010A",
+      "pppoePassword": "BACALSO",
+      "payments": [
+        {
+          "date": "2025-11-20",
+          "amount": 1000,
+          "note": "Advance Payment (2 Months)",
+          "method": "Cash",
+          "referenceNumber": "F3NPVAHU",
+          "billingMonth": "2025-11",
+          "type": "advance"
+        },
+        {
+          "date": "2026-01-20",
+          "amount": 1000,
+          "note": "Advance Payment (2 Months)",
+          "method": "Cash",
+          "referenceNumber": "6YX2FDJ8",
+          "billingMonth": "2026-01",
+          "type": "advance"
+        },
+        {
+          "date": "2026-03-19",
+          "amount": 1000,
+          "note": "Advance Payment (2 Months)",
+          "method": "GCash",
+          "referenceNumber": "5YPFFW6C",
+          "billingMonth": "2026-03",
+          "type": "advance"
+        },
+        {
+          "date": "2026-05-20",
+          "amount": 1000,
+          "note": "Advance Payment (2 Months)",
+          "method": "GCash",
+          "referenceNumber": "PCJ58RCZ",
+          "billingMonth": "2026-05",
+          "type": "advance"
+        }
+      ],
+      "points": {
+        "advance": 2,
+        "ontime": 6,
+        "lost": 0
+      },
+      "nextDue": "2026-07-20",
+      "excessLackingBalance": 8,
+      "createdAt": "2025-12-18T20:47:21.424Z"
+    },
+    {
+      "messengerId": "helen.torres",
+      "clientUsername": "C0011A",
+      "clientPassword": "TORRES",
+      "accountNumber": "NR2021C0011A",
+      "name": "Helen Torres",
+      "address": "San Vicente Patudan Tubod LDN",
+      "contact": "0917-000-0010",
+      "plan": {
+        "name": "Basic",
+        "fee": 499,
+        "speed": "Up to 10 Mbps"
+      },
+      "billingDay": 20,
+      "status": "Active",
+      "pppoeUsername": "C0011A",
+      "pppoePassword": "TORRES",
+      "payments": [
+        {
+          "date": "2025-12-20",
+          "amount": 500,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "RW8SVS57",
+          "billingMonth": "2025-12",
+          "type": "bill"
+        },
+        {
+          "date": "2025-11-21",
+          "amount": 500,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "HQKBCFLF",
+          "billingMonth": "2025-11",
+          "type": "bill"
+        },
+        {
+          "date": "2026-01-20",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "NMGKM92B"
+        },
+        {
+          "date": "2026-02-20",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "KX9C6NCC"
+        },
+        {
+          "date": "2026-03-20",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "8FPHCQDW"
+        },
+        {
+          "date": "2026-04-19",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "CBDAQBH7"
+        },
+        {
+          "date": "2026-05-20",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "TBR6CCEP"
+        }
+      ],
+      "points": {
+        "advance": 1,
+        "ontime": 5,
+        "lost": 1
+      },
+      "nextDue": "2026-06-20",
+      "excessLackingBalance": 7,
+      "createdAt": "2025-12-18T20:47:21.424Z"
+    },
+    {
+      "messengerId": "thalia.arcilla",
+      "clientUsername": "C0012A",
+      "clientPassword": "ARCILLA",
+      "accountNumber": "NR2021C0012A",
+      "name": "Thalia Arcilla",
+      "address": "San Vicente Patudan Tubod LDN",
+      "contact": "0917-000-0011",
+      "plan": {
+        "name": "Basic",
+        "fee": 499,
+        "speed": "Up to 10 Mbps"
+      },
+      "billingDay": 20,
+      "status": "Active",
+      "pppoeUsername": "C0012A",
+      "pppoePassword": "ARCILLA",
+      "payments": [
+        {
+          "date": "2025-11-20",
+          "amount": 700,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "8AXMVBN7",
+          "billingMonth": "2025-11",
+          "type": "bill",
+          "planFeeAtTime": 699,
+          "planNameAtTime": "Family",
+          "isHistoricallyFixed": true
+        },
+        {
+          "date": "2025-12-20",
+          "amount": 700,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "9PR8WEUT",
+          "billingMonth": "2025-12",
+          "type": "bill",
+          "planFeeAtTime": 699,
+          "planNameAtTime": "Family",
+          "isHistoricallyFixed": true
+        },
+        {
+          "date": "2026-01-20",
+          "amount": 700,
+          "note": "",
+          "referenceNumber": "SBWWQEQL",
+          "planFeeAtTime": 699,
+          "planNameAtTime": "Family",
+          "isHistoricallyFixed": true
+        },
+        {
+          "date": "2026-02-20",
+          "amount": 700,
+          "note": "",
+          "referenceNumber": "KEXFDYB6",
+          "planFeeAtTime": 699,
+          "planNameAtTime": "Family",
+          "isHistoricallyFixed": true
+        },
+        {
+          "date": "2026-03-23",
+          "amount": 750,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "D5P279CX",
+          "billingMonth": "2026-03",
+          "type": "bill",
+          "planFeeAtTime": 699,
+          "planNameAtTime": "Family",
+          "isHistoricallyFixed": true
+        },
+        {
+          "date": "2026-04-19",
+          "amount": 700,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "JZR2X9TD",
+          "billingMonth": "2026-04",
+          "type": "bill",
+          "planFeeAtTime": 699,
+          "planNameAtTime": "Family",
+          "isHistoricallyFixed": true
+        },
+        {
+          "date": "2026-05-20",
+          "amount": 700,
+          "note": "Monthly Bill Payment",
+          "method": "GCash",
+          "referenceNumber": "RGLY6EB4",
+          "billingMonth": "2026-05",
+          "type": "bill",
+          "planFeeAtTime": 699,
+          "planNameAtTime": "Family",
+          "isHistoricallyFixed": true
+        },
+        {
+          "date": "2026-06-20",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "CK3JVWGJ",
+          "planFeeAtTime": 499,
+          "planNameAtTime": "Basic",
+          "coverageText": "(Jun 2026)"
+        }
+      ],
+      "points": {
+        "advance": 2,
+        "ontime": 5,
+        "lost": 1
+      },
+      "nextDue": "2026-07-20",
+      "excessLackingBalance": 2.08,
+      "createdAt": "2025-12-18T20:47:21.424Z",
+      "charges": [
+        {
+          "date": "2026-03-23",
+          "note": "Late Penalty",
+          "amount": 55.92,
+          "category": "penalty"
+        }
+      ]
+    },
+    {
+      "messengerId": "delmark.porlas",
+      "clientUsername": "C0013A",
+      "clientPassword": "PORLAS",
+      "accountNumber": "NR2021C0013A",
+      "name": "Delmark Porlas",
+      "address": "P4 Patudan Tubod LDN",
+      "contact": "0917-000-0012",
+      "plan": {
+        "name": "Gamer",
+        "fee": 899,
+        "speed": "Up to 20 Mbps"
+      },
+      "billingDay": 20,
+      "status": "Active",
+      "pppoeUsername": "C0013A",
+      "pppoePassword": "PORLAS",
+      "payments": [
+        {
+          "date": "2025-11-23",
+          "amount": 1000,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "7UHWLYRD",
+          "billingMonth": "2025-11",
+          "type": "bill"
+        },
+        {
+          "date": "2025-12-23",
+          "amount": 1000,
+          "note": "",
+          "referenceNumber": "JZ637T82"
+        },
+        {
+          "date": "2026-01-20",
+          "amount": 900,
+          "note": "",
+          "referenceNumber": "BB3MQJXE"
+        },
+        {
+          "date": "2026-02-20",
+          "amount": 900,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "84WULA5U",
+          "billingMonth": "2026-02",
+          "type": "bill"
+        },
+        {
+          "date": "2026-03-20",
+          "amount": 1000,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "TD9WQJLB",
+          "billingMonth": "2026-03",
+          "type": "bill"
+        },
+        {
+          "date": "2026-04-20",
+          "amount": 1000,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "3XGFGFH5",
+          "billingMonth": "2026-04",
+          "type": "bill"
+        },
+        {
+          "date": "2026-05-20",
+          "amount": 1000,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "E62UACH5",
+          "billingMonth": "2026-05",
+          "type": "bill"
+        }
+      ],
+      "points": {
+        "advance": 0,
+        "ontime": 6,
+        "lost": 1
+      },
+      "nextDue": "2026-06-20",
+      "excessLackingBalance": 237.3,
+      "createdAt": "2025-12-18T20:47:21.424Z",
+      "charges": [
+        {
+          "date": "2025-11-23",
+          "note": "Late Penalty",
+          "amount": 89.9,
+          "category": "penalty"
+        },
+        {
+          "date": "2025-12-23",
+          "note": "Late Penalty",
+          "amount": 89.9,
+          "category": "penalty"
+        },
+        {
+          "date": "2026-03-23",
+          "note": "Late Penalty",
+          "amount": 89.9,
+          "category": "penalty"
+        }
+      ]
+    },
+    {
+      "messengerId": "lucille.tecson",
+      "clientUsername": "C0014A",
+      "clientPassword": "TECSON",
+      "accountNumber": "NR2021C0014A",
+      "name": "Lucille Tecson",
+      "address": "San Vicente Patudan Tubod LDN",
+      "contact": "0917-000-0013",
+      "plan": {
+        "name": "Gamer",
+        "fee": 899,
+        "speed": "Up to 20 Mbps"
+      },
+      "billingDay": 20,
+      "status": "Active",
+      "pppoeUsername": "C0014A",
+      "pppoePassword": "TECSON",
+      "payments": [
+        {
+          "date": "2025-11-15",
+          "amount": 1099,
+          "note": "",
+          "referenceNumber": "KGGT26X9",
+          "planFeeAtTime": 1099,
+          "planNameAtTime": "Premium",
+          "coverageText": "Jun 2026"
+        },
+        {
+          "date": "2025-12-17",
+          "amount": 1099,
+          "note": "",
+          "referenceNumber": "CKPXEN9T",
+          "planFeeAtTime": 1099,
+          "planNameAtTime": "Premium",
+          "coverageText": "Dec 2025"
+        },
+        {
+          "date": "2026-01-19",
+          "amount": 1099,
+          "note": "",
+          "referenceNumber": "C2Z37MCT",
+          "planFeeAtTime": 1099,
+          "planNameAtTime": "Premium",
+          "coverageText": "Jan 2026"
+        },
+        {
+          "date": "2026-02-15",
+          "amount": 4396,
+          "note": "Advance Payment (4 Months)",
+          "method": "Cash",
+          "referenceNumber": "BPD4SXE7",
+          "billingMonth": "2026-02",
+          "type": "advance",
+          "planFeeAtTime": 1099,
+          "planNameAtTime": "Premium",
+          "coverageText": "(Feb 2026, Mar 2026, Apr 2026, May 2026)"
+        },
+        {
+          "date": "2026-06-05",
+          "amount": 899,
+          "note": "",
+          "referenceNumber": "59CZV8TL",
+          "planFeeAtTime": 899,
+          "planNameAtTime": "Gamer",
+          "coverageText": "(Jun 2026)"
+        }
+      ],
+      "points": {
+        "advance": 8,
+        "ontime": 0,
+        "lost": 0
+      },
+      "nextDue": "2026-07-20",
+      "excessLackingBalance": 0,
+      "createdAt": "2025-12-18T20:47:21.424Z",
+      "discounts": [],
+      "charges": []
+    },
+    {
+      "messengerId": "arnilo.moral",
+      "clientUsername": null,
+      "clientPassword": null,
+      "accountNumber": "NR2021C0015A",
+      "name": "Arnilo Moral",
+      "address": "San Vicente Patudan Tubod LDN",
+      "contact": "0917-000-0014",
+      "plan": {
+        "name": "Basic",
+        "fee": 499,
+        "speed": "Up to 10 Mbps"
+      },
+      "billingDay": 20,
+      "status": "Active",
+      "pppoeUsername": "C0015A",
+      "pppoePassword": "MORAL",
+      "payments": [
+        {
+          "date": "2025-11-19",
+          "amount": 500,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "VA44X63W",
+          "billingMonth": "2025-11",
+          "type": "bill"
+        },
+        {
+          "date": "2025-12-17",
+          "amount": 500,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "3JLZSVQF",
+          "billingMonth": "2025-12",
+          "type": "bill"
+        },
+        {
+          "date": "2026-01-19",
+          "amount": 499,
+          "note": "",
+          "referenceNumber": "ZUZSXCN4"
+        },
+        {
+          "date": "2026-02-18",
+          "amount": 500,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "GC6FRLLC",
+          "billingMonth": "2026-02",
+          "type": "bill"
+        },
+        {
+          "date": "2026-03-19",
+          "amount": 500,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "YWJU4GTB",
+          "billingMonth": "2026-03",
+          "type": "bill"
+        },
+        {
+          "date": "2026-04-17",
+          "amount": 500,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "WZVKQBA6",
+          "billingMonth": "2026-04",
+          "type": "bill"
+        },
+        {
+          "date": "2026-05-20",
+          "amount": 500,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "LVWBHUQF",
+          "billingMonth": "2026-05",
+          "type": "bill"
+        },
+        {
+          "date": "2026-06-20",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "Z9H6QGXL",
+          "planFeeAtTime": 499,
+          "planNameAtTime": "Basic",
+          "coverageText": "(Jun 2026)"
+        }
+      ],
+      "points": {
+        "advance": 6,
+        "ontime": 2,
+        "lost": 0
+      },
+      "nextDue": "2026-07-20",
+      "excessLackingBalance": 7,
+      "createdAt": "2025-12-18T20:47:21.424Z"
+    },
+    {
+      "messengerId": "susan.sugan",
+      "clientUsername": null,
+      "clientPassword": null,
+      "accountNumber": "NR2021C0016A",
+      "name": "Susan Sugan",
+      "address": "San Vicente Patudan Tubod LDN",
+      "contact": "0917-000-0015",
+      "plan": {
+        "name": "Basic",
+        "fee": 499,
+        "speed": "Up to 10 Mbps"
+      },
+      "billingDay": 20,
+      "status": "Active",
+      "pppoeUsername": "C0016A",
+      "pppoePassword": "SUGAN",
+      "payments": [
+        {
+          "date": "2025-11-09",
+          "amount": 500,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "SGBDG9ZQ",
+          "billingMonth": "2025-11",
+          "type": "bill"
+        },
+        {
+          "date": "2025-12-18",
+          "amount": 500,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "E7DWWLPA",
+          "billingMonth": "2025-11",
+          "type": "bill"
+        },
+        {
+          "date": "2026-01-17",
+          "amount": 500,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "UKAVEXPF",
+          "billingMonth": "2026-01",
+          "type": "bill"
+        },
+        {
+          "date": "2026-02-11",
+          "amount": 499,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "CJT8JE2G",
+          "billingMonth": "2026-02",
+          "type": "bill"
+        },
+        {
+          "date": "2026-03-15",
+          "amount": 500,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "NZZP5F3B",
+          "billingMonth": "2026-03",
+          "type": "bill"
+        },
+        {
+          "date": "2026-04-18",
+          "amount": 500,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "9Z6N5PXT",
+          "billingMonth": "2026-04",
+          "type": "bill"
+        },
+        {
+          "date": "2026-05-20",
+          "amount": 500,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "D58A2CKQ",
+          "billingMonth": "2026-05",
+          "type": "bill"
+        },
+        {
+          "date": "2026-06-20",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "RCN3JYN7",
+          "planFeeAtTime": 499,
+          "planNameAtTime": "Basic",
+          "coverageText": "(Jun 2026)"
+        }
+      ],
+      "points": {
+        "advance": 6,
+        "ontime": 2,
+        "lost": 0
+      },
+      "nextDue": "2026-07-20",
+      "excessLackingBalance": 7,
+      "createdAt": "2025-12-18T20:47:21.424Z"
+    },
+    {
+      "messengerId": "zacarias.user",
+      "clientUsername": null,
+      "clientPassword": null,
+      "accountNumber": "NR2021C0017A",
+      "name": "Zacarias",
+      "address": "San Vicente Patudan Tubod LDN",
+      "contact": "0917-000-0016",
+      "plan": {
+        "name": "Basic",
+        "fee": 499,
+        "speed": "UpTo 10 mbps"
+      },
+      "billingDay": 20,
+      "status": "Terminated",
+      "pppoeUsername": "C0017A",
+      "pppoePassword": "ZACARIAS",
+      "payments": [],
+      "points": {
+        "advance": 0,
+        "ontime": 0,
+        "lost": 0
+      },
+      "nextDue": "2026-07-19",
+      "excessLackingBalance": 0,
+      "createdAt": "2025-12-18T20:47:21.424Z"
+    },
+    {
+      "messengerId": "sarah.carnable",
+      "clientUsername": null,
+      "clientPassword": null,
+      "accountNumber": "NR2021C0018A",
+      "name": "Sarah Jane Carnable",
+      "address": "San Vicente Patudan Tubod LDN",
+      "contact": "0917-000-0017",
+      "plan": {
+        "name": "Basic",
+        "fee": 499,
+        "speed": "Up to 10 Mbps"
+      },
+      "billingDay": 20,
+      "status": "Active",
+      "pppoeUsername": "C0018A",
+      "pppoePassword": "CARNABLE",
+      "payments": [
+        {
+          "date": "2025-11-18",
+          "amount": 500,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "L6V6CEWD",
+          "billingMonth": "2025-11",
+          "type": "bill"
+        },
+        {
+          "date": "2025-12-19",
+          "amount": 500,
+          "note": "Monthly Bill Payment",
+          "method": "GCash",
+          "referenceNumber": "N2TWT4FS",
+          "billingMonth": "2025-12",
+          "type": "bill"
+        },
+        {
+          "date": "2026-01-19",
+          "amount": 499,
+          "note": "",
+          "referenceNumber": "MT7L4YD2"
+        },
+        {
+          "date": "2026-02-20",
+          "amount": 500,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "DSRU5SV9",
+          "billingMonth": "2026-02",
+          "type": "bill"
+        },
+        {
+          "date": "2026-03-18",
+          "amount": 500,
+          "note": "Monthly Bill Payment",
+          "method": "GCash",
+          "referenceNumber": "B553J7XW",
+          "billingMonth": "2026-03",
+          "type": "bill"
+        },
+        {
+          "date": "2026-04-20",
+          "amount": 500,
+          "note": "Monthly Bill Payment",
+          "method": "GCash",
+          "referenceNumber": "CR7VURCS",
+          "billingMonth": "2026-04",
+          "type": "bill"
+        },
+        {
+          "date": "2026-05-19",
+          "amount": 500,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "QCGELK25",
+          "billingMonth": "2026-05",
+          "type": "bill"
+        },
+        {
+          "date": "2026-06-20",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "GDMEQRVS",
+          "planFeeAtTime": 499,
+          "planNameAtTime": "Basic",
+          "coverageText": "(Jun 2026)"
+        }
+      ],
+      "points": {
+        "advance": 5,
+        "ontime": 3,
+        "lost": 0
+      },
+      "nextDue": "2026-07-20",
+      "excessLackingBalance": 7,
+      "createdAt": "2025-12-18T20:47:21.424Z"
+    },
+    {
+      "messengerId": "N/A",
+      "clientUsername": "C0019A",
+      "clientPassword": "PINANGAY",
+      "accountNumber": "NR2021C0019A",
+      "name": "Lenster Pinangay",
+      "address": "P1 Pualas Tubod LDN",
+      "contact": "N/A",
+      "plan": {
+        "name": "Gamer",
+        "fee": 899,
+        "speed": "Up to 20 Mbps"
+      },
+      "billingDay": 20,
+      "status": "Active",
+      "pppoeUsername": "C0019A",
+      "pppoePassword": "PINANGAY",
+      "payments": [
+        {
+          "date": "2025-12-19",
+          "amount": 899,
+          "note": "",
+          "referenceNumber": "BVNC3W2Y"
+        },
+        {
+          "date": "2026-01-20",
+          "amount": 899,
+          "note": "",
+          "referenceNumber": "WZG4Y5TN"
+        },
+        {
+          "date": "2026-02-20",
+          "amount": 899,
+          "note": "Monthly Bill Payment",
+          "method": "GCash",
+          "referenceNumber": "ZNBQYMZE",
+          "billingMonth": "2026-02",
+          "type": "bill"
+        },
+        {
+          "date": "2026-03-19",
+          "amount": 899,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "PMXUFMNL",
+          "billingMonth": "2026-03",
+          "type": "bill"
+        },
+        {
+          "date": "2026-04-18",
+          "amount": 899,
+          "note": "Monthly Bill Payment",
+          "method": "GCash",
+          "referenceNumber": "W7WAP5FQ",
+          "billingMonth": "2026-04",
+          "type": "bill"
+        },
+        {
+          "date": "2026-05-18",
+          "amount": 899,
+          "note": "Monthly Bill Payment",
+          "method": "GCash",
+          "referenceNumber": "HTTQ9A4U",
+          "billingMonth": "2026-05",
+          "type": "bill"
+        },
+        {
+          "date": "2026-06-19",
+          "amount": 899,
+          "note": "Monthly Bill Payment",
+          "method": "GCash",
+          "referenceNumber": "Y7N35JUX",
+          "billingMonth": "2026-06",
+          "type": "bill",
+          "planFeeAtTime": 899,
+          "planNameAtTime": "Gamer",
+          "coverageText": "(Jun 2026)"
+        }
+      ],
+      "points": {
+        "advance": 5,
+        "ontime": 2,
+        "lost": 0
+      },
+      "nextDue": "2026-07-20",
+      "excessLackingBalance": 0,
+      "createdAt": "2025-12-19T14:32:13.567Z",
+      "cashouts": [
+        {
+          "date": "2025-12-19",
+          "amount": 100,
+          "note": "Request"
+        }
+      ]
+    },
+    {
+      "messengerId": "N/A",
+      "clientUsername": "C0020A",
+      "clientPassword": "CALISKIS",
+      "accountNumber": "NR2021C0020A",
+      "name": "Clarita Caliskis",
+      "address": "P1 Pualas Tubod LDN",
+      "contact": "N/A",
+      "plan": {
+        "name": "Business",
+        "fee": 1299,
+        "speed": "Up to 30 Mbps"
+      },
+      "billingDay": 20,
+      "status": "Active",
+      "pppoeUsername": "C0020A",
+      "pppoePassword": "CALISKIS",
+      "payments": [
+        {
+          "date": "2026-01-20",
+          "amount": 1300,
+          "note": "",
+          "referenceNumber": "EL7M2VYQ"
+        },
+        {
+          "date": "2026-02-20",
+          "amount": 1300,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "A92AH8NQ",
+          "billingMonth": "2026-02",
+          "type": "bill"
+        },
+        {
+          "date": "2026-03-20",
+          "amount": 1300,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "PD26L5JW",
+          "billingMonth": "2026-03",
+          "type": "bill"
+        },
+        {
+          "date": "2026-04-20",
+          "amount": 1300,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "Y5A2HARC",
+          "billingMonth": "2026-04",
+          "type": "bill"
+        },
+        {
+          "date": "2026-05-20",
+          "amount": 1300,
+          "note": "Monthly Bill Payment",
+          "method": "Cash",
+          "referenceNumber": "V8F82YPQ",
+          "billingMonth": "2026-05",
+          "type": "bill"
+        },
+        {
+          "date": "2026-06-20",
+          "amount": 1300,
+          "note": "",
+          "referenceNumber": "M9QYA863",
+          "planFeeAtTime": 1299,
+          "planNameAtTime": "Business",
+          "coverageText": "(Jun 2026)"
+        }
+      ],
+      "points": {
+        "advance": 0,
+        "ontime": 6,
+        "lost": 0
+      },
+      "nextDue": "2026-07-20",
+      "excessLackingBalance": 6,
+      "createdAt": "2025-12-19T14:32:59.226Z",
+      "charges": []
+    },
+    {
+      "messengerId": "N/A",
+      "clientUsername": "C0021A",
+      "clientPassword": "ESPRA",
+      "accountNumber": "NR2021C0021A",
+      "name": "Melissa Espra",
+      "address": "P1, Pualas, Tubod, LDN",
+      "contact": "N/A",
+      "plan": {
+        "name": "Basic",
+        "fee": 499,
+        "speed": "Up to 10 Mbps"
+      },
+      "billingDay": 20,
+      "status": "Active",
+      "pppoeUsername": "C0021A",
+      "pppoePassword": "ESPRA",
+      "payments": [
+        {
+          "date": "2026-01-18",
+          "amount": 499,
+          "note": "",
+          "referenceNumber": "LZJUU9E8"
+        },
+        {
+          "date": "2026-02-16",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "VZUMETLU"
+        },
+        {
+          "date": "2026-03-12",
+          "amount": 500,
+          "note": "Monthly Bill Payment",
+          "method": "GCash",
+          "referenceNumber": "MW9RK9JR",
+          "billingMonth": "2026-03",
+          "type": "bill"
+        },
+        {
+          "date": "2026-04-09",
+          "amount": 500,
+          "note": "Monthly Bill Payment",
+          "method": "GCash",
+          "referenceNumber": "RW67DNV7",
+          "billingMonth": "2026-04",
+          "type": "bill"
+        },
+        {
+          "date": "2026-05-05",
+          "amount": 500,
+          "note": "Monthly Bill Payment",
+          "method": "GCash",
+          "referenceNumber": "DCWXR6NT",
+          "billingMonth": "2026-05",
+          "type": "bill"
+        },
+        {
+          "date": "2026-06-11",
+          "amount": 500,
+          "note": "Monthly Bill Payment",
+          "method": "GCash",
+          "referenceNumber": "R7JSYKFU",
+          "billingMonth": "2026-06",
+          "type": "bill",
+          "planFeeAtTime": 499,
+          "planNameAtTime": "Basic",
+          "coverageText": "(Jun 2026)"
+        }
+      ],
+      "points": {
+        "advance": 6,
+        "ontime": 0,
+        "lost": 0
+      },
+      "nextDue": "2026-07-20",
+      "excessLackingBalance": 5,
+      "createdAt": "2026-01-19T04:30:04.933Z"
+    },
+    {
+      "messengerId": "N/A",
+      "clientUsername": "C0022A",
+      "clientPassword": "LAWAS",
+      "accountNumber": "NR2021C0022A",
+      "name": "Jamaica Lawas",
+      "address": "Purok 4 Patudan Tubod LDN",
+      "contact": "N/A",
+      "plan": {
+        "name": "Gamer",
+        "fee": 899,
+        "speed": "Up to 20 Mbps"
+      },
+      "billingDay": 20,
+      "status": "Active",
+      "pppoeUsername": "C0022A",
+      "pppoePassword": "",
+      "payments": [
+        {
+          "date": "2026-02-20",
+          "amount": 899,
+          "note": "Monthly Bill Payment",
+          "method": "GCash",
+          "referenceNumber": "M84JQMBX",
+          "billingMonth": "2026-02",
+          "type": "bill"
+        },
+        {
+          "date": "2026-03-20",
+          "amount": 899,
+          "note": "Monthly Bill Payment",
+          "method": "GCash",
+          "referenceNumber": "4PQYER3D",
+          "billingMonth": "2026-03",
+          "type": "bill"
+        },
+        {
+          "date": "2026-04-22",
+          "amount": 899,
+          "note": "Monthly Bill Payment",
+          "method": "GCash",
+          "referenceNumber": "NQNEVXSJ",
+          "billingMonth": "2026-04",
+          "type": "bill"
+        },
+        {
+          "date": "2026-05-20",
+          "amount": 899,
+          "note": "Monthly Bill Payment",
+          "method": "GCash",
+          "referenceNumber": "ZKHPMX9T",
+          "billingMonth": "2026-05",
+          "type": "bill"
+        }
+      ],
+      "points": {
+        "advance": 0,
+        "ontime": 3,
+        "lost": 1
+      },
+      "nextDue": "2026-06-20",
+      "excessLackingBalance": 0,
+      "createdAt": "2026-02-03T03:16:06.001Z"
+    },
+    {
+      "messengerId": "N/A",
+      "clientUsername": "C0023A",
+      "clientPassword": "BUCAYONG",
+      "accountNumber": "NR2021C0023A",
+      "name": "Lynrose Bucayong",
+      "address": "Purok 6 San Vicente Patudan Tubod LDN",
+      "contact": "N/A",
+      "plan": {
+        "name": "Basic",
+        "fee": 499,
+        "speed": "Up to 10 Mbps"
+      },
+      "billingDay": 20,
+      "status": "Terminated",
+      "pppoeUsername": "C0023A",
+      "pppoePassword": "BUCAYONG",
+      "payments": [],
+      "points": {
+        "advance": 0,
+        "ontime": 0,
+        "lost": 0
+      },
+      "nextDue": "2026-07-19",
+      "excessLackingBalance": 0,
+      "createdAt": "2026-02-17T14:33:00.295Z"
+    },
+    {
+      "messengerId": "N/A",
+      "clientUsername": "C0024A",
+      "clientPassword": "BARUMAN",
+      "accountNumber": "NR2021C0024A",
+      "name": "Loyda Baruman",
+      "address": "P6 Patudan, Tubod, LDN",
+      "contact": "N/A",
+      "plan": {
+        "name": "Gamer",
+        "fee": 899,
+        "speed": "Up to 20 Mbps"
+      },
+      "billingDay": 20,
+      "status": "Active",
+      "pppoeUsername": "C0024A",
+      "pppoePassword": "BARUMAN",
+      "payments": [],
+      "points": {
+        "advance": 0,
+        "ontime": 0,
+        "lost": 0
+      },
+      "nextDue": "2026-07-19",
+      "excessLackingBalance": 0,
+      "createdAt": "2026-05-28T16:01:36.585Z"
+    },
+    {
+      "messengerId": "N/A",
+      "clientUsername": "C0025A",
+      "clientPassword": "SARABIA",
+      "accountNumber": "NR2021C0025A",
+      "name": "Jeffrey Sarabia",
+      "address": "P5 Patudan, Tubod, LDN",
+      "contact": "N/A",
+      "plan": {
+        "name": "Basic",
+        "fee": 499,
+        "speed": "Up to 10 Mbps"
+      },
+      "billingDay": 20,
+      "status": "Active",
+      "pppoeUsername": "C0025A",
+      "pppoePassword": "SARABIA",
+      "payments": [
+        {
+          "date": "2026-05-20",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "DKE879RK"
+        },
+        {
+          "date": "2026-06-20",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "7FLZJNS9",
+          "planFeeAtTime": 499,
+          "planNameAtTime": "Basic",
+          "coverageText": "(Jun 2026)"
+        }
+      ],
+      "points": {
+        "advance": 0,
+        "ontime": 2,
+        "lost": 0
+      },
+      "nextDue": "2026-07-20",
+      "excessLackingBalance": 2,
+      "createdAt": "2026-05-28T16:02:52.827Z",
+      "charges": [],
+      "discounts": []
+    }
+  ],
+  "settings": {
+    "plans": [
       {
-        "date": "2025-11-20",
-        "amount": 500,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "5D838CF6",
-        "billingMonth": "2025-11",
-        "type": "bill"
+        "id": 1,
+        "name": "Basic",
+        "fee": 499,
+        "speed": "Up to 10 Mbps",
+        "install": 1500
       },
       {
-        "date": "2025-12-20",
-        "amount": 500,
-        "note": "",
-        "method": "Cash",
-        "referenceNumber": "6KT6JPEF",
-        "billingMonth": "2025-12",
-        "type": "bill"
+        "id": 2,
+        "name": "Family",
+        "fee": 699,
+        "speed": "Up to 15 Mbps",
+        "install": 1500
       },
       {
-        "date": "2026-01-20",
-        "amount": 500,
-        "note": "",
-        "referenceNumber": "XAC5W47K"
+        "id": 3,
+        "name": "Gamer",
+        "fee": 899,
+        "speed": "Up to 20 Mbps",
+        "install": 2000
       },
       {
-        "date": "2026-02-20",
-        "amount": 500,
-        "note": "",
-        "referenceNumber": "2P5G9QMR"
+        "id": 4,
+        "name": "Premium",
+        "fee": 1099,
+        "speed": "Up to 25 Mbps",
+        "install": 2500
       },
       {
-        "date": "2026-03-20",
-        "amount": 500,
-        "note": "",
-        "referenceNumber": "44REH67D"
-      },
-      {
-        "date": "2026-04-20",
-        "amount": 500,
-        "note": "",
-        "referenceNumber": "EJK7K2KH"
-      },
-      {
-        "date": "2026-05-20",
-        "amount": 500,
-        "note": "",
-        "referenceNumber": "2K9CKB7B"
+        "id": 5,
+        "name": "Business",
+        "fee": 1299,
+        "speed": "Up to 30 Mbps",
+        "install": 3500
       }
     ],
-    "points": {
-      "advance": 0,
-      "ontime": 7,
-      "lost": 0
-    },
-    "nextDue": "2026-06-20",
-    "excessLackingBalance": 7,
-    "createdAt": "2025-12-18T20:47:21.424Z",
-    "charges": []
-  },
-  {
-    "messengerId": "ires.pepito",
-    "clientUsername": "C0002A",
-    "clientPassword": "PEPITO",
-    "accountNumber": "NR2021C0002A",
-    "name": "Ires Pepito",
-    "address": "San Vicente Patudan Tubod LDN",
-    "contact": "0917-000-0001",
-    "plan": {
-      "name": "Basic",
-      "fee": 499,
-      "speed": "Up to 10 Mbps"
-    },
-    "billingDay": 20,
-    "status": "Active",
-    "pppoeUsername": "C0002A",
-    "pppoePassword": "PEPITO",
-    "payments": [
-      {
-        "date": "2026-01-26",
-        "amount": 499,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "2HBNQ57P",
-        "billingMonth": "2026-01",
-        "type": "bill"
-      },
-      {
-        "date": "2026-02-28",
-        "amount": 500,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "6Y4Q3B8P",
-        "billingMonth": "2026-02",
-        "type": "bill"
-      },
-      {
-        "date": "2026-03-25",
-        "amount": 500,
-        "note": "",
-        "referenceNumber": "ZQV33KYZ"
-      },
-      {
-        "date": "2026-04-10",
-        "amount": 500,
-        "note": "",
-        "referenceNumber": "7JM87G5F"
-      },
-      {
-        "date": "2026-05-25",
-        "amount": 500,
-        "note": "",
-        "referenceNumber": "K9DV9Q2W"
-      }
-    ],
-    "points": {
-      "advance": 1,
-      "ontime": 0,
-      "lost": 2
-    },
-    "nextDue": "2026-06-20",
-    "excessLackingBalance": 4,
-    "createdAt": "2025-12-18T20:47:21.424Z",
-    "charges": []
-  },
-  {
-    "messengerId": "felan.noya",
-    "clientUsername": "C0003A",
-    "clientPassword": "NOYA",
-    "accountNumber": "NR2021C0003A",
-    "name": "Felan Noya",
-    "address": "San Vicente Patudan Tubod LDN",
-    "contact": "0917-000-0002",
-    "plan": {
-      "name": "Basic",
-      "fee": 499,
-      "speed": "Up to 10 Mbps"
-    },
-    "billingDay": 20,
-    "status": "Active",
-    "pppoeUsername": "C0003A",
-    "pppoePassword": "NOYA",
-    "payments": [
-      {
-        "date": "2025-11-20",
-        "amount": 500,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "9CBG4WKN",
-        "billingMonth": "2025-11",
-        "type": "bill"
-      },
-      {
-        "date": "2025-12-20",
-        "amount": 500,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "K8LWUT6W",
-        "billingMonth": "2025-12",
-        "type": "bill"
-      },
-      {
-        "date": "2026-01-20",
-        "amount": 500,
-        "note": "",
-        "referenceNumber": "FXWVUHKH"
-      },
-      {
-        "date": "2026-02-20",
-        "amount": 500,
-        "note": "",
-        "referenceNumber": "35B9Z3E6"
-      },
-      {
-        "date": "2026-04-19",
-        "amount": 500,
-        "note": "",
-        "referenceNumber": "AA8EPSMT"
-      },
-      {
-        "date": "2026-03-20",
-        "amount": 500,
-        "note": "",
-        "referenceNumber": "97XEL3PU"
-      },
-      {
-        "date": "2026-05-20",
-        "amount": 500,
-        "note": "",
-        "referenceNumber": "YWUWXFBX"
-      }
-    ],
-    "points": {
-      "advance": 1,
-      "ontime": 6,
-      "lost": 0
-    },
-    "nextDue": "2026-06-20",
-    "excessLackingBalance": 7,
-    "createdAt": "2025-12-18T20:47:21.424Z"
-  },
-  {
-    "messengerId": "anarie.bacalso",
-    "clientUsername": "C0004A",
-    "clientPassword": "BACALSO",
-    "accountNumber": "NR2021C0004A",
-    "name": "Anarie Bacalso",
-    "address": "San Vicente Patudan Tubod LDN",
-    "contact": "0917-000-0003",
-    "plan": {
-      "name": "Basic",
-      "fee": 499,
-      "speed": "Up to 10 Mbps"
-    },
-    "billingDay": 20,
-    "status": "Active",
-    "pppoeUsername": "C0004A",
-    "pppoePassword": "BACALSO",
-    "payments": [
-      {
-        "date": "2025-11-20",
-        "amount": 500,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "YLUUKDFS",
-        "billingMonth": "2025-11",
-        "type": "bill"
-      },
-      {
-        "date": "2025-12-20",
-        "amount": 499,
-        "note": "",
-        "referenceNumber": "YRS74XT5"
-      },
-      {
-        "date": "2026-01-20",
-        "amount": 500,
-        "note": "",
-        "referenceNumber": "SXCAG28F"
-      },
-      {
-        "date": "2026-02-20",
-        "amount": 500,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "V9EUNTQ8",
-        "billingMonth": "2026-02",
-        "type": "bill"
-      },
-      {
-        "date": "2026-03-20",
-        "amount": 500,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "6SNFHRM3",
-        "billingMonth": "2026-03",
-        "type": "bill"
-      },
-      {
-        "date": "2026-04-19",
-        "amount": 500,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "USWE2EE8",
-        "billingMonth": "2026-04",
-        "type": "bill"
-      },
-      {
-        "date": "2026-05-21",
-        "amount": 500,
-        "note": "Monthly Bill Payment",
-        "method": "GCash",
-        "referenceNumber": "NLK8BJ3C",
-        "billingMonth": "2026-05",
-        "type": "bill"
-      }
-    ],
-    "points": {
-      "advance": 1,
-      "ontime": 5,
-      "lost": 1
-    },
-    "nextDue": "2026-06-20",
-    "excessLackingBalance": 6,
-    "createdAt": "2025-12-18T20:47:21.424Z"
-  },
-  {
-    "messengerId": "vincent.pepito",
-    "clientUsername": null,
-    "clientPassword": null,
-    "accountNumber": "NR2021C0005A",
-    "name": "Vincent Pepito",
-    "address": "San Vicente Patudan Tubod LDN",
-    "contact": "0917-000-0004",
-    "plan": {
-      "name": "Basic",
-      "fee": 499,
-      "speed": "Up to 10 Mbps"
-    },
-    "billingDay": 20,
-    "status": "Terminated",
-    "pppoeUsername": "C0005A",
-    "pppoePassword": "PEPITO",
-    "payments": [],
-    "points": {
-      "advance": 0,
-      "ontime": 0,
-      "lost": 0
-    },
-    "nextDue": "2026-06-19",
-    "excessLackingBalance": 0,
-    "createdAt": "2025-12-18T20:47:21.424Z"
-  },
-  {
-    "messengerId": "ariane.albarote",
-    "clientUsername": "C0006A",
-    "clientPassword": "ALBAROTE2",
-    "accountNumber": "NR2021C0006A",
-    "name": "Ariane Jean Albarote",
-    "address": "San Vicente Patudan Tubod LDN",
-    "contact": "0917-000-0005",
-    "plan": {
-      "name": "Basic",
-      "fee": 499,
-      "speed": "Up to 10 Mbps"
-    },
-    "billingDay": 20,
-    "status": "Active",
-    "pppoeUsername": "C0006A",
-    "pppoePassword": "ALBAROTE",
-    "payments": [
-      {
-        "date": "2025-11-21",
-        "amount": 500,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "BZV4P3XZ",
-        "billingMonth": "2025-11",
-        "type": "bill"
-      },
-      {
-        "date": "2025-12-20",
-        "amount": 500,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "NJHCXFCY",
-        "billingMonth": "2025-12",
-        "type": "bill"
-      },
-      {
-        "date": "2026-01-20",
-        "amount": 500,
-        "note": "",
-        "referenceNumber": "Y86GCZ6M"
-      },
-      {
-        "date": "2026-02-20",
-        "amount": 500,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "ML7ZMW4X",
-        "billingMonth": "2026-02",
-        "type": "bill"
-      },
-      {
-        "date": "2026-03-20",
-        "amount": 500,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "5BYL2FXU",
-        "billingMonth": "2026-03",
-        "type": "bill"
-      },
-      {
-        "date": "2026-04-20",
-        "amount": 500,
-        "note": "Monthly Bill Payment",
-        "method": "GCash",
-        "referenceNumber": "R4HKNHDB",
-        "billingMonth": "2026-04",
-        "type": "bill"
-      },
-      {
-        "date": "2026-05-20",
-        "amount": 500,
-        "note": "Monthly Bill Payment",
-        "method": "GCash",
-        "referenceNumber": "TK7N2JC2",
-        "billingMonth": "2026-05",
-        "type": "bill"
-      }
-    ],
-    "points": {
-      "advance": 0,
-      "ontime": 6,
-      "lost": 1
-    },
-    "nextDue": "2026-06-20",
-    "excessLackingBalance": 7,
-    "createdAt": "2025-12-18T20:47:21.424Z"
-  },
-  {
-    "messengerId": "victoria.espra",
-    "clientUsername": "C0007A",
-    "clientPassword": "ESPRA",
-    "accountNumber": "NR2021C0007A",
-    "name": "Victoria Espra",
-    "address": "San Vicente Patudan Tubod LDN",
-    "contact": "N/a",
-    "plan": {
-      "name": "Basic",
-      "fee": 499,
-      "speed": "Up to 10 Mbps"
-    },
-    "billingDay": 20,
-    "status": "Active",
-    "pppoeUsername": "C0007A",
-    "pppoePassword": "ESPRA",
-    "payments": [
-      {
-        "date": "2025-11-12",
-        "amount": 500,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "HZYNGURW",
-        "billingMonth": "2025-11",
-        "type": "bill"
-      },
-      {
-        "date": "2025-12-20",
-        "amount": 499,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "L8FUFR6Q",
-        "billingMonth": "2025-12",
-        "type": "bill"
-      },
-      {
-        "date": "2026-01-19",
-        "amount": 499,
-        "note": "",
-        "referenceNumber": "Q6ERTH68"
-      },
-      {
-        "date": "2026-03-20",
-        "amount": 500,
-        "note": "",
-        "referenceNumber": "YMAUCCUS"
-      },
-      {
-        "date": "2026-04-20",
-        "amount": 500,
-        "note": "",
-        "referenceNumber": "RJFFE5KC"
-      },
-      {
-        "date": "2026-02-21",
-        "amount": 500,
-        "note": "",
-        "referenceNumber": "2WMKAPGD"
-      },
-      {
-        "date": "2026-05-20",
-        "amount": 500,
-        "note": "",
-        "referenceNumber": "EY8MVNFB"
-      }
-    ],
-    "points": {
-      "advance": 2,
-      "ontime": 4,
-      "lost": 1
-    },
-    "nextDue": "2026-06-20",
-    "excessLackingBalance": 5,
-    "createdAt": "2025-12-18T20:47:21.424Z"
-  },
-  {
-    "messengerId": "carolyn.sarabia",
-    "clientUsername": "C0008A",
-    "clientPassword": "SARABIA",
-    "accountNumber": "NR2021C0008A",
-    "name": "Carolyn Sarabia",
-    "address": "P5, Patudan Tubod LDN",
-    "contact": "0917-000-0007",
-    "plan": {
-      "name": "Basic",
-      "fee": 499,
-      "speed": "Up to 10 Mbps"
-    },
-    "billingDay": 20,
-    "status": "Active",
-    "pppoeUsername": "C0008A",
-    "pppoePassword": "SARABIA",
-    "payments": [
-      {
-        "date": "2025-11-28",
-        "amount": 802,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "JWP29RPM",
-        "billingMonth": "2025-11",
-        "type": "bill"
-      },
-      {
-        "date": "2025-12-20",
-        "amount": 500,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "WNUDBAUF",
-        "billingMonth": "2025-12",
-        "type": "bill"
-      },
-      {
-        "date": "2026-01-30",
-        "amount": 650,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "46N4KEBN",
-        "billingMonth": "2026-01",
-        "type": "bill"
-      },
-      {
-        "date": "2026-02-28",
-        "amount": 650,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "XPPFSY7R",
-        "billingMonth": "2026-02",
-        "type": "bill"
-      },
-      {
-        "date": "2026-03-19",
-        "amount": 499,
-        "note": "Monthly Bill Payment",
-        "method": "GCash",
-        "referenceNumber": "5JGMRLCY",
-        "billingMonth": "2026-03",
-        "type": "bill"
-      },
-      {
-        "date": "2026-04-20",
-        "amount": 500,
-        "note": "Monthly Bill Payment",
-        "method": "GCash",
-        "referenceNumber": "SG2SQAPQ",
-        "billingMonth": "2026-04",
-        "type": "bill"
-      },
-      {
-        "date": "2026-05-20",
-        "amount": 500,
-        "note": "Monthly Bill Payment",
-        "method": "GCash",
-        "referenceNumber": "2Y9BS2AP",
-        "billingMonth": "2026-05",
-        "type": "bill"
-      }
-    ],
-    "points": {
-      "advance": 1,
-      "ontime": 3,
-      "lost": 0
-    },
-    "nextDue": "2026-06-20",
-    "excessLackingBalance": 5.9,
-    "createdAt": "2025-12-18T20:47:21.424Z",
-    "charges": [
-      {
-        "date": "2025-10-20",
-        "note": "Bal. ",
-        "amount": 153,
-        "category": "charge"
-      },
-      {
-        "date": "2025-11-28",
-        "note": "Reconnection Fee",
-        "amount": 149.7,
-        "category": "reconnect"
-      },
-      {
-        "date": "2026-01-30",
-        "note": "Reconnection Fee",
-        "amount": 149.7,
-        "category": "reconnect"
-      },
-      {
-        "date": "2026-02-28",
-        "note": "Reconnection Fee",
-        "amount": 149.7,
-        "category": "reconnect"
-      }
-    ],
-    "discounts": []
-  },
-  {
-    "messengerId": "frankie.sarabia",
-    "clientUsername": "C0009A",
-    "clientPassword": "SARABIA2",
-    "accountNumber": "NR2021C0009A",
-    "name": "Frankie Sarabia",
-    "address": "Patudan Tubod LDN",
-    "contact": "0917-000-0008",
-    "plan": {
-      "name": "Family",
-      "fee": 699,
-      "speed": "Up to 15 Mbps"
-    },
-    "billingDay": 20,
-    "status": "Active",
-    "pppoeUsername": "C0009A",
-    "pppoePassword": "SARABIA",
-    "payments": [
-      {
-        "date": "2025-11-21",
-        "amount": 600,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "9RSKAVAG",
-        "billingMonth": "2025-11",
-        "type": "bill"
-      },
-      {
-        "date": "2025-12-20",
-        "amount": 700,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "48ARK6L8",
-        "billingMonth": "2025-12",
-        "type": "bill"
-      },
-      {
-        "date": "2026-01-20",
-        "amount": 700,
-        "note": "",
-        "referenceNumber": "GTG3AVGE"
-      },
-      {
-        "date": "2026-02-20",
-        "amount": 687,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "9G89657C",
-        "billingMonth": "2026-02",
-        "type": "bill"
-      },
-      {
-        "date": "2026-03-20",
-        "amount": 699,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "TSSAVU5H",
-        "billingMonth": "2026-03",
-        "type": "bill"
-      },
-      {
-        "date": "2026-03-20",
-        "amount": 700,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "AB7W9FNY",
-        "billingMonth": "2026-03",
-        "type": "bill"
-      },
-      {
-        "date": "2026-04-19",
-        "amount": 700,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "UD75DLVS",
-        "billingMonth": "2026-04",
-        "type": "bill"
-      },
-      {
-        "date": "2026-05-21",
-        "amount": 700,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "38AXMQPK",
-        "billingMonth": "2026-05",
-        "type": "bill"
-      }
-    ],
-    "points": {
-      "advance": 1,
-      "ontime": 5,
-      "lost": 1
-    },
-    "nextDue": "2026-06-20",
-    "excessLackingBalance": 3,
-    "createdAt": "2025-12-18T20:47:21.424Z",
-    "discounts": [
-      {
-        "date": "2025-10-20",
-        "note": "Prev. Bal",
-        "amount": 109,
-        "ref": "AHTNDLAU"
-      }
-    ]
-  },
-  {
-    "messengerId": "lorifel.bacalso",
-    "clientUsername": "C0010A",
-    "clientPassword": "BACALSO2",
-    "accountNumber": "NR2021C0010A",
-    "name": "Lorifel Bacalso",
-    "address": "San Vicente Patudan Tubod LDN",
-    "contact": "0917-000-0009",
-    "plan": {
-      "name": "Basic",
-      "fee": 499,
-      "speed": "Up to 10 Mbps"
-    },
-    "billingDay": 20,
-    "status": "Active",
-    "pppoeUsername": "C0010A",
-    "pppoePassword": "BACALSO",
-    "payments": [
-      {
-        "date": "2025-11-20",
-        "amount": 1000,
-        "note": "Advance Payment (2 Months)",
-        "method": "Cash",
-        "referenceNumber": "F3NPVAHU",
-        "billingMonth": "2025-11",
-        "type": "advance"
-      },
-      {
-        "date": "2026-01-20",
-        "amount": 1000,
-        "note": "Advance Payment (2 Months)",
-        "method": "Cash",
-        "referenceNumber": "6YX2FDJ8",
-        "billingMonth": "2026-01",
-        "type": "advance"
-      },
-      {
-        "date": "2026-03-19",
-        "amount": 1000,
-        "note": "Advance Payment (2 Months)",
-        "method": "GCash",
-        "referenceNumber": "5YPFFW6C",
-        "billingMonth": "2026-03",
-        "type": "advance"
-      },
-      {
-        "date": "2026-05-20",
-        "amount": 1000,
-        "note": "Advance Payment (2 Months)",
-        "method": "GCash",
-        "referenceNumber": "PCJ58RCZ",
-        "billingMonth": "2026-05",
-        "type": "advance"
-      }
-    ],
-    "points": {
-      "advance": 2,
-      "ontime": 6,
-      "lost": 0
-    },
-    "nextDue": "2026-07-20",
-    "excessLackingBalance": 8,
-    "createdAt": "2025-12-18T20:47:21.424Z"
-  },
-  {
-    "messengerId": "helen.torres",
-    "clientUsername": "C0011A",
-    "clientPassword": "TORRES",
-    "accountNumber": "NR2021C0011A",
-    "name": "Helen Torres",
-    "address": "San Vicente Patudan Tubod LDN",
-    "contact": "0917-000-0010",
-    "plan": {
-      "name": "Basic",
-      "fee": 499,
-      "speed": "Up to 10 Mbps"
-    },
-    "billingDay": 20,
-    "status": "Active",
-    "pppoeUsername": "C0011A",
-    "pppoePassword": "TORRES",
-    "payments": [
-      {
-        "date": "2025-12-20",
-        "amount": 500,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "RW8SVS57",
-        "billingMonth": "2025-12",
-        "type": "bill"
-      },
-      {
-        "date": "2025-11-21",
-        "amount": 500,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "HQKBCFLF",
-        "billingMonth": "2025-11",
-        "type": "bill"
-      },
-      {
-        "date": "2026-01-20",
-        "amount": 500,
-        "note": "",
-        "referenceNumber": "NMGKM92B"
-      },
-      {
-        "date": "2026-02-20",
-        "amount": 500,
-        "note": "",
-        "referenceNumber": "KX9C6NCC"
-      },
-      {
-        "date": "2026-03-20",
-        "amount": 500,
-        "note": "",
-        "referenceNumber": "8FPHCQDW"
-      },
-      {
-        "date": "2026-04-19",
-        "amount": 500,
-        "note": "",
-        "referenceNumber": "CBDAQBH7"
-      },
-      {
-        "date": "2026-05-20",
-        "amount": 500,
-        "note": "",
-        "referenceNumber": "TBR6CCEP"
-      }
-    ],
-    "points": {
-      "advance": 1,
-      "ontime": 5,
-      "lost": 1
-    },
-    "nextDue": "2026-06-20",
-    "excessLackingBalance": 7,
-    "createdAt": "2025-12-18T20:47:21.424Z"
-  },
-  {
-    "messengerId": "thalia.arcilla",
-    "clientUsername": "C0012A",
-    "clientPassword": "ARCILLA",
-    "accountNumber": "NR2021C0012A",
-    "name": "Thalia Arcilla",
-    "address": "San Vicente Patudan Tubod LDN",
-    "contact": "0917-000-0011",
-    "plan": {
-      "name": "Family",
-      "fee": 699,
-      "speed": "Up to 15 Mbps"
-    },
-    "billingDay": 20,
-    "status": "Active",
-    "pppoeUsername": "C0012A",
-    "pppoePassword": "ARCILLA",
-    "payments": [
-      {
-        "date": "2025-11-20",
-        "amount": 700,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "8AXMVBN7",
-        "billingMonth": "2025-11",
-        "type": "bill"
-      },
-      {
-        "date": "2025-12-20",
-        "amount": 700,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "9PR8WEUT",
-        "billingMonth": "2025-12",
-        "type": "bill"
-      },
-      {
-        "date": "2026-01-20",
-        "amount": 700,
-        "note": "",
-        "referenceNumber": "SBWWQEQL"
-      },
-      {
-        "date": "2026-02-20",
-        "amount": 700,
-        "note": "",
-        "referenceNumber": "KEXFDYB6"
-      },
-      {
-        "date": "2026-03-23",
-        "amount": 750,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "D5P279CX",
-        "billingMonth": "2026-03",
-        "type": "bill"
-      },
-      {
-        "date": "2026-04-19",
-        "amount": 700,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "JZR2X9TD",
-        "billingMonth": "2026-04",
-        "type": "bill"
-      },
-      {
-        "date": "2026-05-20",
-        "amount": 700,
-        "note": "Monthly Bill Payment",
-        "method": "GCash",
-        "referenceNumber": "RGLY6EB4",
-        "billingMonth": "2026-05",
-        "type": "bill"
-      }
-    ],
-    "points": {
-      "advance": 1,
-      "ontime": 5,
-      "lost": 1
-    },
-    "nextDue": "2026-06-20",
-    "excessLackingBalance": 1.08,
-    "createdAt": "2025-12-18T20:47:21.424Z",
-    "charges": [
-      {
-        "date": "2026-03-23",
-        "note": "Late Penalty",
-        "amount": 55.92,
-        "category": "penalty"
-      }
-    ]
-  },
-  {
-    "messengerId": "delmark.porlas",
-    "clientUsername": "C0013A",
-    "clientPassword": "PORLAS",
-    "accountNumber": "NR2021C0013A",
-    "name": "Delmark Porlas",
-    "address": "P4 Patudan Tubod LDN",
-    "contact": "0917-000-0012",
-    "plan": {
-      "name": "Gamer",
-      "fee": 899,
-      "speed": "Up to 20 Mbps"
-    },
-    "billingDay": 20,
-    "status": "Active",
-    "pppoeUsername": "C0013A",
-    "pppoePassword": "PORLAS",
-    "payments": [
-      {
-        "date": "2025-11-23",
-        "amount": 1000,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "7UHWLYRD",
-        "billingMonth": "2025-11",
-        "type": "bill"
-      },
-      {
-        "date": "2025-12-23",
-        "amount": 1000,
-        "note": "",
-        "referenceNumber": "JZ637T82"
-      },
-      {
-        "date": "2026-01-20",
-        "amount": 900,
-        "note": "",
-        "referenceNumber": "BB3MQJXE"
-      },
-      {
-        "date": "2026-02-20",
-        "amount": 900,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "84WULA5U",
-        "billingMonth": "2026-02",
-        "type": "bill"
-      },
-      {
-        "date": "2026-03-20",
-        "amount": 1000,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "TD9WQJLB",
-        "billingMonth": "2026-03",
-        "type": "bill"
-      },
-      {
-        "date": "2026-04-20",
-        "amount": 1000,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "3XGFGFH5",
-        "billingMonth": "2026-04",
-        "type": "bill"
-      },
-      {
-        "date": "2026-05-20",
-        "amount": 1000,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "E62UACH5",
-        "billingMonth": "2026-05",
-        "type": "bill"
-      }
-    ],
-    "points": {
-      "advance": 0,
-      "ontime": 5,
-      "lost": 2
-    },
-    "nextDue": "2026-06-20",
-    "excessLackingBalance": 237.3,
-    "createdAt": "2025-12-18T20:47:21.424Z",
-    "charges": [
-      {
-        "date": "2025-11-23",
-        "note": "Late Penalty",
-        "amount": 89.9,
-        "category": "penalty"
-      },
-      {
-        "date": "2025-12-23",
-        "note": "Late Penalty",
-        "amount": 89.9,
-        "category": "penalty"
-      },
-      {
-        "date": "2026-03-23",
-        "note": "Late Penalty",
-        "amount": 89.9,
-        "category": "penalty"
-      }
-    ]
-  },
-  {
-    "messengerId": "lucille.tecson",
-    "clientUsername": "C0014A",
-    "clientPassword": "TECSON",
-    "accountNumber": "NR2021C0014A",
-    "name": "Lucille Tecson",
-    "address": "San Vicente Patudan Tubod LDN",
-    "contact": "0917-000-0013",
-    "plan": {
-      "name": "Premium",
-      "fee": 1099,
-      "speed": "Up to 25 Mbps"
-    },
-    "billingDay": 20,
-    "status": "Active",
-    "pppoeUsername": "C0014A",
-    "pppoePassword": "TECSON",
-    "payments": [
-      {
-        "date": "2025-11-15",
-        "amount": 1405,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "N46HAQFM",
-        "billingMonth": "2025-11",
-        "type": "bill"
-      },
-      {
-        "date": "2025-12-17",
-        "amount": 1000,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "R8WZ7UTL",
-        "billingMonth": "2025-12",
-        "type": "bill"
-      },
-      {
-        "date": "2026-01-19",
-        "amount": 1000,
-        "note": "",
-        "referenceNumber": "GWUSQSU2"
-      },
-      {
-        "date": "2026-02-15",
-        "amount": 4396,
-        "note": "Advance Payment (4 Months)",
-        "method": "Cash",
-        "referenceNumber": "ZLR7BMJY",
-        "billingMonth": "2026-02",
-        "type": "advance"
-      }
-    ],
-    "points": {
-      "advance": 7,
-      "ontime": 0,
-      "lost": 0
-    },
-    "nextDue": "2026-06-20",
-    "excessLackingBalance": 108,
-    "createdAt": "2025-12-18T20:47:21.424Z",
-    "discounts": []
-  },
-  {
-    "messengerId": "arnilo.moral",
-    "clientUsername": null,
-    "clientPassword": null,
-    "accountNumber": "NR2021C0015A",
-    "name": "Arnilo Moral",
-    "address": "San Vicente Patudan Tubod LDN",
-    "contact": "0917-000-0014",
-    "plan": {
-      "name": "Basic",
-      "fee": 499,
-      "speed": "Up to 10 Mbps"
-    },
-    "billingDay": 20,
-    "status": "Active",
-    "pppoeUsername": "C0015A",
-    "pppoePassword": "MORAL",
-    "payments": [
-      {
-        "date": "2025-11-19",
-        "amount": 500,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "VA44X63W",
-        "billingMonth": "2025-11",
-        "type": "bill"
-      },
-      {
-        "date": "2025-12-17",
-        "amount": 500,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "3JLZSVQF",
-        "billingMonth": "2025-12",
-        "type": "bill"
-      },
-      {
-        "date": "2026-01-19",
-        "amount": 499,
-        "note": "",
-        "referenceNumber": "ZUZSXCN4"
-      },
-      {
-        "date": "2026-02-18",
-        "amount": 500,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "GC6FRLLC",
-        "billingMonth": "2026-02",
-        "type": "bill"
-      },
-      {
-        "date": "2026-03-19",
-        "amount": 500,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "YWJU4GTB",
-        "billingMonth": "2026-03",
-        "type": "bill"
-      },
-      {
-        "date": "2026-04-17",
-        "amount": 500,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "WZVKQBA6",
-        "billingMonth": "2026-04",
-        "type": "bill"
-      },
-      {
-        "date": "2026-05-20",
-        "amount": 500,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "LVWBHUQF",
-        "billingMonth": "2026-05",
-        "type": "bill"
-      }
-    ],
-    "points": {
-      "advance": 6,
-      "ontime": 1,
-      "lost": 0
-    },
-    "nextDue": "2026-06-20",
-    "excessLackingBalance": 6,
-    "createdAt": "2025-12-18T20:47:21.424Z"
-  },
-  {
-    "messengerId": "susan.sugan",
-    "clientUsername": null,
-    "clientPassword": null,
-    "accountNumber": "NR2021C0016A",
-    "name": "Susan Sugan",
-    "address": "San Vicente Patudan Tubod LDN",
-    "contact": "0917-000-0015",
-    "plan": {
-      "name": "Basic",
-      "fee": 499,
-      "speed": "Up to 10 Mbps"
-    },
-    "billingDay": 20,
-    "status": "Active",
-    "pppoeUsername": "C0016A",
-    "pppoePassword": "SUGAN",
-    "payments": [
-      {
-        "date": "2025-11-09",
-        "amount": 500,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "SGBDG9ZQ",
-        "billingMonth": "2025-11",
-        "type": "bill"
-      },
-      {
-        "date": "2025-12-18",
-        "amount": 500,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "E7DWWLPA",
-        "billingMonth": "2025-11",
-        "type": "bill"
-      },
-      {
-        "date": "2026-01-17",
-        "amount": 500,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "UKAVEXPF",
-        "billingMonth": "2026-01",
-        "type": "bill"
-      },
-      {
-        "date": "2026-02-11",
-        "amount": 499,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "CJT8JE2G",
-        "billingMonth": "2026-02",
-        "type": "bill"
-      },
-      {
-        "date": "2026-03-15",
-        "amount": 500,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "NZZP5F3B",
-        "billingMonth": "2026-03",
-        "type": "bill"
-      },
-      {
-        "date": "2026-04-18",
-        "amount": 500,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "9Z6N5PXT",
-        "billingMonth": "2026-04",
-        "type": "bill"
-      },
-      {
-        "date": "2026-05-20",
-        "amount": 500,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "D58A2CKQ",
-        "billingMonth": "2026-05",
-        "type": "bill"
-      }
-    ],
-    "points": {
-      "advance": 6,
-      "ontime": 1,
-      "lost": 0
-    },
-    "nextDue": "2026-06-20",
-    "excessLackingBalance": 6,
-    "createdAt": "2025-12-18T20:47:21.424Z"
-  },
-  {
-    "messengerId": "zacarias.user",
-    "clientUsername": null,
-    "clientPassword": null,
-    "accountNumber": "NR2021C0017A",
-    "name": "Zacarias",
-    "address": "San Vicente Patudan Tubod LDN",
-    "contact": "0917-000-0016",
-    "plan": {
-      "name": "Basic",
-      "fee": 499,
-      "speed": "UpTo 10 mbps"
-    },
-    "billingDay": 20,
-    "status": "Terminated",
-    "pppoeUsername": "C0017A",
-    "pppoePassword": "ZACARIAS",
-    "payments": [],
-    "points": {
-      "advance": 0,
-      "ontime": 0,
-      "lost": 0
-    },
-    "nextDue": "2026-06-19",
-    "excessLackingBalance": 0,
-    "createdAt": "2025-12-18T20:47:21.424Z"
-  },
-  {
-    "messengerId": "sarah.carnable",
-    "clientUsername": null,
-    "clientPassword": null,
-    "accountNumber": "NR2021C0018A",
-    "name": "Sarah Jane Carnable",
-    "address": "San Vicente Patudan Tubod LDN",
-    "contact": "0917-000-0017",
-    "plan": {
-      "name": "Basic",
-      "fee": 499,
-      "speed": "Up to 10 Mbps"
-    },
-    "billingDay": 20,
-    "status": "Active",
-    "pppoeUsername": "C0018A",
-    "pppoePassword": "CARNABLE",
-    "payments": [
-      {
-        "date": "2025-11-18",
-        "amount": 500,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "L6V6CEWD",
-        "billingMonth": "2025-11",
-        "type": "bill"
-      },
-      {
-        "date": "2025-12-19",
-        "amount": 500,
-        "note": "Monthly Bill Payment",
-        "method": "GCash",
-        "referenceNumber": "N2TWT4FS",
-        "billingMonth": "2025-12",
-        "type": "bill"
-      },
-      {
-        "date": "2026-01-19",
-        "amount": 499,
-        "note": "",
-        "referenceNumber": "MT7L4YD2"
-      },
-      {
-        "date": "2026-02-20",
-        "amount": 500,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "DSRU5SV9",
-        "billingMonth": "2026-02",
-        "type": "bill"
-      },
-      {
-        "date": "2026-03-18",
-        "amount": 500,
-        "note": "Monthly Bill Payment",
-        "method": "GCash",
-        "referenceNumber": "B553J7XW",
-        "billingMonth": "2026-03",
-        "type": "bill"
-      },
-      {
-        "date": "2026-04-20",
-        "amount": 500,
-        "note": "Monthly Bill Payment",
-        "method": "GCash",
-        "referenceNumber": "CR7VURCS",
-        "billingMonth": "2026-04",
-        "type": "bill"
-      },
-      {
-        "date": "2026-05-19",
-        "amount": 500,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "QCGELK25",
-        "billingMonth": "2026-05",
-        "type": "bill"
-      }
-    ],
-    "points": {
-      "advance": 5,
-      "ontime": 2,
-      "lost": 0
-    },
-    "nextDue": "2026-06-20",
-    "excessLackingBalance": 6,
-    "createdAt": "2025-12-18T20:47:21.424Z"
-  },
-  {
-    "messengerId": "N/A",
-    "clientUsername": "C0019A",
-    "clientPassword": "PINANGAY",
-    "accountNumber": "NR2021C0019A",
-    "name": "Lenster Pinangay",
-    "address": "P1 Pualas Tubod LDN",
-    "contact": "N/A",
-    "plan": {
-      "name": "Gamer",
-      "fee": 899,
-      "speed": "Up to 20 Mbps"
-    },
-    "billingDay": 20,
-    "status": "Active",
-    "pppoeUsername": "C0019A",
-    "pppoePassword": "PINANGAY",
-    "payments": [
-      {
-        "date": "2025-12-19",
-        "amount": 899,
-        "note": "",
-        "referenceNumber": "BVNC3W2Y"
-      },
-      {
-        "date": "2026-01-20",
-        "amount": 899,
-        "note": "",
-        "referenceNumber": "WZG4Y5TN"
-      },
-      {
-        "date": "2026-02-20",
-        "amount": 899,
-        "note": "Monthly Bill Payment",
-        "method": "GCash",
-        "referenceNumber": "ZNBQYMZE",
-        "billingMonth": "2026-02",
-        "type": "bill"
-      },
-      {
-        "date": "2026-03-19",
-        "amount": 899,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "PMXUFMNL",
-        "billingMonth": "2026-03",
-        "type": "bill"
-      },
-      {
-        "date": "2026-04-18",
-        "amount": 899,
-        "note": "Monthly Bill Payment",
-        "method": "GCash",
-        "referenceNumber": "W7WAP5FQ",
-        "billingMonth": "2026-04",
-        "type": "bill"
-      },
-      {
-        "date": "2026-05-18",
-        "amount": 899,
-        "note": "Monthly Bill Payment",
-        "method": "GCash",
-        "referenceNumber": "HTTQ9A4U",
-        "billingMonth": "2026-05",
-        "type": "bill"
-      }
-    ],
-    "points": {
-      "advance": 4,
-      "ontime": 2,
-      "lost": 0
-    },
-    "nextDue": "2026-06-20",
-    "excessLackingBalance": 0,
-    "createdAt": "2025-12-19T14:32:13.567Z",
-    "cashouts": [
-      {
-        "date": "2025-12-19",
-        "amount": 100,
-        "note": "Request"
-      }
-    ]
-  },
-  {
-    "messengerId": "N/A",
-    "clientUsername": "C0020A",
-    "clientPassword": "CALISKIS",
-    "accountNumber": "NR2021C0020A",
-    "name": "Clarita Caliskis",
-    "address": "P1 Pualas Tubod LDN",
-    "contact": "N/A",
-    "plan": {
-      "name": "Business",
-      "fee": 1299,
-      "speed": "Up to 30 Mbps"
-    },
-    "billingDay": 20,
-    "status": "Active",
-    "pppoeUsername": "C0020A",
-    "pppoePassword": "CALISKIS",
-    "payments": [
-      {
-        "date": "2026-01-20",
-        "amount": 1300,
-        "note": "",
-        "referenceNumber": "EL7M2VYQ"
-      },
-      {
-        "date": "2026-02-20",
-        "amount": 1300,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "A92AH8NQ",
-        "billingMonth": "2026-02",
-        "type": "bill"
-      },
-      {
-        "date": "2026-03-20",
-        "amount": 1300,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "PD26L5JW",
-        "billingMonth": "2026-03",
-        "type": "bill"
-      },
-      {
-        "date": "2026-04-20",
-        "amount": 1300,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "Y5A2HARC",
-        "billingMonth": "2026-04",
-        "type": "bill"
-      },
-      {
-        "date": "2026-05-20",
-        "amount": 1300,
-        "note": "Monthly Bill Payment",
-        "method": "Cash",
-        "referenceNumber": "V8F82YPQ",
-        "billingMonth": "2026-05",
-        "type": "bill"
-      }
-    ],
-    "points": {
-      "advance": 0,
-      "ontime": 5,
-      "lost": 0
-    },
-    "nextDue": "2026-06-20",
-    "excessLackingBalance": 5,
-    "createdAt": "2025-12-19T14:32:59.226Z",
-    "charges": []
-  },
-  {
-    "messengerId": "N/A",
-    "clientUsername": "C0021A",
-    "clientPassword": "ESPRA",
-    "accountNumber": "NR2021C0021A",
-    "name": "Melissa Espra",
-    "address": "P1, Pualas, Tubod, LDN",
-    "contact": "N/A",
-    "plan": {
-      "name": "Basic",
-      "fee": 499,
-      "speed": "Up to 10 Mbps"
-    },
-    "billingDay": 20,
-    "status": "Active",
-    "pppoeUsername": "C0021A",
-    "pppoePassword": "ESPRA",
-    "payments": [
-      {
-        "date": "2026-01-18",
-        "amount": 499,
-        "note": "",
-        "referenceNumber": "LZJUU9E8"
-      },
-      {
-        "date": "2026-02-16",
-        "amount": 500,
-        "note": "",
-        "referenceNumber": "VZUMETLU"
-      },
-      {
-        "date": "2026-03-12",
-        "amount": 500,
-        "note": "Monthly Bill Payment",
-        "method": "GCash",
-        "referenceNumber": "MW9RK9JR",
-        "billingMonth": "2026-03",
-        "type": "bill"
-      },
-      {
-        "date": "2026-04-09",
-        "amount": 500,
-        "note": "Monthly Bill Payment",
-        "method": "GCash",
-        "referenceNumber": "RW67DNV7",
-        "billingMonth": "2026-04",
-        "type": "bill"
-      },
-      {
-        "date": "2026-05-05",
-        "amount": 500,
-        "note": "Monthly Bill Payment",
-        "method": "GCash",
-        "referenceNumber": "DCWXR6NT",
-        "billingMonth": "2026-05",
-        "type": "bill"
-      }
-    ],
-    "points": {
-      "advance": 5,
-      "ontime": 0,
-      "lost": 0
-    },
-    "nextDue": "2026-06-20",
-    "excessLackingBalance": 4,
-    "createdAt": "2026-01-19T04:30:04.933Z"
-  },
-  {
-    "messengerId": "N/A",
-    "clientUsername": "C0022A",
-    "clientPassword": "",
-    "accountNumber": "NR2021C0022A",
-    "name": "Jamaica Lawas",
-    "address": "Purok 4 Patudan Tubod LDN",
-    "contact": "N/A",
-    "plan": {
-      "name": "Gamer",
-      "fee": 899,
-      "speed": "Up to 20 Mbps"
-    },
-    "billingDay": 20,
-    "status": "Active",
-    "pppoeUsername": "C0022A",
-    "pppoePassword": "",
-    "payments": [
-      {
-        "date": "2026-02-20",
-        "amount": 899,
-        "note": "Monthly Bill Payment",
-        "method": "GCash",
-        "referenceNumber": "M84JQMBX",
-        "billingMonth": "2026-02",
-        "type": "bill"
-      },
-      {
-        "date": "2026-03-20",
-        "amount": 899,
-        "note": "Monthly Bill Payment",
-        "method": "GCash",
-        "referenceNumber": "4PQYER3D",
-        "billingMonth": "2026-03",
-        "type": "bill"
-      },
-      {
-        "date": "2026-04-22",
-        "amount": 899,
-        "note": "Monthly Bill Payment",
-        "method": "GCash",
-        "referenceNumber": "NQNEVXSJ",
-        "billingMonth": "2026-04",
-        "type": "bill"
-      },
-      {
-        "date": "2026-05-20",
-        "amount": 899,
-        "note": "Monthly Bill Payment",
-        "method": "GCash",
-        "referenceNumber": "ZKHPMX9T",
-        "billingMonth": "2026-05",
-        "type": "bill"
-      }
-    ],
-    "points": {
-      "advance": 0,
-      "ontime": 3,
-      "lost": 1
-    },
-    "nextDue": "2026-06-20",
-    "excessLackingBalance": 0,
-    "createdAt": "2026-02-03T03:16:06.001Z"
-  },
-  {
-    "messengerId": "N/A",
-    "clientUsername": "C0023A",
-    "clientPassword": "BUCAYONG",
-    "accountNumber": "NR2021C0023A",
-    "name": "Lynrose Bucayong",
-    "address": "Purok 6 San Vicente Patudan Tubod LDN",
-    "contact": "N/A",
-    "plan": {
-      "name": "Basic",
-      "fee": 499,
-      "speed": "Up to 10 Mbps"
-    },
-    "billingDay": 20,
-    "status": "Terminated",
-    "pppoeUsername": "C0023A",
-    "pppoePassword": "BUCAYONG",
-    "payments": [],
-    "points": {
-      "advance": 0,
-      "ontime": 0,
-      "lost": 0
-    },
-    "nextDue": "2026-06-19",
-    "excessLackingBalance": 0,
-    "createdAt": "2026-02-17T14:33:00.295Z"
-  },
-  {
-    "messengerId": "N/A",
-    "clientUsername": "C0024A",
-    "clientPassword": "BARUMAN",
-    "accountNumber": "NR2021C0024A",
-    "name": "Loyda Baruman",
-    "address": "P6 Patudan, Tubod, LDN",
-    "contact": "N/A",
-    "plan": {
-      "name": "Gamer",
-      "fee": 899,
-      "speed": "Up to 20 Mbps"
-    },
-    "billingDay": 20,
-    "status": "Active",
-    "pppoeUsername": "C0024A",
-    "pppoePassword": "BARUMAN",
-    "payments": [],
-    "points": {
-      "advance": 0,
-      "ontime": 0,
-      "lost": 0
-    },
-    "nextDue": "2026-06-19",
-    "excessLackingBalance": 0,
-    "createdAt": "2026-05-28T16:01:36.585Z"
-  },
-  {
-    "messengerId": "N/A",
-    "clientUsername": "C0025A",
-    "clientPassword": "SARABIA",
-    "accountNumber": "NR2021C0025A",
-    "name": "Jeffrey Sarabia",
-    "address": "P5 Patudan, Tubod, LDN",
-    "contact": "N/A",
-    "plan": {
-      "name": "Basic",
-      "fee": 499,
-      "speed": "Up to 10 Mbps"
-    },
-    "billingDay": 20,
-    "status": "Active",
-    "pppoeUsername": "C0025A",
-    "pppoePassword": "SARABIA",
-    "payments": [
-      {
-        "date": "2026-05-20",
-        "amount": 500,
-        "note": "",
-        "referenceNumber": "DKE879RK"
-      }
-    ],
-    "points": {
-      "advance": 0,
-      "ontime": 1,
-      "lost": 0
-    },
-    "nextDue": "2026-06-20",
-    "excessLackingBalance": -800,
-    "createdAt": "2026-05-28T16:02:52.827Z",
-    "charges": [
-      {
-        "date": "2026-05-28",
-        "note": "Balance",
-        "amount": 1300
+    "notifications": [
+      {
+        "id": 1779988641091,
+        "type": "info",
+        "message": "Upgrade Request: Thalia Arcilla wants Basic (₱499 / Up to 10 Mbps)",
+        "date": "2026-05-28T17:17:21.091Z",
+        "read": true,
+        "action": "viewUpgrades"
+      },
+      {
+        "id": 1779988618981,
+        "type": "success",
+        "message": "Client Login: Thalia Arcilla accessed portal.",
+        "date": "2026-05-28T17:16:58.981Z",
+        "read": true,
+        "action": "viewAccount",
+        "dataId": "NR2021C0012A"
+      },
+      {
+        "id": 1766166393898,
+        "type": "success",
+        "message": "Client Login: Lenster Pinangay accessed portal.",
+        "date": "2025-12-19T17:46:33.898Z",
+        "read": true,
+        "action": "viewAccount",
+        "dataId": "NR2021C0019A"
       }
     ]
   }
-]
+}
