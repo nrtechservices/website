@@ -2,7 +2,7 @@
   "plans": [
     {
       "name": "Basic",
-      "badge": null,
+      "badge": "MOST AVAILED",
       "price": "₱499",
       "billing_cycle": "/mo",
       "speed": "Up to 10 Mbps",
