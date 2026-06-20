@@ -1,5 +1,14 @@
-{
-  "active": true,
-  "title": "System Advisory",
-  "message": "We will be having a scheduled maintenance on May 28, 2026, from 1:00 AM to 4:00 AM. Expect intermittent connectivity during this time."
-}
+[
+  {
+    "active": true,
+    "title": "Scheduled Power Interruption Advisory",
+    "message": "NGCP and LANECO will conduct a scheduled power interruption from 8:00 A.M. to 5:00 P.M. (9 Hours) for the annual maintenance of the Aurora-Kapatagan 69 KV line and various ride-on activities including pole replacement and line clearing.",
+    "date": "June 20, 2026"
+  },
+  {
+    "active": true,
+    "title": "N'RTECH Service Advisory: Internet Restored",
+    "message": "Internet service has been successfully restored following an outage caused by earlier LANECO clearing operations. Our staff worked an overtime shift to ensure your connection is back online before our Sunday day off.",
+    "date": "June 20, 2026"
+  }
+]
