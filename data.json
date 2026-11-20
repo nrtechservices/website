@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-09-10T12:36:37.198Z",
+  "timestamp": "2026-11-20T15:00:10.641Z",
   "accounts": [
     {
       "messengerId": "curlito.albarote",
@@ -93,17 +93,42 @@
           "planFeeAtTime": 499,
           "planNameAtTime": "Basic",
           "coverageText": "(Aug 2026)"
+        },
+        {
+          "date": "2026-09-23",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "X9UGB5FM",
+          "planFeeAtTime": 499,
+          "planNameAtTime": "Basic",
+          "coverageText": "(Sep 2026)"
+        },
+        {
+          "date": "2026-10-25",
+          "amount": 550,
+          "note": "",
+          "referenceNumber": "C6KKRJJK",
+          "planFeeAtTime": 499,
+          "planNameAtTime": "Basic",
+          "coverageText": "(Oct 2026)"
         }
       ],
       "points": {
         "advance": 0,
-        "ontime": 8,
-        "lost": 2
+        "ontime": 7,
+        "lost": 5
       },
-      "nextDue": "2026-09-20",
-      "excessLackingBalance": 10,
+      "nextDue": "2026-11-20",
+      "excessLackingBalance": 12.1,
       "createdAt": "2025-12-18T20:47:21.424Z",
-      "charges": [],
+      "charges": [
+        {
+          "date": "2026-10-25",
+          "note": "Late Penalty",
+          "amount": 49.9,
+          "category": "penalty"
+        }
+      ],
       "discounts": []
     },
     {
@@ -272,15 +297,42 @@
           "planFeeAtTime": 499,
           "planNameAtTime": "Basic",
           "coverageText": "(Aug 2026)"
+        },
+        {
+          "date": "2026-09-21",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "XGG4G2JQ",
+          "planFeeAtTime": 499,
+          "planNameAtTime": "Basic",
+          "coverageText": "(Sep 2026)"
+        },
+        {
+          "date": "2026-10-19",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "MJF85GTH",
+          "planFeeAtTime": 499,
+          "planNameAtTime": "Basic",
+          "coverageText": "(Oct 2026)"
+        },
+        {
+          "date": "2026-11-19",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "UJC3RKYN",
+          "planFeeAtTime": 499,
+          "planNameAtTime": "Basic",
+          "coverageText": "(Nov 2026)"
         }
       ],
       "points": {
-        "advance": 1,
+        "advance": 3,
         "ontime": 9,
-        "lost": 0
+        "lost": 1
       },
-      "nextDue": "2026-09-20",
-      "excessLackingBalance": 10,
+      "nextDue": "2026-12-20",
+      "excessLackingBalance": 13,
       "createdAt": "2025-12-18T20:47:21.424Z"
     },
     {
@@ -384,15 +436,42 @@
           "planFeeAtTime": 499,
           "planNameAtTime": "Basic",
           "coverageText": "(Aug 2026)"
+        },
+        {
+          "date": "2026-09-18",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "VMANCKYU",
+          "planFeeAtTime": 499,
+          "planNameAtTime": "Basic",
+          "coverageText": "(Sep 2026)"
+        },
+        {
+          "date": "2026-10-20",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "CLNE8VWF",
+          "planFeeAtTime": 499,
+          "planNameAtTime": "Basic",
+          "coverageText": "(Oct 2026)"
+        },
+        {
+          "date": "2026-11-20",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "QGT86ATX",
+          "planFeeAtTime": 499,
+          "planNameAtTime": "Basic",
+          "coverageText": "(Nov 2026)"
         }
       ],
       "points": {
-        "advance": 1,
-        "ontime": 8,
+        "advance": 2,
+        "ontime": 10,
         "lost": 1
       },
-      "nextDue": "2026-09-20",
-      "excessLackingBalance": 9,
+      "nextDue": "2026-12-20",
+      "excessLackingBalance": 12,
       "createdAt": "2025-12-18T20:47:21.424Z"
     },
     {
@@ -418,7 +497,7 @@
         "ontime": 0,
         "lost": 0
       },
-      "nextDue": "2026-09-19",
+      "nextDue": "2026-11-19",
       "excessLackingBalance": 0,
       "createdAt": "2025-12-18T20:47:21.424Z"
     },
@@ -532,15 +611,42 @@
           "planFeeAtTime": 499,
           "planNameAtTime": "Basic",
           "coverageText": "(Aug 2026)"
+        },
+        {
+          "date": "2026-09-20",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "5UWYAU6X",
+          "planFeeAtTime": 499,
+          "planNameAtTime": "Basic",
+          "coverageText": "(Sep 2026)"
+        },
+        {
+          "date": "2026-10-17",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "R2NUM6DU",
+          "planFeeAtTime": 499,
+          "planNameAtTime": "Basic",
+          "coverageText": "(Oct 2026)"
+        },
+        {
+          "date": "2026-11-15",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "GLRBJJTM",
+          "planFeeAtTime": 499,
+          "planNameAtTime": "Basic",
+          "coverageText": "(Nov 2026)"
         }
       ],
       "points": {
-        "advance": 2,
-        "ontime": 7,
+        "advance": 4,
+        "ontime": 8,
         "lost": 1
       },
-      "nextDue": "2026-09-20",
-      "excessLackingBalance": 9,
+      "nextDue": "2026-12-20",
+      "excessLackingBalance": 12,
       "createdAt": "2025-12-18T20:47:21.424Z"
     },
     {
@@ -638,15 +744,42 @@
           "planFeeAtTime": 499,
           "planNameAtTime": "Basic",
           "coverageText": "(Aug 2026)"
+        },
+        {
+          "date": "2026-09-22",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "7EZABVEH",
+          "planFeeAtTime": 499,
+          "planNameAtTime": "Basic",
+          "coverageText": "(Sep 2026)"
+        },
+        {
+          "date": "2026-10-21",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "TQXJKHBV",
+          "planFeeAtTime": 499,
+          "planNameAtTime": "Basic",
+          "coverageText": "(Oct 2026)"
+        },
+        {
+          "date": "2026-11-20",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "YKKD3C4G",
+          "planFeeAtTime": 499,
+          "planNameAtTime": "Basic",
+          "coverageText": "(Nov 2026)"
         }
       ],
       "points": {
         "advance": 3,
-        "ontime": 6,
-        "lost": 1
+        "ontime": 7,
+        "lost": 3
       },
-      "nextDue": "2026-09-20",
-      "excessLackingBalance": 6,
+      "nextDue": "2026-12-20",
+      "excessLackingBalance": 9,
       "createdAt": "2025-12-18T20:47:21.424Z"
     },
     {
@@ -759,15 +892,42 @@
           "planFeeAtTime": 499,
           "planNameAtTime": "Basic",
           "coverageText": "(Aug 2026)"
+        },
+        {
+          "date": "2026-09-18",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "WAP8G52K",
+          "planFeeAtTime": 499,
+          "planNameAtTime": "Basic",
+          "coverageText": "(Sep 2026)"
+        },
+        {
+          "date": "2026-10-19",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "B9EATXMC",
+          "planFeeAtTime": 499,
+          "planNameAtTime": "Basic",
+          "coverageText": "(Oct 2026)"
+        },
+        {
+          "date": "2026-11-18",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "SCTUBSKZ",
+          "planFeeAtTime": 499,
+          "planNameAtTime": "Basic",
+          "coverageText": "(Nov 2026)"
         }
       ],
       "points": {
-        "advance": 2,
+        "advance": 5,
         "ontime": 3,
         "lost": 2
       },
-      "nextDue": "2026-09-20",
-      "excessLackingBalance": 8.9,
+      "nextDue": "2026-12-20",
+      "excessLackingBalance": 11.9,
       "createdAt": "2025-12-18T20:47:21.424Z",
       "charges": [
         {
@@ -910,15 +1070,42 @@
           "planFeeAtTime": 699,
           "planNameAtTime": "Family",
           "coverageText": "(Aug 2026)"
+        },
+        {
+          "date": "2026-09-24",
+          "amount": 700,
+          "note": "",
+          "referenceNumber": "ZZH74D3A",
+          "planFeeAtTime": 699,
+          "planNameAtTime": "Family",
+          "coverageText": "(Sep 2026)"
+        },
+        {
+          "date": "2026-10-21",
+          "amount": 700,
+          "note": "",
+          "referenceNumber": "8TBVARAF",
+          "planFeeAtTime": 699,
+          "planNameAtTime": "Family",
+          "coverageText": "(Oct 2026)"
+        },
+        {
+          "date": "2026-11-20",
+          "amount": 700,
+          "note": "",
+          "referenceNumber": "BP99FKD3",
+          "planFeeAtTime": 699,
+          "planNameAtTime": "Family",
+          "coverageText": "(Nov 2026)"
         }
       ],
       "points": {
         "advance": 1,
-        "ontime": 7,
-        "lost": 3
+        "ontime": 8,
+        "lost": 5
       },
-      "nextDue": "2026-09-20",
-      "excessLackingBalance": 6,
+      "nextDue": "2026-12-20",
+      "excessLackingBalance": 9,
       "createdAt": "2025-12-18T20:47:21.424Z",
       "discounts": [
         {
@@ -991,15 +1178,36 @@
           "planFeeAtTime": 499,
           "planNameAtTime": "Basic",
           "coverageText": "(Jul 2026, Aug 2026)"
+        },
+        {
+          "date": "2026-09-20",
+          "amount": 1000,
+          "note": "",
+          "referenceNumber": "G4YPAT5T",
+          "planFeeAtTime": 499,
+          "planNameAtTime": "Basic",
+          "coverageText": "(Sep 2026, Oct 2026)"
+        },
+        {
+          "date": "2026-11-03",
+          "amount": 1000,
+          "note": "Advance Payment (2 Months)",
+          "method": "GCash",
+          "referenceNumber": "XS4UJD2L",
+          "billingMonth": "2026-11",
+          "type": "advance",
+          "planFeeAtTime": 499,
+          "planNameAtTime": "Basic",
+          "coverageText": "(Nov 2026, Dec 2026)"
         }
       ],
       "points": {
-        "advance": 4,
-        "ontime": 6,
+        "advance": 6,
+        "ontime": 8,
         "lost": 0
       },
-      "nextDue": "2026-09-20",
-      "excessLackingBalance": 10,
+      "nextDue": "2027-01-20",
+      "excessLackingBalance": 14,
       "createdAt": "2025-12-18T20:47:21.424Z"
     },
     {
@@ -1085,15 +1293,33 @@
           "planFeeAtTime": 499,
           "planNameAtTime": "Basic",
           "coverageText": "(Jul 2026)"
+        },
+        {
+          "date": "2026-09-23",
+          "amount": 499,
+          "note": "",
+          "referenceNumber": "QQ3CEVRL",
+          "planFeeAtTime": 499,
+          "planNameAtTime": "Basic",
+          "coverageText": "(Sep 2026)"
+        },
+        {
+          "date": "2026-10-21",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "HF43TYB8",
+          "planFeeAtTime": 499,
+          "planNameAtTime": "Basic",
+          "coverageText": "(Oct 2026)"
         }
       ],
       "points": {
         "advance": 1,
         "ontime": 6,
-        "lost": 2
+        "lost": 4
       },
-      "nextDue": "2026-08-20",
-      "excessLackingBalance": 9,
+      "nextDue": "2026-11-20",
+      "excessLackingBalance": 10,
       "createdAt": "2025-12-18T20:47:21.424Z"
     },
     {
@@ -1218,15 +1444,33 @@
           "planFeeAtTime": 499,
           "planNameAtTime": "Basic",
           "coverageText": "(Aug 2026)"
+        },
+        {
+          "date": "2026-09-21",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "5DUKA2A4",
+          "planFeeAtTime": 499,
+          "planNameAtTime": "Basic",
+          "coverageText": "(Sep 2026)"
+        },
+        {
+          "date": "2026-10-25",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "Z5XEW59V",
+          "planFeeAtTime": 499,
+          "planNameAtTime": "Basic",
+          "coverageText": "(Oct 2026)"
         }
       ],
       "points": {
         "advance": 2,
         "ontime": 6,
-        "lost": 2
+        "lost": 4
       },
-      "nextDue": "2026-09-20",
-      "excessLackingBalance": 4.08,
+      "nextDue": "2026-11-20",
+      "excessLackingBalance": 6.08,
       "createdAt": "2025-12-18T20:47:21.424Z",
       "charges": [
         {
@@ -1338,15 +1582,33 @@
           "planFeeAtTime": 899,
           "planNameAtTime": "Gamer",
           "coverageText": "(Aug 2026)"
+        },
+        {
+          "date": "2026-09-23",
+          "amount": 1000,
+          "note": "",
+          "referenceNumber": "9BC8A8KE",
+          "planFeeAtTime": 899,
+          "planNameAtTime": "Gamer",
+          "coverageText": "(Sep 2026)"
+        },
+        {
+          "date": "2026-10-26",
+          "amount": 1000,
+          "note": "",
+          "referenceNumber": "TZZPTKUP",
+          "planFeeAtTime": 899,
+          "planNameAtTime": "Gamer",
+          "coverageText": "(Oct 2026)"
         }
       ],
       "points": {
         "advance": 0,
-        "ontime": 6,
-        "lost": 3
+        "ontime": 5,
+        "lost": 5
       },
-      "nextDue": "2026-09-20",
-      "excessLackingBalance": 260.5,
+      "nextDue": "2026-11-20",
+      "excessLackingBalance": 192.8,
       "createdAt": "2025-12-18T20:47:21.424Z",
       "charges": [
         {
@@ -1375,6 +1637,24 @@
         },
         {
           "date": "2026-07-27",
+          "note": "Late Penalty",
+          "amount": 89.9,
+          "category": "penalty"
+        },
+        {
+          "date": "2026-10-26",
+          "note": "Late Penalty",
+          "amount": 89.9,
+          "category": "penalty"
+        },
+        {
+          "date": "2026-09-23",
+          "note": "Late Penalty",
+          "amount": 89.9,
+          "category": "penalty"
+        },
+        {
+          "date": "2026-08-25",
           "note": "Late Penalty",
           "amount": 89.9,
           "category": "penalty"
@@ -1464,14 +1744,41 @@
           "planFeeAtTime": 899,
           "planNameAtTime": "Gamer",
           "coverageText": "(Aug 2026)"
+        },
+        {
+          "date": "2026-09-21",
+          "amount": 899,
+          "note": "",
+          "referenceNumber": "XE53YACP",
+          "planFeeAtTime": 899,
+          "planNameAtTime": "Gamer",
+          "coverageText": "(Sep 2026)"
+        },
+        {
+          "date": "2026-10-19",
+          "amount": 899,
+          "note": "",
+          "referenceNumber": "4UYRVL88",
+          "planFeeAtTime": 899,
+          "planNameAtTime": "Gamer",
+          "coverageText": "(Oct 2026)"
+        },
+        {
+          "date": "2026-11-20",
+          "amount": 899,
+          "note": "",
+          "referenceNumber": "PBAGHMDP",
+          "planFeeAtTime": 899,
+          "planNameAtTime": "Gamer",
+          "coverageText": "(Nov 2026)"
         }
       ],
       "points": {
-        "advance": 8,
-        "ontime": 2,
-        "lost": 0
+        "advance": 9,
+        "ontime": 3,
+        "lost": 1
       },
-      "nextDue": "2026-09-20",
+      "nextDue": "2026-12-20",
       "excessLackingBalance": 0,
       "createdAt": "2025-12-18T20:47:21.424Z",
       "discounts": [],
@@ -1584,15 +1891,42 @@
           "planFeeAtTime": 499,
           "planNameAtTime": "Basic",
           "coverageText": "(Aug 2026)"
+        },
+        {
+          "date": "2026-09-19",
+          "amount": 499,
+          "note": "",
+          "referenceNumber": "QFNGPMF3",
+          "planFeeAtTime": 499,
+          "planNameAtTime": "Basic",
+          "coverageText": "(Sep 2026)"
+        },
+        {
+          "date": "2026-10-19",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "7TXK3LC2",
+          "planFeeAtTime": 499,
+          "planNameAtTime": "Basic",
+          "coverageText": "(Oct 2026)"
+        },
+        {
+          "date": "2026-11-20",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "LV35A42B",
+          "planFeeAtTime": 499,
+          "planNameAtTime": "Basic",
+          "coverageText": "(Nov 2026)"
         }
       ],
       "points": {
-        "advance": 7,
-        "ontime": 3,
+        "advance": 9,
+        "ontime": 4,
         "lost": 0
       },
-      "nextDue": "2026-09-20",
-      "excessLackingBalance": 9,
+      "nextDue": "2026-12-20",
+      "excessLackingBalance": 11,
       "createdAt": "2025-12-18T20:47:21.424Z"
     },
     {
@@ -1702,15 +2036,42 @@
           "planFeeAtTime": 499,
           "planNameAtTime": "Basic",
           "coverageText": "(Aug 2026)"
+        },
+        {
+          "date": "2026-09-20",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "3CB87JYP",
+          "planFeeAtTime": 499,
+          "planNameAtTime": "Basic",
+          "coverageText": "(Sep 2026)"
+        },
+        {
+          "date": "2026-10-20",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "DRWZSW96",
+          "planFeeAtTime": 499,
+          "planNameAtTime": "Basic",
+          "coverageText": "(Oct 2026)"
+        },
+        {
+          "date": "2026-11-20",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "VK9MFKYS",
+          "planFeeAtTime": 499,
+          "planNameAtTime": "Basic",
+          "coverageText": "(Nov 2026)"
         }
       ],
       "points": {
         "advance": 7,
-        "ontime": 2,
+        "ontime": 5,
         "lost": 1
       },
-      "nextDue": "2026-09-20",
-      "excessLackingBalance": 9,
+      "nextDue": "2026-12-20",
+      "excessLackingBalance": 12,
       "createdAt": "2025-12-18T20:47:21.424Z"
     },
     {
@@ -1736,7 +2097,7 @@
         "ontime": 0,
         "lost": 0
       },
-      "nextDue": "2026-09-19",
+      "nextDue": "2026-11-19",
       "excessLackingBalance": 0,
       "createdAt": "2025-12-18T20:47:21.424Z"
     },
@@ -1844,15 +2205,42 @@
           "planFeeAtTime": 499,
           "planNameAtTime": "Basic",
           "coverageText": "(Aug 2026)"
+        },
+        {
+          "date": "2026-09-20",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "PJZXGXY6",
+          "planFeeAtTime": 499,
+          "planNameAtTime": "Basic",
+          "coverageText": "(Sep 2026)"
+        },
+        {
+          "date": "2026-10-19",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "CH4DSKZ8",
+          "planFeeAtTime": 499,
+          "planNameAtTime": "Basic",
+          "coverageText": "(Oct 2026)"
+        },
+        {
+          "date": "2026-11-20",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "27UP2BGU",
+          "planFeeAtTime": 499,
+          "planNameAtTime": "Basic",
+          "coverageText": "(Nov 2026)"
         }
       ],
       "points": {
-        "advance": 6,
-        "ontime": 4,
+        "advance": 7,
+        "ontime": 6,
         "lost": 0
       },
-      "nextDue": "2026-09-20",
-      "excessLackingBalance": 9,
+      "nextDue": "2026-12-20",
+      "excessLackingBalance": 12,
       "createdAt": "2025-12-18T20:47:21.424Z"
     },
     {
@@ -1953,15 +2341,42 @@
           "planFeeAtTime": 899,
           "planNameAtTime": "Gamer",
           "coverageText": "(Aug 2026)"
+        },
+        {
+          "date": "2026-09-18",
+          "amount": 900,
+          "note": "",
+          "referenceNumber": "HJZECH9G",
+          "planFeeAtTime": 899,
+          "planNameAtTime": "Gamer",
+          "coverageText": "(Sep 2026)"
+        },
+        {
+          "date": "2026-10-19",
+          "amount": 899,
+          "note": "",
+          "referenceNumber": "KQ8EEBBK",
+          "planFeeAtTime": 899,
+          "planNameAtTime": "Gamer",
+          "coverageText": "(Oct 2026)"
+        },
+        {
+          "date": "2026-11-20",
+          "amount": 899,
+          "note": "",
+          "referenceNumber": "AA7QNA3Q",
+          "planFeeAtTime": 899,
+          "planNameAtTime": "Gamer",
+          "coverageText": "(Nov 2026)"
         }
       ],
       "points": {
-        "advance": 6,
-        "ontime": 3,
+        "advance": 8,
+        "ontime": 4,
         "lost": 0
       },
-      "nextDue": "2026-09-20",
-      "excessLackingBalance": 0,
+      "nextDue": "2026-12-20",
+      "excessLackingBalance": 1,
       "createdAt": "2025-12-19T14:32:13.567Z",
       "cashouts": [
         {
@@ -2057,15 +2472,42 @@
           "planFeeAtTime": 1299,
           "planNameAtTime": "Business",
           "coverageText": "(Aug 2026)"
+        },
+        {
+          "date": "2026-09-23",
+          "amount": 1299,
+          "note": "",
+          "referenceNumber": "ZYPV7B8K",
+          "planFeeAtTime": 1299,
+          "planNameAtTime": "Business",
+          "coverageText": "(Sep 2026)"
+        },
+        {
+          "date": "2026-10-19",
+          "amount": 1299,
+          "note": "",
+          "referenceNumber": "9FYLFAFM",
+          "planFeeAtTime": 1299,
+          "planNameAtTime": "Business",
+          "coverageText": "(Oct 2026)"
+        },
+        {
+          "date": "2026-11-18",
+          "amount": 1300,
+          "note": "",
+          "referenceNumber": "AXNDT567",
+          "planFeeAtTime": 1299,
+          "planNameAtTime": "Business",
+          "coverageText": "(Nov 2026)"
         }
       ],
       "points": {
-        "advance": 0,
+        "advance": 2,
         "ontime": 8,
-        "lost": 0
+        "lost": 1
       },
-      "nextDue": "2026-09-20",
-      "excessLackingBalance": 8,
+      "nextDue": "2026-12-20",
+      "excessLackingBalance": 9,
       "createdAt": "2025-12-19T14:32:59.226Z",
       "charges": []
     },
@@ -2155,15 +2597,42 @@
           "planFeeAtTime": 499,
           "planNameAtTime": "Basic",
           "coverageText": "(Aug 2026)"
+        },
+        {
+          "date": "2026-09-18",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "G64ALTYK",
+          "planFeeAtTime": 499,
+          "planNameAtTime": "Basic",
+          "coverageText": "(Sep 2026)"
+        },
+        {
+          "date": "2026-10-05",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "TRSCHMRW",
+          "planFeeAtTime": 499,
+          "planNameAtTime": "Basic",
+          "coverageText": "(Oct 2026)"
+        },
+        {
+          "date": "2026-11-03",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "M5CM4SLL",
+          "planFeeAtTime": 499,
+          "planNameAtTime": "Basic",
+          "coverageText": "(Nov 2026)"
         }
       ],
       "points": {
-        "advance": 8,
+        "advance": 11,
         "ontime": 0,
         "lost": 0
       },
-      "nextDue": "2026-09-20",
-      "excessLackingBalance": 7,
+      "nextDue": "2026-12-20",
+      "excessLackingBalance": 10,
       "createdAt": "2026-01-19T04:30:04.933Z"
     },
     {
@@ -2246,14 +2715,32 @@
           "planFeeAtTime": 899,
           "planNameAtTime": "Gamer",
           "coverageText": "(Aug 2026)"
+        },
+        {
+          "date": "2026-09-18",
+          "amount": 899,
+          "note": "",
+          "referenceNumber": "88FSVEEZ",
+          "planFeeAtTime": 899,
+          "planNameAtTime": "Gamer",
+          "coverageText": "(Sep 2026)"
+        },
+        {
+          "date": "2026-10-21",
+          "amount": 899,
+          "note": "",
+          "referenceNumber": "AK3V7F4X",
+          "planFeeAtTime": 899,
+          "planNameAtTime": "Gamer",
+          "coverageText": "(Oct 2026)"
         }
       ],
       "points": {
-        "advance": 0,
+        "advance": 1,
         "ontime": 5,
-        "lost": 2
+        "lost": 3
       },
-      "nextDue": "2026-09-20",
+      "nextDue": "2026-11-20",
       "excessLackingBalance": 0,
       "createdAt": "2026-02-03T03:16:06.001Z"
     },
@@ -2280,7 +2767,7 @@
         "ontime": 0,
         "lost": 0
       },
-      "nextDue": "2026-09-19",
+      "nextDue": "2026-11-19",
       "excessLackingBalance": 0,
       "createdAt": "2026-02-17T14:33:00.295Z"
     },
@@ -2293,9 +2780,9 @@
       "address": "P6 Patudan, Tubod, LDN",
       "contact": "N/A",
       "plan": {
-        "name": "Family",
-        "fee": 699,
-        "speed": "Up to 15 Mbps"
+        "name": "Gamer",
+        "fee": 899,
+        "speed": "Up to 20 Mbps"
       },
       "billingDay": 20,
       "status": "Active",
@@ -2337,20 +2824,53 @@
           "planFeeAtTime": 699,
           "planNameAtTime": "Family",
           "coverageText": "(Aug 2026)"
+        },
+        {
+          "date": "2026-09-27",
+          "amount": 699,
+          "note": "",
+          "referenceNumber": "28M4ZQZ5",
+          "planFeeAtTime": 699,
+          "planNameAtTime": "Family",
+          "coverageText": "(Sep 2026)"
+        },
+        {
+          "date": "2026-10-23",
+          "amount": 699,
+          "note": "",
+          "referenceNumber": "86PN6XSC",
+          "planFeeAtTime": 699,
+          "planNameAtTime": "Family",
+          "coverageText": "(Oct 2026)"
+        },
+        {
+          "date": "2026-11-20",
+          "amount": 899,
+          "note": "",
+          "referenceNumber": "J59EEJM5",
+          "planFeeAtTime": 899,
+          "planNameAtTime": "Gamer",
+          "coverageText": "(Nov 2026)"
         }
       ],
       "points": {
         "advance": 0,
-        "ontime": 0,
-        "lost": 1
+        "ontime": 1,
+        "lost": 2
       },
-      "nextDue": "2026-09-20",
+      "nextDue": "2026-12-20",
       "excessLackingBalance": 1,
       "createdAt": "2026-05-28T16:01:36.585Z",
       "charges": [
         {
           "date": "2026-07-09",
           "note": "Plan Changed to Family",
+          "amount": 0,
+          "category": "note"
+        },
+        {
+          "date": "2026-11-20",
+          "note": "Plan Changed to Gamer",
           "amount": 0,
           "category": "note"
         }
@@ -2407,15 +2927,33 @@
           "planFeeAtTime": 499,
           "planNameAtTime": "Basic",
           "coverageText": "(Aug 2026)"
+        },
+        {
+          "date": "2026-09-26",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "9XXL4HDN",
+          "planFeeAtTime": 499,
+          "planNameAtTime": "Basic",
+          "coverageText": "(Sep 2026)"
+        },
+        {
+          "date": "2026-10-20",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "24DUHGFD",
+          "planFeeAtTime": 499,
+          "planNameAtTime": "Basic",
+          "coverageText": "(Oct 2026)"
         }
       ],
       "points": {
         "advance": 0,
-        "ontime": 4,
+        "ontime": 5,
         "lost": 0
       },
-      "nextDue": "2026-09-20",
-      "excessLackingBalance": 4,
+      "nextDue": "2026-11-20",
+      "excessLackingBalance": 6,
       "createdAt": "2026-05-28T16:02:52.827Z",
       "charges": [],
       "discounts": []
@@ -2455,15 +2993,24 @@
           "planFeeAtTime": 499,
           "planNameAtTime": "Basic",
           "coverageText": "(Aug 2026, Sep 2026)"
+        },
+        {
+          "date": "2026-10-21",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "9DPENR4B",
+          "planFeeAtTime": 499,
+          "planNameAtTime": "Basic",
+          "coverageText": "(Oct 2026)"
         }
       ],
       "points": {
         "advance": 1,
         "ontime": 2,
-        "lost": 0
+        "lost": 1
       },
-      "nextDue": "2026-10-20",
-      "excessLackingBalance": 3,
+      "nextDue": "2026-11-20",
+      "excessLackingBalance": 4,
       "createdAt": "2026-06-27T12:44:42.264Z"
     },
     {
@@ -2492,16 +3039,145 @@
           "planFeeAtTime": 499,
           "planNameAtTime": "Basic",
           "coverageText": "(Aug 2026)"
+        },
+        {
+          "date": "2026-09-21",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "94V4YZLJ",
+          "planFeeAtTime": 499,
+          "planNameAtTime": "Basic",
+          "coverageText": "(Sep 2026)"
+        },
+        {
+          "date": "2026-10-20",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "SDJR2G4Y",
+          "planFeeAtTime": 499,
+          "planNameAtTime": "Basic",
+          "coverageText": "(Oct 2026)"
+        },
+        {
+          "date": "2026-11-20",
+          "amount": 500,
+          "note": "",
+          "referenceNumber": "QUR5VPUF",
+          "planFeeAtTime": 499,
+          "planNameAtTime": "Basic",
+          "coverageText": "(Nov 2026)"
         }
       ],
       "points": {
         "advance": 0,
-        "ontime": 1,
+        "ontime": 3,
+        "lost": 1
+      },
+      "nextDue": "2026-12-20",
+      "excessLackingBalance": 4,
+      "createdAt": "2026-07-22T09:16:46.947Z"
+    },
+    {
+      "messengerId": "N/A",
+      "clientUsername": "C0028A",
+      "clientPassword": "ARCILLA",
+      "accountNumber": "NR2021C0028A",
+      "name": "Rachel Arcilla",
+      "address": "San Vicente, Patudan, Tubod, LDN",
+      "contact": "09517001319",
+      "plan": {
+        "name": "Basic",
+        "fee": 499,
+        "speed": "Up to 10 Mbps"
+      },
+      "billingDay": 20,
+      "status": "Active",
+      "pppoeUsername": "C0028A",
+      "pppoePassword": "ARCILLA",
+      "payments": [],
+      "points": {
+        "advance": 0,
+        "ontime": 0,
         "lost": 0
       },
-      "nextDue": "2026-09-20",
-      "excessLackingBalance": 1,
-      "createdAt": "2026-07-22T09:16:46.947Z"
+      "nextDue": "2026-11-19",
+      "excessLackingBalance": 0,
+      "createdAt": "2026-10-06T12:56:02.342Z",
+      "charges": []
+    },
+    {
+      "messengerId": "N/A",
+      "clientUsername": "C0029A",
+      "clientPassword": "PEPITO",
+      "accountNumber": "NR2021C0029A",
+      "name": "Alma Pepito",
+      "address": "P6, Patudan, Tubod, LDN",
+      "contact": "N/A",
+      "plan": {
+        "name": "Basic",
+        "fee": 499,
+        "speed": "Up to 10 Mbps"
+      },
+      "billingDay": 20,
+      "status": "Active",
+      "pppoeUsername": "C0029A",
+      "pppoePassword": "PEPITO",
+      "payments": [
+        {
+          "date": "2026-11-14",
+          "amount": 499,
+          "note": "Free upon installation",
+          "referenceNumber": "WNHZNY8G",
+          "planFeeAtTime": 499,
+          "planNameAtTime": "Basic",
+          "coverageText": "(Nov 2026)"
+        }
+      ],
+      "points": {
+        "advance": 1,
+        "ontime": 0,
+        "lost": 0
+      },
+      "nextDue": "2026-12-20",
+      "excessLackingBalance": 0,
+      "createdAt": "2026-11-20T10:39:01.710Z"
+    },
+    {
+      "messengerId": "N/A",
+      "clientUsername": "C0030A",
+      "clientPassword": "GAÑOSO",
+      "accountNumber": "NR2021C0030A",
+      "name": "Margie Gañoso",
+      "address": "P1, Pualas, Tubod LDN",
+      "contact": "N/A",
+      "plan": {
+        "name": "Gamer",
+        "fee": 899,
+        "speed": "Up to 20 Mbps"
+      },
+      "billingDay": 20,
+      "status": "Active",
+      "pppoeUsername": "C0030A",
+      "pppoePassword": "GAÑOSO",
+      "payments": [
+        {
+          "date": "2026-11-17",
+          "amount": 899,
+          "note": "Free upon Installation",
+          "referenceNumber": "R223LMNU",
+          "planFeeAtTime": 899,
+          "planNameAtTime": "Gamer",
+          "coverageText": "(Nov 2026)"
+        }
+      ],
+      "points": {
+        "advance": 1,
+        "ontime": 0,
+        "lost": 0
+      },
+      "nextDue": "2026-12-20",
+      "excessLackingBalance": 0,
+      "createdAt": "2026-11-20T10:43:07.392Z"
     }
   ],
   "settings": {
