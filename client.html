@@ -1389,7 +1389,7 @@
             <div class="receipt-header" style="padding-bottom: 18px; margin-bottom: 18px;">
                 <img src="logo.png" alt="N'RTECH Logo" class="receipt-logo" onerror="this.style.display='none'">
                 <h2>GCash Payment Gateway</h2>
-                <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 4px;">Select your preferred payment method below</p>
+                <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 4px;">Choose how you want to pay your bill</p>
                 <div class="bill-warning">
                     <i class="fas fa-exclamation-circle"></i> Pay on or before the 20th to avoid late penalties and disconnection.
                 </div>
@@ -1410,35 +1410,35 @@
                 </button>
             </div>
 
-            <!-- Option 1: Pay via GCash App Direct Redirect -->
+            <!-- Option 1: Pay via GCash App -->
             <div id="gatewayPaneApp" class="gateway-pane active">
                 <div class="gcash-app-card">
                     <div class="gcash-app-badge">
-                        <i class="fas fa-bolt"></i> Express GCash App Redirect
+                        <i class="fas fa-mobile-alt"></i> GCash App Direct Launch
                     </div>
                     <h4 style="color: #0f172a; font-size: 1.1rem; margin-bottom: 4px;">Noruel John Ramirez</h4>
                     <p style="color: var(--gcash-dark); font-weight: 800; font-size: 1.2rem; letter-spacing: 1px;">09317926807</p>
 
                     <div class="gcash-step-list">
-                        <div><span class="step-num">1</span><span>Tap <strong>Open GCash App</strong> below (number is auto-copied for Express Send).</span></div>
-                        <div><span class="step-num">2</span><span>In GCash, select <strong>Express Send</strong>, paste <strong>09317926807</strong>, and enter <strong id="gatewayStepAmount">₱0.00</strong>.</span></div>
-                        <div><span class="step-num">3</span><span>Save your GCash receipt and click <strong>Send Proof of Payment</strong> after paying.</span></div>
+                        <div><span class="step-num">1</span><span>Tap <strong>Open GCash App</strong> below (number <strong>09317926807</strong> is auto-copied for Express Send).</span></div>
+                        <div><span class="step-num">2</span><span>In GCash, tap <strong>Express Send</strong>, paste <strong>09317926807</strong>, and enter <strong id="gatewayStepAmount">₱0.00</strong>.</span></div>
+                        <div><span class="step-num">3</span><span>Once sent, tap <strong>Send Proof of Payment</strong> below to send your receipt to N'RTECH Messenger.</span></div>
                     </div>
 
                     <button type="button" class="btn-gcash-launch" onclick="launchGCashAppGateway()">
-                        <i class="fas fa-external-link-alt"></i> Open GCash App Now
+                        <i class="fas fa-external-link-alt"></i> Open GCash App
                     </button>
 
                     <button type="button" onclick="proceedToProofFromGateway()" style="margin-top: 10px; background: white; color: var(--messenger-dark); border: 1.5px solid #bfdbfe; width: 100%; padding: 12px; border-radius: 12px; font-weight: 700; font-size: 0.9rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: var(--transition-smooth);">
-                        <i class="fab fa-facebook-messenger"></i> Already Paid? Submit Receipt to Messenger
+                        <i class="fab fa-facebook-messenger"></i> Already Paid? Send Proof via Messenger
                     </button>
                 </div>
             </div>
 
-            <!-- Option 2: Pay via InstaPay / GCash QR Code -->
+            <!-- Option 2: Pay via QR Code -->
             <div id="gatewayPaneQr" class="gateway-pane">
                 <div class="qr-section">
-                    <h4 style="margin-bottom: 5px; color: var(--text-dark); font-size: 1.1rem;">Scan InstaPay / GCash QR</h4>
+                    <h4 style="margin-bottom: 5px; color: var(--text-dark); font-size: 1.1rem;">Scan GCash / InstaPay QR</h4>
                     <p style="font-size: 0.85rem; color: var(--text-light);">Open GCash &rarr; Tap <strong>QR</strong> &rarr; Scan or Upload from Gallery</p>
                     
                     <img src="gcash-qr.jpg" 
@@ -1479,7 +1479,7 @@
                     <i class="fas fa-receipt" style="font-size: 2rem; color: var(--messenger);"></i>
                 </div>
                 <h2>Send Proof of Payment</h2>
-                <p style="color: var(--text-light); font-size: 0.95rem; margin-top: 5px;">Enter your GCash reference number to generate a detailed payment slip and open Messenger.</p>
+                <p style="color: var(--text-light); font-size: 0.95rem; margin-top: 5px;">Creates a detailed payment card and opens <strong>m.me/ramirez.technician</strong> directly.</p>
             </div>
 
             <div class="dispatch-preview-box">
@@ -1504,7 +1504,7 @@
             </div>
 
             <button type="button" class="btn-primary" style="background: linear-gradient(135deg, var(--messenger), var(--messenger-dark));" onclick="submitProofOfPayment()">
-                <i class="fab fa-facebook-messenger"></i> Generate Slip & Open Messenger
+                <i class="fab fa-facebook-messenger"></i> Send to m.me/ramirez.technician
             </button>
         </div>
     </div>
@@ -1518,13 +1518,13 @@
                     <i class="fas fa-tools" style="font-size: 2rem; color: var(--accent);"></i>
                 </div>
                 <h2>Report a Technical Issue</h2>
-                <p style="color: var(--text-light); font-size: 0.95rem; margin-top: 5px;">Creates a detailed support dispatch card and redirects directly to N'RTECH Messenger.</p>
+                <p style="color: var(--text-light); font-size: 0.95rem; margin-top: 5px;">Creates a detailed support card and opens <strong>m.me/ramirez.technician</strong> directly.</p>
             </div>
 
             <div class="dispatch-preview-box">
                 <div class="dispatch-preview-header">
                     <span><i class="fas fa-id-card" style="color: var(--accent);"></i> Ticket Account Profile</span>
-                    <span style="color: var(--messenger);">Direct Dispatch</span>
+                    <span style="color: var(--messenger);">m.me/ramirez.technician</span>
                 </div>
                 <div class="dispatch-row"><span>Subscriber:</span> <span id="supPreviewName">-</span></div>
                 <div class="dispatch-row"><span>Account No:</span> <span id="supPreviewAcc">-</span></div>
@@ -1551,7 +1551,7 @@
             </div>
             
             <button type="button" class="btn-primary" style="background: linear-gradient(135deg, var(--accent), #7c3aed); box-shadow: 0 8px 20px rgba(139, 92, 246, 0.3);" onclick="submitSupportTicket()">
-                <i class="fab fa-facebook-messenger"></i> Generate Ticket & Open Messenger
+                <i class="fab fa-facebook-messenger"></i> Send to m.me/ramirez.technician
             </button>
         </div>
     </div>
@@ -1565,7 +1565,7 @@
                     <i class="fas fa-rocket" style="font-size: 2rem; color: var(--primary-dark);"></i>
                 </div>
                 <h2>Upgrade Subscription Plan</h2>
-                <p style="color: var(--text-light); font-size: 0.95rem; margin-top: 5px;">Select your desired speed tier below to generate a detailed upgrade order for Messenger.</p>
+                <p style="color: var(--text-light); font-size: 0.95rem; margin-top: 5px;">Select your desired speed tier below to send a detailed upgrade request to <strong>m.me/ramirez.technician</strong>.</p>
             </div>
             
             <label style="display:block; font-weight:700; font-size:0.95rem; margin-bottom:10px;"><i class="fas fa-cubes" style="color:var(--primary)"></i> Select Available Packages</label>
@@ -1580,7 +1580,7 @@
             </div>
 
             <button type="button" class="btn-primary" style="background: linear-gradient(135deg, var(--primary), var(--primary-dark));" onclick="submitUpgradeRequest()">
-                <i class="fab fa-facebook-messenger"></i> Submit Order & Open Messenger
+                <i class="fab fa-facebook-messenger"></i> Send to m.me/ramirez.technician
             </button>
         </div>
     </div>
@@ -1594,7 +1594,7 @@
                     <i class="fas fa-car-battery" style="font-size: 2rem; color: #d97706;"></i>
                 </div>
                 <h2>Order N'RTECH Mini UPS</h2>
-                <p style="color: var(--text-light); font-size: 0.95rem; margin-top: 5px;">Choose a backup capacity model below to generate a detailed price & installation inquiry on Messenger.</p>
+                <p style="color: var(--text-light); font-size: 0.95rem; margin-top: 5px;">Choose a backup capacity model below to send a detailed inquiry to <strong>m.me/ramirez.technician</strong>.</p>
             </div>
             
             <label style="display:block; font-weight:700; font-size:0.95rem; margin-bottom:10px;"><i class="fas fa-cubes" style="color:var(--primary)"></i> Select Backup Capacity</label>
@@ -1609,7 +1609,7 @@
             </div>
 
             <button type="button" class="btn-primary" style="background: linear-gradient(135deg, var(--messenger), var(--messenger-dark));" onclick="submitUpsRequest()">
-                <i class="fab fa-facebook-messenger"></i> Inquire Price & Open Messenger
+                <i class="fab fa-facebook-messenger"></i> Send to m.me/ramirez.technician
             </button>
         </div>
     </div>
@@ -1685,7 +1685,7 @@
     <div id="toastContainer"></div>
 
     <script>
-        // --- Direct Messenger Target ---
+        // --- Receiver & Payment Constants ---
         const MESSENGER_DIRECT_URL = "https://m.me/ramirez.technician";
         const GCASH_MERCHANT_NUMBER = "09317926807";
 
@@ -1797,13 +1797,11 @@
 
         document.getElementById('forgotPassLink').addEventListener('click', (e) => {
             e.preventDefault();
-            errorMsg.innerHTML = '<i class="fas fa-info-circle"></i> Redirecting to N\'RTECH Messenger for password reset...';
+            errorMsg.innerHTML = '<i class="fas fa-info-circle"></i> Opening N\'RTECH Messenger (m.me/ramirez.technician)...';
             errorMsg.style.color = '#d49a37'; errorMsg.style.background = '#fffbeb'; errorMsg.style.borderColor = '#fde68a';
             errorMsg.style.display = 'block';
             playSound('info');
-            setTimeout(() => {
-                window.open(MESSENGER_DIRECT_URL, "_blank");
-            }, 900);
+            window.open(MESSENGER_DIRECT_URL, "_blank");
         });
 
         loginForm.addEventListener('submit', async (e) => {
@@ -2078,21 +2076,24 @@
         }
 
         function launchGCashAppGateway() {
-            // Auto-copy GCash number so user can paste immediately inside GCash Express Send
             if (navigator.clipboard && navigator.clipboard.writeText) {
                 navigator.clipboard.writeText(GCASH_MERCHANT_NUMBER).catch(() => {});
             }
-            showToast(`GCash number ${GCASH_MERCHANT_NUMBER} copied! Opening GCash App...`, "success");
 
-            // Attempt GCash mobile app deep link, with graceful web fallback
-            const start = Date.now();
-            window.location.href = "gcash://";
+            const isAndroid = /android/i.test(navigator.userAgent || "");
+            const appSchemeUrl = isAndroid
+                ? "intent://com.globe.gcash.android/#Intent;scheme=gcash;package=com.globe.gcash.android;end"
+                : "gcash://";
 
-            setTimeout(() => {
-                if (Date.now() - start < 2200) {
-                    window.open("https://m.gcash.com/", "_blank");
-                }
-            }, 1400);
+            showToast(`Copied ${GCASH_MERCHANT_NUMBER}! Launching GCash App...`, "success");
+
+            // Create temporary link to trigger native GCash app launch cleanly
+            const launcher = document.createElement("a");
+            launcher.href = appSchemeUrl;
+            launcher.style.display = "none";
+            document.body.appendChild(launcher);
+            launcher.click();
+            document.body.removeChild(launcher);
         }
 
         function proceedToProofFromGateway() {
@@ -2413,7 +2414,7 @@
             return lines.length > 0 ? lines : ["None provided"];
         }
         
-        // --- Auto-Generate Detailed Branded PNG Card & Redirect to https://m.me/ramirez.technician ---
+        // --- Auto-Generate Detailed Branded PNG Card & Open https://m.me/ramirez.technician ---
         async function generateAndShareRequestImage(title, subtitle, accentColor, detailsList, fileName, textFallbackSummary) {
             const canvas = document.createElement("canvas");
             const tempCtx = canvas.getContext("2d");
@@ -2496,7 +2497,6 @@
 
                 y += (row.lines.length * lineHeight) + rowGap;
 
-                // Subtle row separator
                 if (idx < preparedRows.length - 1) {
                     ctx.strokeStyle = "rgba(148, 163, 184, 0.15)";
                     ctx.lineWidth = 1;
@@ -2510,18 +2510,13 @@
             // Footer Bar
             ctx.fillStyle = "#cbd5e1";
             ctx.font = "600 14px Inter, Arial, sans-serif";
-            ctx.fillText("N'RTECH Client Portal • Tubod, Lanao del Norte • Direct Messenger Dispatch", 48, canvas.height - 46);
+            ctx.fillText("N'RTECH Client Portal • Receiver: m.me/ramirez.technician", 48, canvas.height - 46);
 
             // Convert Canvas to Blob / File
             const blob = await new Promise(resolve => canvas.toBlob(resolve, "image/png"));
             const file = new File([blob], fileName, { type: "image/png" });
 
-            // Copy structured text silently as backup
-            if (textFallbackSummary && navigator.clipboard && navigator.clipboard.writeText) {
-                navigator.clipboard.writeText(textFallbackSummary).catch(() => {});
-            }
-
-            // Try Native Mobile Share Sheet first (direct tap to Messenger with image attached)
+            // Try Native Mobile Share Sheet first (direct tap to Messenger with image + text attached)
             if (navigator.canShare && navigator.canShare({ files: [file] })) {
                 try {
                     await navigator.share({
@@ -2529,17 +2524,14 @@
                         title: title,
                         text: textFallbackSummary
                     });
-                    showToast("Dispatch slip shared! Redirecting to Messenger...", "success");
-                    setTimeout(() => {
-                        window.location.href = MESSENGER_DIRECT_URL;
-                    }, 1000);
+                    showToast("Ready to send in Messenger!", "success");
                     return;
                 } catch (err) {
-                    // Fall through to auto-download + direct redirect
+                    // User dismissed share sheet -> proceed to download + open m.me/ramirez.technician
                 }
             }
 
-            // Auto-download PNG slip and redirect directly to https://m.me/ramirez.technician
+            // Auto-download PNG card and open https://m.me/ramirez.technician
             const link = document.createElement("a");
             link.download = fileName;
             link.href = URL.createObjectURL(blob);
@@ -2547,13 +2539,13 @@
             link.click();
             document.body.removeChild(link);
 
-            showToast("Detailed slip saved! Redirecting to N'RTECH Messenger...", "success");
+            showToast("Card saved! Opening m.me/ramirez.technician...", "success");
             setTimeout(() => {
-                window.open(MESSENGER_DIRECT_URL, "_blank") || (window.location.href = MESSENGER_DIRECT_URL);
-            }, 1300);
+                window.open(MESSENGER_DIRECT_URL, "_blank");
+            }, 900);
         }
 
-        // 1. Send Proof of Payment -> Detailed Image + Direct Redirect to https://m.me/ramirez.technician
+        // 1. Send Proof of Payment -> Detailed Card + Open https://m.me/ramirez.technician
         function submitProofOfPayment() {
             const refNum = document.getElementById('popReferenceNum').value.trim();
             const payNotes = document.getElementById('popPaymentNotes').value.trim();
@@ -2565,23 +2557,24 @@
 
             const timestamp = new Date().toLocaleString();
             const details = [
+                { label: "Receiver", value: "m.me/ramirez.technician", highlight: true },
                 { label: "Subscriber", value: sessionClientName, highlight: true },
                 { label: "Account No", value: sessionClientAcc, highlight: true },
                 { label: "Address", value: sessionClientAddress },
                 { label: "Current Plan", value: `${sessionCurrentPlanName || 'N/A'} (${sessionCurrentPlanSpeed})` },
                 { label: "Due Date", value: sessionDueDateStr },
-                { label: "Amount Paid", value: sessionUpcomingBillStr, highlight: true },
+                { label: "Amount Due", value: sessionUpcomingBillStr, highlight: true },
                 { label: "GCash Ref No", value: refNum, highlight: true },
                 { label: "Payment Note", value: payNotes || "Standard Monthly Subscription Payment" },
                 { label: "Submitted At", value: timestamp }
             ];
 
-            const fallbackText = `N'RTECH PROOF OF PAYMENT\nSubscriber: ${sessionClientName}\nAccount No: ${sessionClientAcc}\nPlan: ${sessionCurrentPlanName} (${sessionCurrentPlanSpeed})\nAmount Due: ${sessionUpcomingBillStr}\nGCash Ref No: ${refNum}\nNote: ${payNotes || 'Standard Payment'}\nTime: ${timestamp}`;
+            const fallbackText = `N'RTECH PROOF OF PAYMENT\nReceiver: m.me/ramirez.technician\nSubscriber: ${sessionClientName}\nAccount No: ${sessionClientAcc}\nPlan: ${sessionCurrentPlanName} (${sessionCurrentPlanSpeed})\nAmount Due: ${sessionUpcomingBillStr}\nGCash Ref No: ${refNum}\nNote: ${payNotes || 'Standard Payment'}\nTime: ${timestamp}`;
 
             closeProofModal();
             generateAndShareRequestImage(
                 "GCASH PAYMENT VERIFICATION SLIP",
-                "Official Subscriber Advance / Monthly Payment Submission",
+                "Receiver: N'RTECH (m.me/ramirez.technician)",
                 "#0084ff",
                 details,
                 `NRTECH-Payment-${sessionClientAcc}.png`,
@@ -2589,13 +2582,14 @@
             );
         }
 
-        // 2. Report Technical Issue -> Detailed Image + Direct Redirect to https://m.me/ramirez.technician
+        // 2. Report Technical Issue -> Detailed Card + Open https://m.me/ramirez.technician
         function submitSupportTicket() {
             const category = document.getElementById('issueCategory').value;
             const description = document.getElementById('issueDescription').value.trim();
             const timestamp = new Date().toLocaleString();
 
             const details = [
+                { label: "Receiver", value: "m.me/ramirez.technician", highlight: true },
                 { label: "Subscriber", value: sessionClientName, highlight: true },
                 { label: "Account No", value: sessionClientAcc, highlight: true },
                 { label: "Address", value: sessionClientAddress },
@@ -2606,12 +2600,12 @@
                 { label: "Reported At", value: timestamp }
             ];
 
-            const fallbackText = `N'RTECH TECHNICAL SUPPORT TICKET\nSubscriber: ${sessionClientName}\nAccount No: ${sessionClientAcc}\nAddress: ${sessionClientAddress}\nPlan: ${sessionCurrentPlanName} (${sessionCurrentPlanSpeed})\nIssue: ${category}\nDetails: ${description || 'None provided'}\nTime: ${timestamp}`;
+            const fallbackText = `N'RTECH TECHNICAL SUPPORT TICKET\nReceiver: m.me/ramirez.technician\nSubscriber: ${sessionClientName}\nAccount No: ${sessionClientAcc}\nAddress: ${sessionClientAddress}\nPlan: ${sessionCurrentPlanName} (${sessionCurrentPlanSpeed})\nIssue: ${category}\nDetails: ${description || 'None provided'}\nTime: ${timestamp}`;
 
             closeSupportModal();
             generateAndShareRequestImage(
                 "TECHNICAL SUPPORT DISPATCH TICKET",
-                "Subscriber Line Diagnostics & Field Repair Request",
+                "Receiver: N'RTECH (m.me/ramirez.technician)",
                 "#8b5cf6",
                 details,
                 `NRTECH-Support-${sessionClientAcc}.png`,
@@ -2619,7 +2613,7 @@
             );
         }
 
-        // 3. Submit Plan Upgrade Order -> Detailed Image + Direct Redirect to https://m.me/ramirez.technician
+        // 3. Submit Plan Upgrade Order -> Detailed Card + Open https://m.me/ramirez.technician
         function submitUpgradeRequest() {
             if (!selectedUpgradePackage.name) {
                 showToast("Please choose a subscription package tier first.", "warning");
@@ -2629,6 +2623,7 @@
             const timestamp = new Date().toLocaleString();
 
             const details = [
+                { label: "Receiver", value: "m.me/ramirez.technician", highlight: true },
                 { label: "Subscriber", value: sessionClientName, highlight: true },
                 { label: "Account No", value: sessionClientAcc, highlight: true },
                 { label: "Address", value: sessionClientAddress },
@@ -2639,12 +2634,12 @@
                 { label: "Requested At", value: timestamp }
             ];
 
-            const fallbackText = `N'RTECH PLAN UPGRADE ORDER\nSubscriber: ${sessionClientName}\nAccount No: ${sessionClientAcc}\nCurrent Plan: ${sessionCurrentPlanName} (${sessionCurrentPlanSpeed})\nNew Plan: ${selectedUpgradePackage.name} (${selectedUpgradePackage.speed})\nNew Price: ${selectedUpgradePackage.price}/mo\nNotes: ${notes || 'None provided'}\nTime: ${timestamp}`;
+            const fallbackText = `N'RTECH PLAN UPGRADE ORDER\nReceiver: m.me/ramirez.technician\nSubscriber: ${sessionClientName}\nAccount No: ${sessionClientAcc}\nCurrent Plan: ${sessionCurrentPlanName} (${sessionCurrentPlanSpeed})\nNew Plan: ${selectedUpgradePackage.name} (${selectedUpgradePackage.speed})\nNew Price: ${selectedUpgradePackage.price}/mo\nNotes: ${notes || 'None provided'}\nTime: ${timestamp}`;
 
             closeUpgradeModal();
             generateAndShareRequestImage(
                 "SUBSCRIPTION PLAN UPGRADE ORDER",
-                "Bandwidth Tier Migration & Profile Reconfiguration Request",
+                "Receiver: N'RTECH (m.me/ramirez.technician)",
                 "#d49a37",
                 details,
                 `NRTECH-Upgrade-${sessionClientAcc}.png`,
@@ -2652,7 +2647,7 @@
             );
         }
 
-        // 4. Mini UPS Inquiry -> Detailed Image + Direct Redirect to https://m.me/ramirez.technician
+        // 4. Mini UPS Inquiry -> Detailed Card + Open https://m.me/ramirez.technician
         function submitUpsRequest() {
             if (!selectedUpsPackage.model) {
                 showToast("Please select a UPS backup model capacity first.", "warning");
@@ -2662,6 +2657,7 @@
             const timestamp = new Date().toLocaleString();
 
             const details = [
+                { label: "Receiver", value: "m.me/ramirez.technician", highlight: true },
                 { label: "Subscriber", value: sessionClientName, highlight: true },
                 { label: "Account No", value: sessionClientAcc, highlight: true },
                 { label: "Address", value: sessionClientAddress },
@@ -2672,12 +2668,12 @@
                 { label: "Inquired At", value: timestamp }
             ];
 
-            const fallbackText = `N'RTECH MINI UPS INQUIRY\nSubscriber: ${sessionClientName}\nAccount No: ${sessionClientAcc}\nAddress: ${sessionClientAddress}\nModel: Mini UPS ${selectedUpsPackage.model}\nDesign: ${selectedUpsPackage.design}\nNotes: ${notes || 'Requesting unit price & availability'}\nTime: ${timestamp}`;
+            const fallbackText = `N'RTECH MINI UPS INQUIRY\nReceiver: m.me/ramirez.technician\nSubscriber: ${sessionClientName}\nAccount No: ${sessionClientAcc}\nAddress: ${sessionClientAddress}\nModel: Mini UPS ${selectedUpsPackage.model}\nDesign: ${selectedUpsPackage.design}\nNotes: ${notes || 'Requesting unit price & availability'}\nTime: ${timestamp}`;
 
             closeUpsModal();
             generateAndShareRequestImage(
                 "MINI UPS BACKUP PRICE & ORDER INQUIRY",
-                "Uninterruptible Router / ONU Power Backup Reservation",
+                "Receiver: N'RTECH (m.me/ramirez.technician)",
                 "#f59e0b",
                 details,
                 `NRTECH-MiniUPS-${sessionClientAcc}.png`,
