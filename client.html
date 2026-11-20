@@ -1221,11 +1221,39 @@
                 <h4 style="margin-bottom: 5px; color: var(--text-dark); font-size: 1.1rem;">Scan to Pay Bill</h4>
                 <p style="font-size: 0.85rem; color: var(--text-light);">Use your GCash app to scan the QR code below</p>
                 
-                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=09317926807" 
-                     alt="GCash QR" 
-                     style="cursor: zoom-in;" 
-                     onclick="window.open(this.src, '_blank')"
-                     title="Click to enlarge">
+                <img src="gcash-qr.jpg" 
+     alt="GCash QR" 
+     style="cursor: zoom-in;" 
+     onclick="window.open(this.src, '_blank')"
+     onerror="if(!this.dataset.retry){this.dataset.retry='png';this.src='gcash-qr.png';}else if(this.dataset.retry==='png'){this.dataset.retry='jpeg';this.src='gcash-qr.jpeg';}"
+     title="Click to enlarge">
+
+<div class="qr-section">
+    <h4 style="margin-bottom: 5px; color: var(--text-dark); font-size: 1.1rem;">Scan to Pay Bill</h4>
+    <p style="font-size: 0.85rem; color: var(--text-light);">Use your GCash app to scan the QR code below</p>
+    
+    <img src="gcash-qr.jpg" 
+         alt="GCash QR" 
+         style="cursor: zoom-in;" 
+         onclick="window.open(this.src, '_blank')"
+         onerror="if(!this.dataset.retry){this.dataset.retry='png';this.src='gcash-qr.png';}else if(this.dataset.retry==='png'){this.dataset.retry='jpeg';this.src='gcash-qr.jpeg';}"
+         title="Click to enlarge">
+         
+    <div class="gcash-info">
+        <strong style="display: block; margin-bottom: 5px; font-size: 1rem;">Account Name: Noruel John Ramirez</strong>
+        
+        <div class="gcash-box-container">
+            <div style="display: flex; align-items: center; gap: 8px;">
+                <span style="font-size: 0.95rem; color: var(--text-light); font-weight: 700;">GCash:</span>
+                <span id="gcashNumberText" style="color: var(--primary-dark); font-size: 1.25rem; font-weight: 800; letter-spacing: 1px;">09317926807</span>
+            </div>
+            <button onclick="copyGCashNumber()" style="background: var(--bg-light); border: 1px solid #cbd5e1; padding: 8px 14px; border-radius: 8px; cursor: pointer; color: var(--text-dark); display: flex; align-items: center; gap: 6px; font-size: 0.85rem; transition: var(--transition-smooth); font-weight: 700;">
+                <i class="far fa-copy"></i> Copy
+            </button>
+        </div>
+    </div>
+</div>
+
                      
                 <div class="gcash-info">
                     <strong style="display: block; margin-bottom: 5px; font-size: 1rem;">Account Name: Noruel John Ramirez</strong>
