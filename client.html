@@ -426,33 +426,6 @@
         .proof-btn:hover { background: var(--messenger-dark); transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0, 132, 255, 0.3); }
         .proof-btn:active { transform: scale(0.96); }
 
-        .gcash-app-btn {
-            background: linear-gradient(135deg, #007dfe, #005ce6);
-            color: white;
-            border: none;
-            padding: 13px 18px;
-            border-radius: 12px;
-            cursor: pointer;
-            font-size: 0.95rem;
-            font-weight: 700;
-            width: 100%;
-            margin-top: 14px;
-            transition: var(--transition-smooth);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 8px;
-            box-shadow: 0 6px 16px rgba(0, 125, 254, 0.25);
-        }
-
-        .gcash-app-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(0, 125, 254, 0.35);
-            filter: brightness(1.05);
-        }
-
-        .gcash-app-btn:active { transform: scale(0.97); }
-
         /* --- Notifications Card Top View --- */
         .notification-top-wrapper {
             width: 100%;
@@ -760,9 +733,8 @@
         }
 
         .qr-section img {
-            width: 170px;
-            height: 170px;
-            object-fit: contain;
+            width: 160px;
+            height: 160px;
             border-radius: 12px;
             margin: 15px 0;
             border: 3px solid var(--primary);
@@ -1249,11 +1221,10 @@
                 <h4 style="margin-bottom: 5px; color: var(--text-dark); font-size: 1.1rem;">Scan to Pay Bill</h4>
                 <p style="font-size: 0.85rem; color: var(--text-light);">Use your GCash app to scan the QR code below</p>
                 
-                <img src="gcash-qr.png" 
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=09317926807" 
                      alt="GCash QR" 
                      style="cursor: zoom-in;" 
                      onclick="window.open(this.src, '_blank')"
-                     onerror="this.src='https://api.qrserver.com/v1/create-qr-code/?size=170x170&data=09317926807';"
                      title="Click to enlarge">
                      
                 <div class="gcash-info">
@@ -1264,14 +1235,10 @@
                             <span style="font-size: 0.95rem; color: var(--text-light); font-weight: 700;">GCash:</span>
                             <span id="gcashNumberText" style="color: var(--primary-dark); font-size: 1.25rem; font-weight: 800; letter-spacing: 1px;">09317926807</span>
                         </div>
-                        <button type="button" onclick="copyGCashNumber()" style="background: var(--bg-light); border: 1px solid #cbd5e1; padding: 8px 14px; border-radius: 8px; cursor: pointer; color: var(--text-dark); display: flex; align-items: center; gap: 6px; font-size: 0.85rem; transition: var(--transition-smooth); font-weight: 700;">
-                            <i class="far fa-copy"></i> Copy & Message
+                        <button onclick="copyGCashNumber()" style="background: var(--bg-light); border: 1px solid #cbd5e1; padding: 8px 14px; border-radius: 8px; cursor: pointer; color: var(--text-dark); display: flex; align-items: center; gap: 6px; font-size: 0.85rem; transition: var(--transition-smooth); font-weight: 700;">
+                            <i class="far fa-copy"></i> Copy
                         </button>
                     </div>
-
-                    <button type="button" class="gcash-app-btn" onclick="openGCashApp()">
-                        <i class="fas fa-mobile-alt"></i> Open GCash App
-                    </button>
                 </div>
             </div>
         </div>
@@ -1811,45 +1778,14 @@
             }
         }
 
-        // --- Copy GCash Number & Redirect to Messenger ---
+        // --- Copy GCash Number Logic ---
         function copyGCashNumber() {
-            const gcashNumber = document.getElementById('gcashNumberText').innerText.trim();
-            const redirectToMessenger = () => {
-                showToast("GCash number copied! Redirecting to Messenger...", "success");
-                setTimeout(() => {
-                    window.open("https://m.me/ramirez.technician", "_blank");
-                }, 1000);
-            };
-
-            if (navigator.clipboard && navigator.clipboard.writeText) {
-                navigator.clipboard.writeText(gcashNumber).then(redirectToMessenger).catch(() => {
-                    fallbackCopyText(gcashNumber);
-                    redirectToMessenger();
-                });
-            } else {
-                fallbackCopyText(gcashNumber);
-                redirectToMessenger();
-            }
-        }
-
-        function fallbackCopyText(text) {
-            const tempInput = document.createElement("input");
-            tempInput.value = text;
-            document.body.appendChild(tempInput);
-            tempInput.select();
-            document.execCommand("copy");
-            document.body.removeChild(tempInput);
-        }
-
-        // --- Open GCash App Deep Link ---
-        function openGCashApp() {
-            showToast("Opening GCash app...", "info");
-            const fallbackTimer = setTimeout(() => {
-                window.open("https://www.gcash.com/", "_blank");
-            }, 1500);
-
-            window.addEventListener("blur", () => clearTimeout(fallbackTimer), { once: true });
-            window.location.href = "gcash://";
+            const gcashNumber = document.getElementById('gcashNumberText').innerText;
+            navigator.clipboard.writeText(gcashNumber).then(() => {
+                showToast("GCash number copied to clipboard!", "success");
+            }).catch(err => {
+                showToast("Failed to copy number. Please copy manually.", "warning");
+            });
         }
 
         // --- Proof of Payment Modal Logic ---
@@ -2211,3 +2147,5 @@
     </script>
 </body>
 </html>
+
+
