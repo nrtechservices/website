@@ -954,7 +954,7 @@
         
         /* --- Deep Mobile Adjustments (Clean / Minimized Base Scale) --- */
         @media (max-width: 480px) {
-            html { font-size: 14.5px; } /* Scales down global typography slightly */
+            html { font-size: 14.5px; }
             .portal-container { padding: 25px 15px; border-radius: 16px; }
             .dashboard-grid, .bottom-support-grid { gap: 15px; margin-bottom: 25px; }
             .stat-card { padding: 18px 15px; border-radius: 16px; }
@@ -1222,13 +1222,11 @@
                 <p style="font-size: 0.85rem; color: var(--text-light);">Use your GCash app to scan the QR code below</p>
                 
                 <img src="gcash-qr.jpg" 
-     alt="GCash QR" 
-     style="cursor: zoom-in;" 
-     onclick="window.open(this.src, '_blank')"
-     onerror="if(!this.dataset.retry){this.dataset.retry='png';this.src='gcash-qr.png';}else if(this.dataset.retry==='png'){this.dataset.retry='jpeg';this.src='gcash-qr.jpeg';}"
-     title="Click to enlarge">
-
-
+                     alt="GCash QR" 
+                     style="cursor: zoom-in;" 
+                     onclick="window.open(this.src, '_blank')"
+                     onerror="if(!this.dataset.retry){this.dataset.retry='png';this.src='gcash-qr.png';}else if(this.dataset.retry==='png'){this.dataset.retry='jpeg';this.src='gcash-qr.jpeg';}"
+                     title="Click to enlarge">
                      
                 <div class="gcash-info">
                     <strong style="display: block; margin-bottom: 5px; font-size: 1rem;">Account Name: Noruel John Ramirez</strong>
@@ -1262,7 +1260,7 @@
                 <input type="text" id="popReferenceNum" class="nice-input-box" placeholder="5012 3456 7890" maxlength="40">
             </div>
             <button type="button" class="btn-primary" style="background: linear-gradient(135deg, var(--messenger), var(--messenger-dark));" onclick="submitProofOfPayment()">
-                Confirm & Launch Messenger
+                <i class="fas fa-image"></i> Generate Slip & Open Messenger
             </button>
         </div>
     </div>
@@ -1295,7 +1293,7 @@
             </div>
             
             <button type="button" class="btn-primary" style="background: linear-gradient(135deg, var(--accent), #7c3aed); box-shadow: 0 8px 20px rgba(139, 92, 246, 0.3);" onclick="submitSupportTicket()">
-                <i class="fab fa-facebook-messenger"></i> Send via Messenger
+                <i class="fas fa-image"></i> Generate Ticket Image & Open Messenger
             </button>
         </div>
     </div>
@@ -1323,7 +1321,7 @@
             </div>
 
             <button type="button" class="btn-primary" style="background: linear-gradient(135deg, var(--primary), var(--primary-dark));" onclick="submitUpgradeRequest()">
-                <i class="fab fa-facebook-messenger"></i> Submit Upgrade Order
+                <i class="fas fa-image"></i> Generate Order Image & Open Messenger
             </button>
         </div>
     </div>
@@ -1351,7 +1349,7 @@
             </div>
 
             <button type="button" class="btn-primary" style="background: linear-gradient(135deg, var(--messenger), var(--messenger-dark));" onclick="submitUpsRequest()">
-                <i class="fab fa-facebook-messenger"></i> Inquire Price via Messenger
+                <i class="fas fa-image"></i> Generate Inquiry Image & Open Messenger
             </button>
         </div>
     </div>
@@ -1548,7 +1546,6 @@
                 if (!response.ok) throw new Error("Network pool response issue"); 
                 const data = await response.json();
                 
-                // data.accounts holds the client list in the newly parsed format
                 const clients = data.accounts || data; 
                 const client = clients.find(c => String(c.clientUsername).toLowerCase() === usernameInput.toLowerCase() && String(c.clientPassword) === accPass);
 
@@ -1562,7 +1559,6 @@
                     
                     showToast(`Welcome back, ${client.name || 'Client'}!`, 'success');
                     
-                    // Trigger Update Check after UI loads
                     setTimeout(() => { fetchUpdates(); }, 800);
                 } else {
                     playSound('error');
@@ -1590,7 +1586,6 @@
                 let messageStr = "";
 
                 if (Array.isArray(updateData)) {
-                    // Filter down to updates that are active
                     const activeUpdates = updateData.filter(u => u.active === true);
                     
                     if (activeUpdates.length > 0) {
@@ -1599,7 +1594,6 @@
                         messageStr = activeUpdates.map(u => `<strong>${u.title}:</strong> ${u.message}`).join('<br><br>');
                     }
                 } else if (updateData.active !== false && (updateData.message || updateData.title)) {
-                    // Fallback block if it's a single object
                     showUpdate = true;
                     titleStr = updateData.title || "System Advisory";
                     messageStr = updateData.message || "Important system update information.";
@@ -1627,7 +1621,6 @@
                 const resNotif = await fetch("notif.json", { cache: "no-store" });
                 const notifData = await resNotif.json();
                 
-                // Matches either clientUsername OR the unique accountNumber string
                 userNotifs = notifData.filter(n => 
                     (String(n.username).toLowerCase() === String(clientObj.clientUsername).toLowerCase() ||
                      String(n.username).toLowerCase() === String(clientObj.accountNumber).toLowerCase()) && 
@@ -1745,7 +1738,6 @@
                     tr.style.animation = `fadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards ${0.2 + (index * 0.1)}s`;
                     tr.style.opacity = '0';
                     
-                    // Priority checking for direct JSON attributes for covered month
                     let coveredMonthString = "Unknown";
                     
                     if (pay.coverageText) {
@@ -1799,30 +1791,6 @@
         }
         function closeProofModal() { proofModal.style.display = 'none'; }
 
-        function submitProofOfPayment() {
-            const refNum = document.getElementById('popReferenceNum').value.trim();
-            if (!refNum) {
-                showToast("Please provide a payment reference number.", "warning");
-                return;
-            }
-
-            const name = document.getElementById('clientNameDisplay').textContent;
-            const account = document.getElementById('clientAccDisplay').textContent;
-            const plan = document.getElementById('planDisplay').textContent;
-            const balance = document.getElementById('balanceDisplay').textContent;
-
-            const structuredMessage = `N'RTECH ADVANCE PAYMENT SUBMISSION\n\nSubscriber: ${name}\nAccount No: ${account}\nPlan Tier: ${plan}\nInvoice Amount: ${balance}\nReference No: ${refNum}\nTimestamp: ${new Date().toLocaleString()}\n\nStatus: SEND DONE. Please check system records.`;
-
-            closeProofModal();
-            showToast("Message copied! Once Messenger opens, just PASTE the text in the chat.", "success");
-
-            navigator.clipboard.writeText(structuredMessage).then(() => {
-                setTimeout(() => { window.open("https://m.me/ramirez.technician", "_blank"); }, 1800);
-            }).catch(() => {
-                window.open("https://m.me/ramirez.technician", "_blank");
-            });
-        }
-
         // --- Support Modal Logic ---
         function openSupportModal() {
             document.getElementById('issueDescription').value = '';
@@ -1831,25 +1799,6 @@
             playSound('info');
         }
         function closeSupportModal() { supportModal.style.display = 'none'; }
-
-        function submitSupportTicket() {
-            const category = document.getElementById('issueCategory').value;
-            const description = document.getElementById('issueDescription').value.trim();
-            
-            const name = document.getElementById('clientNameDisplay').textContent;
-            const account = document.getElementById('clientAccDisplay').textContent;
-
-            const structuredMessage = `N'RTECH SUPPORT REQUEST\n\nSubscriber: ${name}\nAccount No: ${account}\nIssue: ${category}\nDetails: ${description || 'None provided'}\nTimestamp: ${new Date().toLocaleString()}`;
-
-            closeSupportModal();
-            showToast("Message copied! Once Messenger opens, just PASTE the text in the chat.", "success");
-
-            navigator.clipboard.writeText(structuredMessage).then(() => {
-                setTimeout(() => { window.open("https://m.me/ramirez.technician", "_blank"); }, 1800);
-            }).catch(() => {
-                window.open("https://m.me/ramirez.technician", "_blank");
-            });
-        }
 
         // --- Subscription Array Structural Builders from plans.json ---
         async function openUpgradeModal() {
@@ -1882,7 +1831,6 @@
             }
         }
 
-        // Handles rendering logic and automatically screens out the currently subscribed plan
         function renderPlansInGrid(plansArray, containerElement) {
             containerElement.innerHTML = '';
             let printedPlansCount = 0;
@@ -1932,26 +1880,6 @@
             element.classList.add('selected');
             selectedUpgradePackage = { name: planName, speed: speed, price: price };
             playSound('success');
-        }
-
-        function submitUpgradeRequest() {
-            if (!selectedUpgradePackage.name) {
-                showToast("Please choose a subscription package tier first.", "warning");
-                return;
-            }
-            const notes = document.getElementById('upgradeNotes').value.trim();
-            const currentPlan = document.getElementById('planDisplay').textContent;
-
-            const structuredMessage = `N'RTECH SUBSCRIPTION UPGRADE REQUEST\n\nSubscriber: ${sessionClientName}\nAccount No: ${sessionClientAcc}\nCurrent Tier: ${currentPlan}\nRequested Package: ${selectedUpgradePackage.name} (${selectedUpgradePackage.speed})\nPackage Pricing: ${selectedUpgradePackage.price}/mo\nUser Notes: ${notes || 'None provided'}\nTimestamp: ${new Date().toLocaleString()}`;
-
-            closeUpgradeModal();
-            showToast("Upgrade data compiled! Paste into Messenger chat when prompted.", "success");
-
-            navigator.clipboard.writeText(structuredMessage).then(() => {
-                setTimeout(() => { window.open("https://m.me/ramirez.technician", "_blank"); }, 1800);
-            }).catch(() => {
-                window.open("https://m.me/ramirez.technician", "_blank");
-            });
         }
 
         // --- Mini UPS Structural Request Modal Modules ---
@@ -2045,25 +1973,6 @@
 
         function closeUpsModal() { upsModal.style.display = 'none'; }
 
-        function submitUpsRequest() {
-            if (!selectedUpsPackage.model) {
-                showToast("Please select a UPS backup model capacity first.", "warning");
-                return;
-            }
-            const notes = document.getElementById('upsNotes').value.trim();
-
-            const structuredMessage = `N'RTECH MINI UPS INQUIRY\n\nSubscriber: ${sessionClientName}\nAccount No: ${sessionClientAcc}\nModel Capacity: ${selectedUpsPackage.model}\nDesign Configuration: ${selectedUpsPackage.design}\nUser Notes: ${notes || 'None provided'}\nTimestamp: ${new Date().toLocaleString()}\n\nInquiry: Requesting device unit pricing and installation deployment details.`;
-
-            closeUpsModal();
-            showToast("Inquiry string compiled! Paste into Messenger chat when prompted.", "success");
-
-            navigator.clipboard.writeText(structuredMessage).then(() => {
-                setTimeout(() => { window.open("https://m.me/ramirez.technician", "_blank"); }, 1800);
-            }).catch(() => {
-                window.open("https://m.me/ramirez.technician", "_blank");
-            });
-        }
-
         // --- FAQ Modal Logic ---
         function openFaqModal() { faqModal.style.display = 'flex'; playSound('info'); }
         function closeFaqModal() { faqModal.style.display = 'none'; }
@@ -2075,7 +1984,6 @@
             document.getElementById('modalReference').textContent = payment.referenceNumber || 'N/A';
             document.getElementById('modalAmountPaid').textContent = `₱${payment.amount.toLocaleString(undefined, {minimumFractionDigits: 2})}`;
             
-            // Priority checking for direct JSON attributes for covered month
             let coveredMonthString = "Unknown";
             if (payment.coverageText) {
                 coveredMonthString = payment.coverageText.replace(/[()]/g, '');
@@ -2121,8 +2029,6 @@
             if (event.target === upgradeModal) closeUpgradeModal();
             if (event.target === faqModal) closeFaqModal();
             if (event.target === upsModal) closeUpsModal();
-            // Note: UpdateModal lacks an outside click close feature intentionally, 
-            // the user must press "I Understand".
         }
 
         function logout() {
@@ -2146,6 +2052,203 @@
                 
                 showToast("Successfully logged out.", 'info');
             }, 400);
+        }
+        
+        // --- Auto-Generate Branded PNG Card & Open Messenger (No Copy-Paste) ---
+        async function generateAndShareRequestImage(title, accentColor, detailsList, fileName) {
+            const canvas = document.createElement("canvas");
+            const lineHeight = 42;
+            const headerHeight = 165;
+            const footerHeight = 75;
+            canvas.width = 760;
+            canvas.height = headerHeight + (detailsList.length * lineHeight) + footerHeight;
+
+            const ctx = canvas.getContext("2d");
+
+            // Dark Slate Card Background
+            ctx.fillStyle = "#0f172a";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Outer Gold Border
+            ctx.strokeStyle = "#d49a37";
+            ctx.lineWidth = 6;
+            ctx.strokeRect(18, 18, canvas.width - 36, canvas.height - 36);
+
+            // Top Accent Bar
+            ctx.fillStyle = accentColor;
+            ctx.fillRect(21, 21, canvas.width - 42, 12);
+
+            // Header Title
+            ctx.fillStyle = "#d49a37";
+            ctx.font = "bold 28px Poppins, Arial, sans-serif";
+            ctx.fillText("N'RTECH INTERNET SERVICES", 48, 78);
+
+            // Subtitle
+            ctx.fillStyle = "#ffffff";
+            ctx.font = "bold 21px Inter, Arial, sans-serif";
+            ctx.fillText(title, 48, 118);
+
+            // Divider Line
+            ctx.strokeStyle = "#334155";
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.moveTo(48, 140);
+            ctx.lineTo(canvas.width - 48, 140);
+            ctx.stroke();
+
+            // Detail Rows
+            let y = 185;
+            detailsList.forEach(item => {
+                ctx.fillStyle = "#94a3b8";
+                ctx.font = "bold 17px Inter, Arial, sans-serif";
+                ctx.fillText(item.label + ":", 48, y);
+
+                ctx.fillStyle = "#f8fafc";
+                ctx.font = "18px Inter, Arial, sans-serif";
+                const valueText = String(item.value).length > 42 
+                    ? String(item.value).substring(0, 42) + "..." 
+                    : String(item.value);
+                ctx.fillText(valueText, 240, y);
+
+                y += lineHeight;
+            });
+
+            // Footer Note
+            ctx.fillStyle = "#64748b";
+            ctx.font = "italic 15px Inter, Arial, sans-serif";
+            ctx.fillText("Generated via N'RTECH Client Portal • Attach this image in Messenger", 48, canvas.height - 42);
+
+            // Convert Canvas to Blob / File
+            const blob = await new Promise(resolve => canvas.toBlob(resolve, "image/png"));
+            const file = new File([blob], fileName, { type: "image/png" });
+
+            // Try Native Mobile Share Sheet first (allows direct tap to Messenger on phones)
+            if (navigator.canShare && navigator.canShare({ files: [file] })) {
+                try {
+                    await navigator.share({
+                        files: [file],
+                        title: title
+                    });
+                    showToast("Image shared! Send it directly in Messenger.", "success");
+                    return;
+                } catch (err) {
+                    // If user cancels share sheet, fall back to automatic download + open Messenger
+                }
+            }
+
+            // Fallback: Auto-download PNG image and launch Messenger
+            const link = document.createElement("a");
+            link.download = fileName;
+            link.href = URL.createObjectURL(blob);
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+
+            showToast("Summary image saved! Attach it in Messenger when it opens.", "success");
+            setTimeout(() => {
+                window.open("https://m.me/ramirez.technician", "_blank");
+            }, 1500);
+        }
+
+        // 1. Proof of Payment (Image Card)
+        function submitProofOfPayment() {
+            const refNum = document.getElementById('popReferenceNum').value.trim();
+            if (!refNum) {
+                showToast("Please provide a payment reference number.", "warning");
+                return;
+            }
+
+            const name = document.getElementById('clientNameDisplay').textContent;
+            const account = document.getElementById('clientAccDisplay').textContent;
+            const plan = document.getElementById('planDisplay').textContent;
+            const balance = document.getElementById('balanceDisplay').textContent;
+
+            closeProofModal();
+            generateAndShareRequestImage(
+                "ADVANCE PAYMENT PROOF",
+                "#0084ff",
+                [
+                    { label: "Subscriber", value: name },
+                    { label: "Account No", value: account },
+                    { label: "Plan Tier", value: plan },
+                    { label: "Invoice Amount", value: balance },
+                    { label: "Reference No", value: refNum },
+                    { label: "Timestamp", value: new Date().toLocaleString() }
+                ],
+                `NRTECH-Payment-${account}.png`
+            );
+        }
+
+        // 2. Support Ticket (Image Card)
+        function submitSupportTicket() {
+            const category = document.getElementById('issueCategory').value;
+            const description = document.getElementById('issueDescription').value.trim();
+            const name = document.getElementById('clientNameDisplay').textContent;
+            const account = document.getElementById('clientAccDisplay').textContent;
+
+            closeSupportModal();
+            generateAndShareRequestImage(
+                "HELPDESK SUPPORT TICKET",
+                "#8b5cf6",
+                [
+                    { label: "Subscriber", value: name },
+                    { label: "Account No", value: account },
+                    { label: "Issue Type", value: category },
+                    { label: "Details", value: description || "None provided" },
+                    { label: "Timestamp", value: new Date().toLocaleString() }
+                ],
+                `NRTECH-Support-${account}.png`
+            );
+        }
+
+        // 3. Plan Upgrade Order (Image Card)
+        function submitUpgradeRequest() {
+            if (!selectedUpgradePackage.name) {
+                showToast("Please choose a subscription package tier first.", "warning");
+                return;
+            }
+            const notes = document.getElementById('upgradeNotes').value.trim();
+            const currentPlan = document.getElementById('planDisplay').textContent;
+
+            closeUpgradeModal();
+            generateAndShareRequestImage(
+                "SUBSCRIPTION UPGRADE ORDER",
+                "#d49a37",
+                [
+                    { label: "Subscriber", value: sessionClientName },
+                    { label: "Account No", value: sessionClientAcc },
+                    { label: "Current Plan", value: currentPlan },
+                    { label: "New Plan", value: `${selectedUpgradePackage.name} (${selectedUpgradePackage.speed})` },
+                    { label: "Monthly Fee", value: `${selectedUpgradePackage.price}/mo` },
+                    { label: "Notes", value: notes || "None provided" },
+                    { label: "Timestamp", value: new Date().toLocaleString() }
+                ],
+                `NRTECH-Upgrade-${sessionClientAcc}.png`
+            );
+        }
+
+        // 4. Mini UPS Inquiry (Image Card)
+        function submitUpsRequest() {
+            if (!selectedUpsPackage.model) {
+                showToast("Please select a UPS backup model capacity first.", "warning");
+                return;
+            }
+            const notes = document.getElementById('upsNotes').value.trim();
+
+            closeUpsModal();
+            generateAndShareRequestImage(
+                "MINI UPS PRICE & ORDER INQUIRY",
+                "#f59e0b",
+                [
+                    { label: "Subscriber", value: sessionClientName },
+                    { label: "Account No", value: sessionClientAcc },
+                    { label: "UPS Capacity", value: selectedUpsPackage.model },
+                    { label: "Design Type", value: selectedUpsPackage.design },
+                    { label: "Notes", value: notes || "None provided" },
+                    { label: "Timestamp", value: new Date().toLocaleString() }
+                ],
+                `NRTECH-MiniUPS-${sessionClientAcc}.png`
+            );
         }
     </script>
 </body>
