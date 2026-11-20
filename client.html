@@ -6,7 +6,7 @@
     <title>N'RTECH Client Portal</title>
     
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
     
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="logo.png"> 
@@ -23,8 +23,6 @@
             --success: #10b981;
             --accent: #8b5cf6;
             --info: #3b82f6;
-            --gcash: #007dfe;
-            --gcash-dark: #005bb5;
             --messenger: #0084ff;
             --messenger-dark: #0066cc;
             --border-color: #e2e8f0;
@@ -211,8 +209,8 @@
             width: 100%;
             padding: 16px;
             border-radius: 14px;
-            font-size: 1.05rem;
-            font-weight: 700;
+            font-size: 1.1rem;
+            font-weight: bold;
             cursor: pointer;
             transition: var(--transition-smooth);
             text-transform: uppercase;
@@ -222,7 +220,6 @@
             justify-content: center;
             align-items: center;
             gap: 10px;
-            text-decoration: none;
         }
 
         .btn-primary:hover {
@@ -421,13 +418,40 @@
             gap: 10px;
         }
 
-        .bill-btn { background: linear-gradient(135deg, var(--gcash), var(--gcash-dark)); color: white; margin-top: auto; box-shadow: 0 6px 16px rgba(0, 125, 254, 0.25); }
-        .bill-btn:hover { transform: translateY(-3px); box-shadow: 0 10px 22px rgba(0, 125, 254, 0.35); filter: brightness(1.05); }
+        .bill-btn { background: var(--danger); color: white; margin-top: auto; }
+        .bill-btn:hover { background: #dc2626; transform: translateY(-3px); box-shadow: 0 8px 20px rgba(239, 68, 68, 0.3); }
         .bill-btn:active { transform: scale(0.96); }
 
         .proof-btn { background: var(--messenger); color: white; margin-top: 12px; }
         .proof-btn:hover { background: var(--messenger-dark); transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0, 132, 255, 0.3); }
         .proof-btn:active { transform: scale(0.96); }
+
+        .gcash-app-btn {
+            background: linear-gradient(135deg, #007dfe, #005ce6);
+            color: white;
+            border: none;
+            padding: 13px 18px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            font-weight: 700;
+            width: 100%;
+            margin-top: 14px;
+            transition: var(--transition-smooth);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 6px 16px rgba(0, 125, 254, 0.25);
+        }
+
+        .gcash-app-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 125, 254, 0.35);
+            filter: brightness(1.05);
+        }
+
+        .gcash-app-btn:active { transform: scale(0.97); }
 
         /* --- Notifications Card Top View --- */
         .notification-top-wrapper {
@@ -507,135 +531,6 @@
             transform: translateY(-1px);
         }
 
-        /* --- GCash Payment Gateway Tabs & Views --- */
-        .gateway-tabs {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            background: #f1f5f9;
-            padding: 6px;
-            border-radius: 16px;
-            margin-top: 20px;
-            border: 1px solid #e2e8f0;
-        }
-
-        .gateway-tab-btn {
-            border: none;
-            background: transparent;
-            padding: 12px 14px;
-            border-radius: 12px;
-            font-weight: 700;
-            font-size: 0.9rem;
-            color: var(--text-light);
-            cursor: pointer;
-            transition: var(--transition-smooth);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-        }
-
-        .gateway-tab-btn.active {
-            background: #ffffff;
-            color: var(--gcash);
-            box-shadow: 0 4px 12px rgba(0, 125, 254, 0.15);
-        }
-
-        .gateway-pane {
-            display: none;
-            animation: fadeInUp 0.35s ease;
-        }
-
-        .gateway-pane.active {
-            display: block;
-        }
-
-        .gcash-app-card {
-            background: linear-gradient(145deg, #f0f7ff, #e0f2fe);
-            border: 2px solid #bae6fd;
-            border-radius: 18px;
-            padding: 24px 20px;
-            margin-top: 18px;
-            text-align: center;
-        }
-
-        .gcash-app-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background: var(--gcash);
-            color: white;
-            font-size: 0.75rem;
-            font-weight: 800;
-            padding: 5px 14px;
-            border-radius: 20px;
-            letter-spacing: 0.5px;
-            margin-bottom: 14px;
-            text-transform: uppercase;
-        }
-
-        .gcash-step-list {
-            text-align: left;
-            background: rgba(255,255,255,0.85);
-            border-radius: 12px;
-            padding: 14px 16px;
-            margin: 16px 0;
-            font-size: 0.85rem;
-            color: var(--text-dark);
-            border: 1px solid #dbeafe;
-        }
-
-        .gcash-step-list div {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            margin-bottom: 8px;
-        }
-
-        .gcash-step-list div:last-child {
-            margin-bottom: 0;
-        }
-
-        .step-num {
-            background: var(--gcash);
-            color: white;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            font-size: 0.72rem;
-            font-weight: 800;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-            margin-top: 1px;
-        }
-
-        .btn-gcash-launch {
-            background: linear-gradient(135deg, var(--gcash), var(--gcash-dark));
-            color: white;
-            border: none;
-            width: 100%;
-            padding: 15px 18px;
-            border-radius: 14px;
-            font-size: 1rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: var(--transition-smooth);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            box-shadow: 0 10px 22px rgba(0, 125, 254, 0.3);
-            text-decoration: none;
-        }
-
-        .btn-gcash-launch:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 14px 28px rgba(0, 125, 254, 0.4);
-            filter: brightness(1.06);
-        }
-
         /* --- Flexible Adaptive GCash Component Layout --- */
         .gcash-box-container {
             display: flex;
@@ -651,49 +546,6 @@
             width: 100%;
             box-sizing: border-box;
             flex-wrap: wrap;
-        }
-
-        /* --- Detailed Messenger Dispatch Card Preview --- */
-        .dispatch-preview-box {
-            background: #f8fafc;
-            border: 1.5px solid #cbd5e1;
-            border-radius: 14px;
-            padding: 14px 16px;
-            margin-bottom: 18px;
-            text-align: left;
-            font-size: 0.85rem;
-        }
-
-        .dispatch-preview-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            font-weight: 700;
-            color: var(--text-dark);
-            padding-bottom: 8px;
-            margin-bottom: 8px;
-            border-bottom: 1px dashed #cbd5e1;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 0.4px;
-        }
-
-        .dispatch-row {
-            display: flex;
-            justify-content: space-between;
-            gap: 10px;
-            margin-bottom: 5px;
-        }
-
-        .dispatch-row span:first-child {
-            color: var(--text-light);
-            font-weight: 500;
-        }
-
-        .dispatch-row span:last-child {
-            color: var(--text-dark);
-            font-weight: 700;
-            text-align: right;
         }
 
         /* --- Payment History Section --- */
@@ -842,7 +694,7 @@
         .modal-content {
             background: #ffffff;
             width: 100%;
-            max-width: 480px;
+            max-width: 460px;
             border-radius: 24px;
             padding: 40px 35px;
             position: relative;
@@ -881,7 +733,7 @@
 
         .close-modal-btn:hover { background: var(--danger); color: white; transform: rotate(90deg) scale(1.1); }
 
-        .receipt-header { text-align: center; border-bottom: 2px dashed #e2e8f0; padding-bottom: 22px; margin-bottom: 22px; position: relative; z-index: 2; }
+        .receipt-header { text-align: center; border-bottom: 2px dashed #e2e8f0; padding-bottom: 25px; margin-bottom: 25px; position: relative; z-index: 2; }
         
         .receipt-logo { 
             display: block; 
@@ -901,25 +753,26 @@
             text-align: center;
             background: #f8fafc;
             border-radius: 16px;
-            padding: 22px;
-            margin-top: 18px;
+            padding: 25px;
+            margin-top: 25px;
             border: 1px solid #e2e8f0;
             box-shadow: inset 0 2px 10px rgba(0,0,0,0.02);
         }
 
         .qr-section img {
-            width: 175px;
-            height: 175px;
+            width: 170px;
+            height: 170px;
+            object-fit: contain;
             border-radius: 12px;
             margin: 15px 0;
-            border: 3px solid var(--gcash);
+            border: 3px solid var(--primary);
             padding: 8px;
             background: white;
             transition: var(--transition-smooth);
-            box-shadow: 0 10px 20px rgba(0, 125, 254, 0.15);
+            box-shadow: 0 10px 20px rgba(212, 154, 55, 0.15);
         }
         
-        .qr-section img:hover { transform: scale(1.06) translateY(-3px); box-shadow: 0 15px 30px rgba(0, 125, 254, 0.25); }
+        .qr-section img:hover { transform: scale(1.08) translateY(-5px); box-shadow: 0 15px 30px rgba(212, 154, 55, 0.25); }
 
         .gcash-info { font-size: 0.95rem; line-height: 1.5; color: var(--text-dark); width: 100%; }
         .payment-pill { display: inline-block; background: #eff6ff; color: #1d4ed8; padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 800; margin-bottom: 20px; letter-spacing: 0.5px; }
@@ -946,7 +799,7 @@
             box-shadow: 0 4px 10px rgba(245, 158, 11, 0.1);
         }
 
-        .modal-form-group { margin-top: 15px; margin-bottom: 22px; text-align: left; }
+        .modal-form-group { margin-top: 15px; margin-bottom: 25px; text-align: left; }
         .modal-form-group label { display: block; font-size: 0.95rem; font-weight: 600; margin-bottom: 10px; color: var(--text-dark); }
 
         /* --- FAQ & Animated Tutorial Elements --- */
@@ -1127,9 +980,9 @@
             .plan-selection-grid, .ups-selection-grid { grid-template-columns: 1fr; }
         }
         
-        /* --- Deep Mobile Adjustments --- */
+        /* --- Deep Mobile Adjustments (Clean / Minimized Base Scale) --- */
         @media (max-width: 480px) {
-            html { font-size: 14.5px; }
+            html { font-size: 14.5px; } /* Scales down global typography slightly */
             .portal-container { padding: 25px 15px; border-radius: 16px; }
             .dashboard-grid, .bottom-support-grid { gap: 15px; margin-bottom: 25px; }
             .stat-card { padding: 18px 15px; border-radius: 16px; }
@@ -1139,7 +992,7 @@
             .client-info h2 { font-size: 1.6rem; }
             .client-info p { font-size: 0.85rem; }
             .history-section { padding: 20px 15px; border-radius: 16px; margin-bottom: 25px; }
-            .btn-primary { padding: 14px; font-size: 0.95rem; }
+            .btn-primary { padding: 14px; font-size: 1rem; }
             .modal-content { padding: 25px 15px; border-radius: 16px; }
             .receipt-logo { max-height: 80px; margin-bottom: 10px; }
             header { padding: 10px 0; }
@@ -1148,7 +1001,6 @@
             .gcash-box-container { flex-direction: column; gap: 10px; text-align: center; padding: 10px; }
             .gcash-box-container button { width: 100%; justify-content: center; }
             .faq-item { padding: 15px; }
-            .gateway-tab-btn { font-size: 0.82rem; padding: 10px 8px; }
         }
     </style>
 </head>
@@ -1183,7 +1035,7 @@
             </div>
             
             <div style="text-align: right; margin-bottom: 20px;">
-                <a href="https://m.me/ramirez.technician" target="_blank" id="forgotPassLink" style="color: var(--primary); text-decoration: none; font-size: 0.95rem; font-weight: 600; transition: var(--transition-smooth);" onmouseover="this.style.color='var(--primary-dark)'" onmouseout="this.style.color='var(--primary)'">Forgot Password?</a>
+                <a href="#" id="forgotPassLink" style="color: var(--primary); text-decoration: none; font-size: 0.95rem; font-weight: 600; transition: var(--transition-smooth);" onmouseover="this.style.color='var(--primary-dark)'" onmouseout="this.style.color='var(--primary)'">Forgot Password?</a>
             </div>
             
             <button type="submit" class="btn-primary" id="loginBtn">
@@ -1246,13 +1098,13 @@
                 </p>
             </div>
 
-            <div class="stat-card" id="billingCard" style="border-top: 4px solid var(--gcash);">
+            <div class="stat-card" id="billingCard" style="border-top: 4px solid var(--danger);">
                 <h4>Upcoming Bill <i class="fas fa-file-invoice-dollar" style="color:var(--danger);"></i></h4>
                 <div class="value" id="balanceDisplay" style="color: var(--danger);">₱0.00</div>
                 <p style="color: var(--text-dark); font-size: 0.95rem; margin-top: 12px; font-weight:700; margin-bottom: 22px;">Due Date: <span id="dueDisplay" style="color: var(--danger);">2026-06-19</span></p>
                 
                 <button class="bill-btn" onclick="openBillModal()">
-                    <i class="fas fa-wallet"></i> Pay via GCash Gateway
+                    <i class="fas fa-qrcode"></i> View Payment Details
                 </button>
 
                 <button class="proof-btn" onclick="openProofModal()">
@@ -1328,7 +1180,6 @@
         </button>
     </div>
 
-    <!-- System Advisory Modal -->
     <div id="updateModal" class="modal-overlay" style="z-index: 9999;">
         <div class="modal-content" style="max-width: 400px; text-align: center;">
             <div class="receipt-header" style="border-bottom: none; margin-bottom: 10px; padding-bottom: 0;">
@@ -1345,7 +1196,6 @@
         </div>
     </div>
 
-    <!-- Notification Modal -->
     <div id="notifModal" class="modal-overlay">
         <div class="modal-content">
             <button class="close-modal-btn" onclick="closeNotifModal()"><i class="fas fa-times"></i></button>
@@ -1361,7 +1211,6 @@
         </div>
     </div>
 
-    <!-- Payment Receipt Modal -->
     <div id="receiptModal" class="modal-overlay">
         <div class="modal-content">
             <div class="paid-stamp">PAID</div>
@@ -1382,95 +1231,52 @@
         </div>
     </div>
 
-    <!-- GCash Payment Gateway Modal (Choice: Pay via GCash App OR via QR Code) -->
     <div id="billModal" class="modal-overlay">
         <div class="modal-content">
             <button class="close-modal-btn" onclick="closeBillModal()"><i class="fas fa-times"></i></button>
-            <div class="receipt-header" style="padding-bottom: 18px; margin-bottom: 18px;">
+            <div class="receipt-header">
                 <img src="logo.png" alt="N'RTECH Logo" class="receipt-logo" onerror="this.style.display='none'">
-                <h2>GCash Payment Gateway</h2>
-                <p style="color: var(--text-light); font-size: 0.9rem; margin-top: 4px;">Choose how you want to pay your bill</p>
+                <h2>Upcoming Invoice</h2>
                 <div class="bill-warning">
-                    <i class="fas fa-exclamation-circle"></i> Pay on or before the 20th to avoid late penalties and disconnection.
+                    <i class="fas fa-exclamation-circle"></i> Pay before the 20th to prevent penalty and service interruption.
                 </div>
             </div>
-
-            <div class="receipt-details" style="background: #f8fafc; padding: 14px 16px; border-radius: 14px; border: 1px solid #e2e8f0;">
-                <div style="margin-bottom: 6px;"><span>Account No:</span> <span id="gatewayAccNo">NRT-XXXX</span></div>
-                <div style="margin-bottom: 0;"><span>Total Amount Due:</span> <span id="modalBillAmount" style="color: var(--danger); font-weight: 800; font-size: 1.25rem;">₱0.00</span></div>
+            <div class="receipt-details">
+                <div><span>Amount Due:</span> <span id="modalBillAmount" style="color: var(--danger); font-weight: 800; font-size: 1.3rem;"></span></div>
             </div>
-
-            <!-- Payment Method Switcher -->
-            <div class="gateway-tabs">
-                <button type="button" class="gateway-tab-btn active" id="tabAppBtn" onclick="switchGatewayTab('app')">
-                    <i class="fas fa-mobile-alt"></i> Pay via GCash App
-                </button>
-                <button type="button" class="gateway-tab-btn" id="tabQrBtn" onclick="switchGatewayTab('qr')">
-                    <i class="fas fa-qrcode"></i> Pay via QR Code
-                </button>
-            </div>
-
-            <!-- Option 1: Pay via GCash App -->
-            <div id="gatewayPaneApp" class="gateway-pane active">
-                <div class="gcash-app-card">
-                    <div class="gcash-app-badge">
-                        <i class="fas fa-mobile-alt"></i> GCash App Direct Launch
-                    </div>
-                    <h4 style="color: #0f172a; font-size: 1.1rem; margin-bottom: 4px;">Noruel John Ramirez</h4>
-                    <p style="color: var(--gcash-dark); font-weight: 800; font-size: 1.2rem; letter-spacing: 1px;">09317926807</p>
-
-                    <div class="gcash-step-list">
-                        <div><span class="step-num">1</span><span>Tap <strong>Open GCash App</strong> below (number <strong>09317926807</strong> is auto-copied for Express Send).</span></div>
-                        <div><span class="step-num">2</span><span>In GCash, tap <strong>Express Send</strong>, paste <strong>09317926807</strong>, and enter <strong id="gatewayStepAmount">₱0.00</strong>.</span></div>
-                        <div><span class="step-num">3</span><span>Once sent, tap <strong>Send Proof of Payment</strong> below to send your receipt to N'RTECH Messenger.</span></div>
-                    </div>
-
-                    <button type="button" class="btn-gcash-launch" onclick="launchGCashAppGateway()">
-                        <i class="fas fa-external-link-alt"></i> Open GCash App
-                    </button>
-
-                    <button type="button" onclick="proceedToProofFromGateway()" style="margin-top: 10px; background: white; color: var(--messenger-dark); border: 1.5px solid #bfdbfe; width: 100%; padding: 12px; border-radius: 12px; font-weight: 700; font-size: 0.9rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: var(--transition-smooth);">
-                        <i class="fab fa-facebook-messenger"></i> Already Paid? Send Proof via Messenger
-                    </button>
-                </div>
-            </div>
-
-            <!-- Option 2: Pay via QR Code -->
-            <div id="gatewayPaneQr" class="gateway-pane">
-                <div class="qr-section">
-                    <h4 style="margin-bottom: 5px; color: var(--text-dark); font-size: 1.1rem;">Scan GCash / InstaPay QR</h4>
-                    <p style="font-size: 0.85rem; color: var(--text-light);">Open GCash &rarr; Tap <strong>QR</strong> &rarr; Scan or Upload from Gallery</p>
+            
+            <div class="qr-section">
+                <h4 style="margin-bottom: 5px; color: var(--text-dark); font-size: 1.1rem;">Scan to Pay Bill</h4>
+                <p style="font-size: 0.85rem; color: var(--text-light);">Use your GCash app to scan the QR code below</p>
+                
+                <img src="gcash-qr.png" 
+                     alt="GCash QR" 
+                     style="cursor: zoom-in;" 
+                     onclick="window.open(this.src, '_blank')"
+                     onerror="this.src='https://api.qrserver.com/v1/create-qr-code/?size=170x170&data=09317926807';"
+                     title="Click to enlarge">
+                     
+                <div class="gcash-info">
+                    <strong style="display: block; margin-bottom: 5px; font-size: 1rem;">Account Name: Noruel John Ramirez</strong>
                     
-                    <img src="gcash-qr.jpg" 
-                         alt="GCash QR" 
-                         style="cursor: zoom-in;" 
-                         onclick="window.open(this.src, '_blank')"
-                         onerror="if(!this.dataset.retry){this.dataset.retry='png';this.src='gcash-qr.png';}else if(this.dataset.retry==='png'){this.dataset.retry='jpeg';this.src='gcash-qr.jpeg';}"
-                         title="Click to enlarge">
-                         
-                    <div class="gcash-info">
-                        <strong style="display: block; margin-bottom: 5px; font-size: 1rem;">Account Name: Noruel John Ramirez</strong>
-                        
-                        <div class="gcash-box-container">
-                            <div style="display: flex; align-items: center; gap: 8px;">
-                                <span style="font-size: 0.95rem; color: var(--text-light); font-weight: 700;">GCash:</span>
-                                <span id="gcashNumberText" style="color: var(--primary-dark); font-size: 1.2rem; font-weight: 800; letter-spacing: 1px;">09317926807</span>
-                            </div>
-                            <button type="button" onclick="copyGCashNumber()" style="background: var(--bg-light); border: 1px solid #cbd5e1; padding: 8px 14px; border-radius: 8px; cursor: pointer; color: var(--text-dark); display: flex; align-items: center; gap: 6px; font-size: 0.85rem; transition: var(--transition-smooth); font-weight: 700;">
-                                <i class="far fa-copy"></i> Copy
-                            </button>
+                    <div class="gcash-box-container">
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="font-size: 0.95rem; color: var(--text-light); font-weight: 700;">GCash:</span>
+                            <span id="gcashNumberText" style="color: var(--primary-dark); font-size: 1.25rem; font-weight: 800; letter-spacing: 1px;">09317926807</span>
                         </div>
-
-                        <button type="button" onclick="proceedToProofFromGateway()" style="margin-top: 14px; background: linear-gradient(135deg, var(--messenger), var(--messenger-dark)); color: white; border: none; width: 100%; padding: 13px; border-radius: 12px; font-weight: 700; font-size: 0.92rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; box-shadow: 0 6px 15px rgba(0, 132, 255, 0.25);">
-                            <i class="fab fa-facebook-messenger"></i> Done Scanning? Send Proof via Messenger
+                        <button type="button" onclick="copyGCashNumber()" style="background: var(--bg-light); border: 1px solid #cbd5e1; padding: 8px 14px; border-radius: 8px; cursor: pointer; color: var(--text-dark); display: flex; align-items: center; gap: 6px; font-size: 0.85rem; transition: var(--transition-smooth); font-weight: 700;">
+                            <i class="far fa-copy"></i> Copy & Message
                         </button>
                     </div>
+
+                    <button type="button" class="gcash-app-btn" onclick="openGCashApp()">
+                        <i class="fas fa-mobile-alt"></i> Open GCash App
+                    </button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Proof of Payment Modal -->
     <div id="proofModal" class="modal-overlay">
         <div class="modal-content">
             <button class="close-modal-btn" onclick="closeProofModal()"><i class="fas fa-times"></i></button>
@@ -1478,38 +1284,19 @@
                 <div style="background: #e0f2fe; width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px auto; border: 2px solid #bae6fd;">
                     <i class="fas fa-receipt" style="font-size: 2rem; color: var(--messenger);"></i>
                 </div>
-                <h2>Send Proof of Payment</h2>
-                <p style="color: var(--text-light); font-size: 0.95rem; margin-top: 5px;">Creates a detailed payment card and opens <strong>m.me/ramirez.technician</strong> directly.</p>
+                <h2>Verify Transaction</h2>
+                <p style="color: var(--text-light); font-size: 0.95rem; margin-top: 5px;">Submit your advance payment reference string.</p>
             </div>
-
-            <div class="dispatch-preview-box">
-                <div class="dispatch-preview-header">
-                    <span><i class="fas fa-user-check" style="color: var(--primary);"></i> Subscriber Dispatch Details</span>
-                    <span style="color: var(--messenger);">m.me/ramirez.technician</span>
-                </div>
-                <div class="dispatch-row"><span>Subscriber:</span> <span id="popPreviewName">-</span></div>
-                <div class="dispatch-row"><span>Account No:</span> <span id="popPreviewAcc">-</span></div>
-                <div class="dispatch-row"><span>Plan & Speed:</span> <span id="popPreviewPlan">-</span></div>
-                <div class="dispatch-row"><span>Amount Due:</span> <span id="popPreviewAmount" style="color: var(--danger);">-</span></div>
-            </div>
-
             <div class="modal-form-group">
-                <label for="popReferenceNum"><i class="fas fa-hashtag" style="color: var(--primary);"></i> GCash Reference / Transaction Number</label>
-                <input type="text" id="popReferenceNum" class="nice-input-box" placeholder="e.g. 5012 3456 7890" maxlength="40">
+                <label for="popReferenceNum"><i class="fas fa-receipt" style="color: var(--primary);"></i> Reference / Trans. Number</label>
+                <input type="text" id="popReferenceNum" class="nice-input-box" placeholder="5012 3456 7890" maxlength="40">
             </div>
-
-            <div class="modal-form-group" style="margin-top: 0;">
-                <label for="popPaymentNotes"><i class="far fa-comment-dots" style="color: var(--primary);"></i> Payment Notes / Covered Month (Optional)</label>
-                <input type="text" id="popPaymentNotes" placeholder="e.g. Full payment for November 2026" style="padding: 13px 16px; font-size: 0.95rem;">
-            </div>
-
             <button type="button" class="btn-primary" style="background: linear-gradient(135deg, var(--messenger), var(--messenger-dark));" onclick="submitProofOfPayment()">
-                <i class="fab fa-facebook-messenger"></i> Send to m.me/ramirez.technician
+                Confirm & Launch Messenger
             </button>
         </div>
     </div>
 
-    <!-- Support Ticket Modal -->
     <div id="supportModal" class="modal-overlay">
         <div class="modal-content">
             <button class="close-modal-btn" onclick="closeSupportModal()"><i class="fas fa-times"></i></button>
@@ -1517,46 +1304,32 @@
                 <div style="background: #f3e8ff; width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px auto; border: 2px solid #e9d5ff;">
                     <i class="fas fa-tools" style="font-size: 2rem; color: var(--accent);"></i>
                 </div>
-                <h2>Report a Technical Issue</h2>
-                <p style="color: var(--text-light); font-size: 0.95rem; margin-top: 5px;">Creates a detailed support card and opens <strong>m.me/ramirez.technician</strong> directly.</p>
-            </div>
-
-            <div class="dispatch-preview-box">
-                <div class="dispatch-preview-header">
-                    <span><i class="fas fa-id-card" style="color: var(--accent);"></i> Ticket Account Profile</span>
-                    <span style="color: var(--messenger);">m.me/ramirez.technician</span>
-                </div>
-                <div class="dispatch-row"><span>Subscriber:</span> <span id="supPreviewName">-</span></div>
-                <div class="dispatch-row"><span>Account No:</span> <span id="supPreviewAcc">-</span></div>
-                <div class="dispatch-row"><span>Service Address:</span> <span id="supPreviewAddress">-</span></div>
-                <div class="dispatch-row"><span>Current Plan:</span> <span id="supPreviewPlan">-</span></div>
+                <h2>Report an Issue</h2>
+                <p style="color: var(--text-light); font-size: 0.95rem; margin-top: 5px;">Our technical team will assist you shortly.</p>
             </div>
             
             <div class="modal-form-group">
                 <label for="issueCategory"><i class="fas fa-list-ul" style="color: var(--primary);"></i> Issue Category</label>
                 <select id="issueCategory">
-                    <option value="LOS (Blinking Red Light on ONU/Router)">LOS (Blinking Red Light on ONU/Router)</option>
-                    <option value="No Internet Connection (PON Steady Green)">No Internet Connection (PON Steady Green)</option>
-                    <option value="Slow Internet / High Ping Latency">Slow Internet / High Ping Latency</option>
-                    <option value="Damaged / Cut Fiber Drop Cable">Damaged / Cut Fiber Drop Cable</option>
-                    <option value="Request Router / ONU Relocation">Request Router / ONU Relocation</option>
-                    <option value="Wi-Fi Password / Router Config Assistance">Wi-Fi Password / Router Config Assistance</option>
-                    <option value="Other Technical Concern">Other Technical Concern</option>
+                    <option value="LOS (Red Light on Router)">LOS (Red Light on Router)</option>
+                    <option value="Slow Internet Connection">Slow Internet Connection</option>
+                    <option value="No Internet Connection">No Internet Connection</option>
+                    <option value="Router Relocation">Request Router Relocation</option>
+                    <option value="Other Inquiry">Other Inquiry</option>
                 </select>
             </div>
             
             <div class="modal-form-group">
-                <label for="issueDescription"><i class="fas fa-align-left" style="color: var(--primary);"></i> Detailed Description & Router Light Status</label>
-                <textarea id="issueDescription" rows="3" placeholder="Describe when the issue started, which lights are blinking on your modem, or any visible wire damage..." style="resize: none; font-family: inherit; outline: none;"></textarea>
+                <label for="issueDescription"><i class="fas fa-align-left" style="color: var(--primary);"></i> Description (Optional)</label>
+                <textarea id="issueDescription" rows="3" placeholder="Provide more details about your concern..." style="resize: none; font-family: inherit; outline: none;"></textarea>
             </div>
             
             <button type="button" class="btn-primary" style="background: linear-gradient(135deg, var(--accent), #7c3aed); box-shadow: 0 8px 20px rgba(139, 92, 246, 0.3);" onclick="submitSupportTicket()">
-                <i class="fab fa-facebook-messenger"></i> Send to m.me/ramirez.technician
+                <i class="fab fa-facebook-messenger"></i> Send via Messenger
             </button>
         </div>
     </div>
 
-    <!-- Upgrade Plan Modal -->
     <div id="upgradeModal" class="modal-overlay">
         <div class="modal-content" style="max-width: 540px;">
             <button class="close-modal-btn" onclick="closeUpgradeModal()"><i class="fas fa-times"></i></button>
@@ -1565,7 +1338,7 @@
                     <i class="fas fa-rocket" style="font-size: 2rem; color: var(--primary-dark);"></i>
                 </div>
                 <h2>Upgrade Subscription Plan</h2>
-                <p style="color: var(--text-light); font-size: 0.95rem; margin-top: 5px;">Select your desired speed tier below to send a detailed upgrade request to <strong>m.me/ramirez.technician</strong>.</p>
+                <p style="color: var(--text-light); font-size: 0.95rem; margin-top: 5px;">Choose your desired high-speed package tier below.</p>
             </div>
             
             <label style="display:block; font-weight:700; font-size:0.95rem; margin-bottom:10px;"><i class="fas fa-cubes" style="color:var(--primary)"></i> Select Available Packages</label>
@@ -1575,17 +1348,16 @@
             </div>
 
             <div class="modal-form-group">
-                <label for="upgradeNotes"><i class="far fa-comment-alt" style="color: var(--primary);"></i> Preferred Effective Date / Special Instructions</label>
-                <textarea id="upgradeNotes" rows="3" placeholder="Let us know when you want the upgrade activated or any router setup notes..." style="resize: none; font-family: inherit; outline: none;"></textarea>
+                <label for="upgradeNotes"><i class="far fa-comment-alt" style="color: var(--primary);"></i> Special Instructions / Notes</label>
+                <textarea id="upgradeNotes" rows="3" placeholder="Let us know your preferred deployment date or alternative configuration details..." style="resize: none; font-family: inherit; outline: none;"></textarea>
             </div>
 
             <button type="button" class="btn-primary" style="background: linear-gradient(135deg, var(--primary), var(--primary-dark));" onclick="submitUpgradeRequest()">
-                <i class="fab fa-facebook-messenger"></i> Send to m.me/ramirez.technician
+                <i class="fab fa-facebook-messenger"></i> Submit Upgrade Order
             </button>
         </div>
     </div>
 
-    <!-- Mini UPS Modal -->
     <div id="upsModal" class="modal-overlay">
         <div class="modal-content" style="max-width: 540px;">
             <button class="close-modal-btn" onclick="closeUpsModal()"><i class="fas fa-times"></i></button>
@@ -1594,7 +1366,7 @@
                     <i class="fas fa-car-battery" style="font-size: 2rem; color: #d97706;"></i>
                 </div>
                 <h2>Order N'RTECH Mini UPS</h2>
-                <p style="color: var(--text-light); font-size: 0.95rem; margin-top: 5px;">Choose a backup capacity model below to send a detailed inquiry to <strong>m.me/ramirez.technician</strong>.</p>
+                <p style="color: var(--text-light); font-size: 0.95rem; margin-top: 5px;">Choose a backup capacity package below to inquire about real-time pricing configurations.</p>
             </div>
             
             <label style="display:block; font-weight:700; font-size:0.95rem; margin-bottom:10px;"><i class="fas fa-cubes" style="color:var(--primary)"></i> Select Backup Capacity</label>
@@ -1604,17 +1376,16 @@
             </div>
 
             <div class="modal-form-group">
-                <label for="upsNotes"><i class="far fa-comment-alt" style="color: var(--primary);"></i> Delivery / Installation Questions (Optional)</label>
-                <textarea id="upsNotes" rows="3" placeholder="Specify router/ONU voltage (12V/9V/5V), preferred delivery date, or installation questions..." style="resize: none; font-family: inherit; outline: none;"></textarea>
+                <label for="upsNotes"><i class="far fa-comment-alt" style="color: var(--primary);"></i> Inquiries / Special Instructions</label>
+                <textarea id="upsNotes" rows="3" placeholder="Provide extra delivery details or questions regarding continuous device installations..." style="resize: none; font-family: inherit; outline: none;"></textarea>
             </div>
 
             <button type="button" class="btn-primary" style="background: linear-gradient(135deg, var(--messenger), var(--messenger-dark));" onclick="submitUpsRequest()">
-                <i class="fab fa-facebook-messenger"></i> Send to m.me/ramirez.technician
+                <i class="fab fa-facebook-messenger"></i> Inquire Price via Messenger
             </button>
         </div>
     </div>
 
-    <!-- FAQ Modal -->
     <div id="faqModal" class="modal-overlay">
         <div class="modal-content" style="max-width: 520px;">
             <button class="close-modal-btn" onclick="closeFaqModal()"><i class="fas fa-times"></i></button>
@@ -1685,22 +1456,12 @@
     <div id="toastContainer"></div>
 
     <script>
-        // --- Receiver & Payment Constants ---
-        const MESSENGER_DIRECT_URL = "https://m.me/ramirez.technician";
-        const GCASH_MERCHANT_NUMBER = "09317926807";
-
         // --- Globals for capturing User Session Data ---
         let sessionClientName = "Client";
         let sessionClientAcc = "N/A";
-        let sessionClientAddress = "No address on file";
-        let sessionCurrentPlanName = "";
-        let sessionCurrentPlanSpeed = "N/A";
-        let sessionCurrentPlanFee = 0;
-        let sessionUpcomingBillStr = "₱0.00";
-        let sessionDueDateStr = "20th of the month";
-        let sessionAccountStatus = "Active";
+        let sessionCurrentPlanName = ""; // Auto-hides existing matching profile plans
         let selectedUpgradePackage = { name: "", speed: "", price: "" };
-        let selectedUpsPackage = { model: "", design: "" };
+        let selectedUpsPackage = { model: "", design: "" }; // Mini UPS storage tracker
 
         // --- Custom Toast Notification Function ---
         function showToast(message, type = 'success') {
@@ -1797,11 +1558,10 @@
 
         document.getElementById('forgotPassLink').addEventListener('click', (e) => {
             e.preventDefault();
-            errorMsg.innerHTML = '<i class="fas fa-info-circle"></i> Opening N\'RTECH Messenger (m.me/ramirez.technician)...';
+            errorMsg.innerHTML = '<i class="fas fa-info-circle"></i> Please message N\'RTECH Internet Services for a password reset.';
             errorMsg.style.color = '#d49a37'; errorMsg.style.background = '#fffbeb'; errorMsg.style.borderColor = '#fde68a';
             errorMsg.style.display = 'block';
-            playSound('info');
-            window.open(MESSENGER_DIRECT_URL, "_blank");
+            playSound('error'); 
         });
 
         loginForm.addEventListener('submit', async (e) => {
@@ -1818,6 +1578,7 @@
                 if (!response.ok) throw new Error("Network pool response issue"); 
                 const data = await response.json();
                 
+                // data.accounts holds the client list in the newly parsed format
                 const clients = data.accounts || data; 
                 const client = clients.find(c => String(c.clientUsername).toLowerCase() === usernameInput.toLowerCase() && String(c.clientPassword) === accPass);
 
@@ -1831,6 +1592,7 @@
                     
                     showToast(`Welcome back, ${client.name || 'Client'}!`, 'success');
                     
+                    // Trigger Update Check after UI loads
                     setTimeout(() => { fetchUpdates(); }, 800);
                 } else {
                     playSound('error');
@@ -1858,6 +1620,7 @@
                 let messageStr = "";
 
                 if (Array.isArray(updateData)) {
+                    // Filter down to updates that are active
                     const activeUpdates = updateData.filter(u => u.active === true);
                     
                     if (activeUpdates.length > 0) {
@@ -1866,6 +1629,7 @@
                         messageStr = activeUpdates.map(u => `<strong>${u.title}:</strong> ${u.message}`).join('<br><br>');
                     }
                 } else if (updateData.active !== false && (updateData.message || updateData.title)) {
+                    // Fallback block if it's a single object
                     showUpdate = true;
                     titleStr = updateData.title || "System Advisory";
                     messageStr = updateData.message || "Important system update information.";
@@ -1893,6 +1657,7 @@
                 const resNotif = await fetch("notif.json", { cache: "no-store" });
                 const notifData = await resNotif.json();
                 
+                // Matches either clientUsername OR the unique accountNumber string
                 userNotifs = notifData.filter(n => 
                     (String(n.username).toLowerCase() === String(clientObj.clientUsername).toLowerCase() ||
                      String(n.username).toLowerCase() === String(clientObj.accountNumber).toLowerCase()) && 
@@ -1928,14 +1693,10 @@
             
             sessionClientName = clientName;
             sessionClientAcc = client.accountNumber || "N/A";
-            sessionClientAddress = client.address || "No address on file";
             sessionCurrentPlanName = client.plan ? client.plan.name : "";
-            sessionCurrentPlanSpeed = client.plan ? client.plan.speed : "N/A";
-            sessionCurrentPlanFee = client.plan ? parseFloat(client.plan.fee) : 0;
-            sessionAccountStatus = client.status || "Active";
 
             const balance = parseFloat(client.excessLackingBalance) || 0;
-            const monthlyFee = sessionCurrentPlanFee;
+            const monthlyFee = client.plan ? parseFloat(client.plan.fee) : 0;
             
             let calculatedDue = monthlyFee;
             if (balance < 0) {
@@ -1944,11 +1705,8 @@
             const finalUpcomingBill = client.upcomingBill !== undefined ? parseFloat(client.upcomingBill) : calculatedDue;
             
             const billString = `₱${finalUpcomingBill.toLocaleString(undefined, {minimumFractionDigits: 2})}`;
-            sessionUpcomingBillStr = billString;
             
             document.getElementById('modalBillAmount').textContent = billString;
-            document.getElementById('gatewayStepAmount').textContent = billString;
-            document.getElementById('gatewayAccNo').textContent = sessionClientAcc;
             document.getElementById('balanceDisplay').textContent = billString;
 
             const balLabel = document.getElementById('excessLackingLabel');
@@ -1980,10 +1738,10 @@
 
             document.getElementById('clientNameDisplay').textContent = clientName;
             document.getElementById('clientAccDisplay').textContent = sessionClientAcc;
-            document.getElementById('clientAddressDisplay').textContent = sessionClientAddress;
+            document.getElementById('clientAddressDisplay').textContent = client.address || "No address on file";
 
             const statusBadge = document.getElementById('statusBadge');
-            const currentStatus = sessionAccountStatus;
+            const currentStatus = client.status || "Active";
             
             if (currentStatus.toLowerCase() === 'active') {
                 statusBadge.className = 'status-badge status-active';
@@ -1997,11 +1755,9 @@
             }
 
             document.getElementById('planDisplay').textContent = currentStatus.toLowerCase() === 'active' && client.plan ? client.plan.name : "N/A";
-            document.getElementById('speedDisplay').textContent = sessionCurrentPlanSpeed;
+            document.getElementById('speedDisplay').textContent = client.plan ? client.plan.speed : "N/A";
             document.getElementById('feeDisplay').textContent = monthlyFee;
-
-            sessionDueDateStr = client.nextDue || (client.billingDay ? `${client.billingDay}th of the month` : "20th of the month");
-            document.getElementById('dueDisplay').textContent = sessionDueDateStr;
+            document.getElementById('dueDisplay').textContent = client.nextDue || (client.billingDay ? `${client.billingDay}th of the month` : "N/A");
 
             if(client.points) {
                 document.getElementById('advancePtsDisplay').textContent = client.points.advance || 0;
@@ -2019,6 +1775,7 @@
                     tr.style.animation = `fadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards ${0.2 + (index * 0.1)}s`;
                     tr.style.opacity = '0';
                     
+                    // Priority checking for direct JSON attributes for covered month
                     let coveredMonthString = "Unknown";
                     
                     if (pay.coverageText) {
@@ -2054,88 +1811,106 @@
             }
         }
 
-        // --- GCash Payment Gateway Tab Switcher & App Launcher ---
-        function switchGatewayTab(mode) {
-            const tabAppBtn = document.getElementById('tabAppBtn');
-            const tabQrBtn = document.getElementById('tabQrBtn');
-            const paneApp = document.getElementById('gatewayPaneApp');
-            const paneQr = document.getElementById('gatewayPaneQr');
-
-            if (mode === 'app') {
-                tabAppBtn.classList.add('active');
-                tabQrBtn.classList.remove('active');
-                paneApp.classList.add('active');
-                paneQr.classList.remove('active');
-            } else {
-                tabQrBtn.classList.add('active');
-                tabAppBtn.classList.remove('active');
-                paneQr.classList.add('active');
-                paneApp.classList.remove('active');
-            }
-            playSound('info');
-        }
-
-        function launchGCashAppGateway() {
-            if (navigator.clipboard && navigator.clipboard.writeText) {
-                navigator.clipboard.writeText(GCASH_MERCHANT_NUMBER).catch(() => {});
-            }
-
-            const isAndroid = /android/i.test(navigator.userAgent || "");
-            const appSchemeUrl = isAndroid
-                ? "intent://com.globe.gcash.android/#Intent;scheme=gcash;package=com.globe.gcash.android;end"
-                : "gcash://";
-
-            showToast(`Copied ${GCASH_MERCHANT_NUMBER}! Launching GCash App...`, "success");
-
-            // Create temporary link to trigger native GCash app launch cleanly
-            const launcher = document.createElement("a");
-            launcher.href = appSchemeUrl;
-            launcher.style.display = "none";
-            document.body.appendChild(launcher);
-            launcher.click();
-            document.body.removeChild(launcher);
-        }
-
-        function proceedToProofFromGateway() {
-            closeBillModal();
-            openProofModal();
-        }
-
-        // --- Copy GCash Number Logic ---
+        // --- Copy GCash Number & Redirect to Messenger ---
         function copyGCashNumber() {
-            const gcashNumber = document.getElementById('gcashNumberText').innerText;
-            navigator.clipboard.writeText(gcashNumber).then(() => {
-                showToast("GCash number copied to clipboard!", "success");
-            }).catch(err => {
-                showToast("Failed to copy number. Please copy manually.", "warning");
-            });
+            const gcashNumber = document.getElementById('gcashNumberText').innerText.trim();
+            const redirectToMessenger = () => {
+                showToast("GCash number copied! Redirecting to Messenger...", "success");
+                setTimeout(() => {
+                    window.open("https://m.me/ramirez.technician", "_blank");
+                }, 1000);
+            };
+
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(gcashNumber).then(redirectToMessenger).catch(() => {
+                    fallbackCopyText(gcashNumber);
+                    redirectToMessenger();
+                });
+            } else {
+                fallbackCopyText(gcashNumber);
+                redirectToMessenger();
+            }
+        }
+
+        function fallbackCopyText(text) {
+            const tempInput = document.createElement("input");
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+        }
+
+        // --- Open GCash App Deep Link ---
+        function openGCashApp() {
+            showToast("Opening GCash app...", "info");
+            const fallbackTimer = setTimeout(() => {
+                window.open("https://www.gcash.com/", "_blank");
+            }, 1500);
+
+            window.addEventListener("blur", () => clearTimeout(fallbackTimer), { once: true });
+            window.location.href = "gcash://";
         }
 
         // --- Proof of Payment Modal Logic ---
         function openProofModal() {
             document.getElementById('popReferenceNum').value = '';
-            document.getElementById('popPaymentNotes').value = '';
-            document.getElementById('popPreviewName').textContent = sessionClientName;
-            document.getElementById('popPreviewAcc').textContent = sessionClientAcc;
-            document.getElementById('popPreviewPlan').textContent = `${sessionCurrentPlanName || 'N/A'} (${sessionCurrentPlanSpeed})`;
-            document.getElementById('popPreviewAmount').textContent = sessionUpcomingBillStr;
             proofModal.style.display = 'flex';
             playSound('info');
         }
         function closeProofModal() { proofModal.style.display = 'none'; }
 
+        function submitProofOfPayment() {
+            const refNum = document.getElementById('popReferenceNum').value.trim();
+            if (!refNum) {
+                showToast("Please provide a payment reference number.", "warning");
+                return;
+            }
+
+            const name = document.getElementById('clientNameDisplay').textContent;
+            const account = document.getElementById('clientAccDisplay').textContent;
+            const plan = document.getElementById('planDisplay').textContent;
+            const balance = document.getElementById('balanceDisplay').textContent;
+
+            const structuredMessage = `N'RTECH ADVANCE PAYMENT SUBMISSION\n\nSubscriber: ${name}\nAccount No: ${account}\nPlan Tier: ${plan}\nInvoice Amount: ${balance}\nReference No: ${refNum}\nTimestamp: ${new Date().toLocaleString()}\n\nStatus: SEND DONE. Please check system records.`;
+
+            closeProofModal();
+            showToast("Message copied! Once Messenger opens, just PASTE the text in the chat.", "success");
+
+            navigator.clipboard.writeText(structuredMessage).then(() => {
+                setTimeout(() => { window.open("https://m.me/ramirez.technician", "_blank"); }, 1800);
+            }).catch(() => {
+                window.open("https://m.me/ramirez.technician", "_blank");
+            });
+        }
+
         // --- Support Modal Logic ---
         function openSupportModal() {
             document.getElementById('issueDescription').value = '';
             document.getElementById('issueCategory').selectedIndex = 0;
-            document.getElementById('supPreviewName').textContent = sessionClientName;
-            document.getElementById('supPreviewAcc').textContent = sessionClientAcc;
-            document.getElementById('supPreviewAddress').textContent = sessionClientAddress;
-            document.getElementById('supPreviewPlan').textContent = `${sessionCurrentPlanName || 'N/A'} (${sessionCurrentPlanSpeed})`;
             supportModal.style.display = 'flex';
             playSound('info');
         }
         function closeSupportModal() { supportModal.style.display = 'none'; }
+
+        function submitSupportTicket() {
+            const category = document.getElementById('issueCategory').value;
+            const description = document.getElementById('issueDescription').value.trim();
+            
+            const name = document.getElementById('clientNameDisplay').textContent;
+            const account = document.getElementById('clientAccDisplay').textContent;
+
+            const structuredMessage = `N'RTECH SUPPORT REQUEST\n\nSubscriber: ${name}\nAccount No: ${account}\nIssue: ${category}\nDetails: ${description || 'None provided'}\nTimestamp: ${new Date().toLocaleString()}`;
+
+            closeSupportModal();
+            showToast("Message copied! Once Messenger opens, just PASTE the text in the chat.", "success");
+
+            navigator.clipboard.writeText(structuredMessage).then(() => {
+                setTimeout(() => { window.open("https://m.me/ramirez.technician", "_blank"); }, 1800);
+            }).catch(() => {
+                window.open("https://m.me/ramirez.technician", "_blank");
+            });
+        }
 
         // --- Subscription Array Structural Builders from plans.json ---
         async function openUpgradeModal() {
@@ -2168,6 +1943,7 @@
             }
         }
 
+        // Handles rendering logic and automatically screens out the currently subscribed plan
         function renderPlansInGrid(plansArray, containerElement) {
             containerElement.innerHTML = '';
             let printedPlansCount = 0;
@@ -2217,6 +1993,26 @@
             element.classList.add('selected');
             selectedUpgradePackage = { name: planName, speed: speed, price: price };
             playSound('success');
+        }
+
+        function submitUpgradeRequest() {
+            if (!selectedUpgradePackage.name) {
+                showToast("Please choose a subscription package tier first.", "warning");
+                return;
+            }
+            const notes = document.getElementById('upgradeNotes').value.trim();
+            const currentPlan = document.getElementById('planDisplay').textContent;
+
+            const structuredMessage = `N'RTECH SUBSCRIPTION UPGRADE REQUEST\n\nSubscriber: ${sessionClientName}\nAccount No: ${sessionClientAcc}\nCurrent Tier: ${currentPlan}\nRequested Package: ${selectedUpgradePackage.name} (${selectedUpgradePackage.speed})\nPackage Pricing: ${selectedUpgradePackage.price}/mo\nUser Notes: ${notes || 'None provided'}\nTimestamp: ${new Date().toLocaleString()}`;
+
+            closeUpgradeModal();
+            showToast("Upgrade data compiled! Paste into Messenger chat when prompted.", "success");
+
+            navigator.clipboard.writeText(structuredMessage).then(() => {
+                setTimeout(() => { window.open("https://m.me/ramirez.technician", "_blank"); }, 1800);
+            }).catch(() => {
+                window.open("https://m.me/ramirez.technician", "_blank");
+            });
         }
 
         // --- Mini UPS Structural Request Modal Modules ---
@@ -2310,6 +2106,25 @@
 
         function closeUpsModal() { upsModal.style.display = 'none'; }
 
+        function submitUpsRequest() {
+            if (!selectedUpsPackage.model) {
+                showToast("Please select a UPS backup model capacity first.", "warning");
+                return;
+            }
+            const notes = document.getElementById('upsNotes').value.trim();
+
+            const structuredMessage = `N'RTECH MINI UPS INQUIRY\n\nSubscriber: ${sessionClientName}\nAccount No: ${sessionClientAcc}\nModel Capacity: ${selectedUpsPackage.model}\nDesign Configuration: ${selectedUpsPackage.design}\nUser Notes: ${notes || 'None provided'}\nTimestamp: ${new Date().toLocaleString()}\n\nInquiry: Requesting device unit pricing and installation deployment details.`;
+
+            closeUpsModal();
+            showToast("Inquiry string compiled! Paste into Messenger chat when prompted.", "success");
+
+            navigator.clipboard.writeText(structuredMessage).then(() => {
+                setTimeout(() => { window.open("https://m.me/ramirez.technician", "_blank"); }, 1800);
+            }).catch(() => {
+                window.open("https://m.me/ramirez.technician", "_blank");
+            });
+        }
+
         // --- FAQ Modal Logic ---
         function openFaqModal() { faqModal.style.display = 'flex'; playSound('info'); }
         function closeFaqModal() { faqModal.style.display = 'none'; }
@@ -2321,6 +2136,7 @@
             document.getElementById('modalReference').textContent = payment.referenceNumber || 'N/A';
             document.getElementById('modalAmountPaid').textContent = `₱${payment.amount.toLocaleString(undefined, {minimumFractionDigits: 2})}`;
             
+            // Priority checking for direct JSON attributes for covered month
             let coveredMonthString = "Unknown";
             if (payment.coverageText) {
                 coveredMonthString = payment.coverageText.replace(/[()]/g, '');
@@ -2353,11 +2169,7 @@
         }
 
         function closeReceiptModal() { receiptModal.style.display = 'none'; }
-        window.openBillModal = function() {
-            switchGatewayTab('app');
-            billModal.style.display = 'flex';
-            playSound('info');
-        };
+        window.openBillModal = function() { billModal.style.display = 'flex'; };
         window.closeBillModal = function() { billModal.style.display = 'none'; };
         function closeNotifModal() { notifModal.style.display = 'none'; }
 
@@ -2370,6 +2182,8 @@
             if (event.target === upgradeModal) closeUpgradeModal();
             if (event.target === faqModal) closeFaqModal();
             if (event.target === upsModal) closeUpsModal();
+            // Note: UpdateModal lacks an outside click close feature intentionally, 
+            // the user must press "I Understand".
         }
 
         function logout() {
@@ -2393,292 +2207,6 @@
                 
                 showToast("Successfully logged out.", 'info');
             }, 400);
-        }
-
-        // --- Helper: Wrap long text neatly on Canvas ---
-        function wrapCanvasLines(ctx, text, maxWidth) {
-            const words = String(text || "").split(/\s+/);
-            const lines = [];
-            let currentLine = "";
-
-            words.forEach(word => {
-                const testLine = currentLine ? `${currentLine} ${word}` : word;
-                if (ctx.measureText(testLine).width > maxWidth && currentLine) {
-                    lines.push(currentLine);
-                    currentLine = word;
-                } else {
-                    currentLine = testLine;
-                }
-            });
-            if (currentLine) lines.push(currentLine);
-            return lines.length > 0 ? lines : ["None provided"];
-        }
-        
-        // --- Auto-Generate Detailed Branded PNG Card & Open https://m.me/ramirez.technician ---
-        async function generateAndShareRequestImage(title, subtitle, accentColor, detailsList, fileName, textFallbackSummary) {
-            const canvas = document.createElement("canvas");
-            const tempCtx = canvas.getContext("2d");
-            tempCtx.font = "600 18px Inter, Arial, sans-serif";
-
-            const maxValueWidth = 480;
-            const preparedRows = detailsList.map(item => {
-                const wrapped = wrapCanvasLines(tempCtx, item.value, maxValueWidth);
-                return {
-                    label: item.label,
-                    lines: wrapped,
-                    isHighlight: Boolean(item.highlight)
-                };
-            });
-
-            const totalTextLines = preparedRows.reduce((acc, row) => acc + row.lines.length, 0);
-            const rowGap = 16;
-            const lineHeight = 26;
-            const headerHeight = 195;
-            const footerHeight = 95;
-
-            canvas.width = 800;
-            canvas.height = headerHeight + (totalTextLines * lineHeight) + (preparedRows.length * rowGap) + footerHeight;
-
-            const ctx = canvas.getContext("2d");
-
-            // Dark Slate Card Background
-            ctx.fillStyle = "#0f172a";
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-            // Subtle Inner Panel
-            ctx.fillStyle = "#1e293b";
-            ctx.fillRect(28, 162, canvas.width - 56, canvas.height - 245);
-
-            // Outer Gold Border
-            ctx.strokeStyle = "#d49a37";
-            ctx.lineWidth = 5;
-            ctx.strokeRect(16, 16, canvas.width - 32, canvas.height - 32);
-
-            // Top Accent Bar
-            ctx.fillStyle = accentColor;
-            ctx.fillRect(19, 19, canvas.width - 38, 12);
-
-            // Ticket ID Badge (Top Right)
-            const ticketCode = "NRT-" + Math.floor(100000 + Math.random() * 900000);
-            ctx.fillStyle = "rgba(212, 154, 55, 0.16)";
-            ctx.fillRect(canvas.width - 215, 48, 167, 34);
-            ctx.fillStyle = "#fbbf24";
-            ctx.font = "bold 15px monospace";
-            ctx.fillText(`REF: ${ticketCode}`, canvas.width - 202, 70);
-
-            // Header Title
-            ctx.fillStyle = "#d49a37";
-            ctx.font = "bold 28px Poppins, Arial, sans-serif";
-            ctx.fillText("N'RTECH INTERNET SERVICES", 48, 76);
-
-            // Main Request Title
-            ctx.fillStyle = "#ffffff";
-            ctx.font = "bold 22px Inter, Arial, sans-serif";
-            ctx.fillText(title, 48, 114);
-
-            // Subtitle
-            ctx.fillStyle = "#94a3b8";
-            ctx.font = "15px Inter, Arial, sans-serif";
-            ctx.fillText(subtitle, 48, 140);
-
-            // Detail Rows
-            let y = 198;
-            preparedRows.forEach((row, idx) => {
-                ctx.fillStyle = "#94a3b8";
-                ctx.font = "bold 16px Inter, Arial, sans-serif";
-                ctx.fillText(row.label.toUpperCase() + ":", 48, y);
-
-                ctx.fillStyle = row.isHighlight ? "#38bdf8" : "#f8fafc";
-                ctx.font = row.isHighlight ? "bold 18px Inter, Arial, sans-serif" : "600 17px Inter, Arial, sans-serif";
-
-                row.lines.forEach((lineStr, lineIdx) => {
-                    ctx.fillText(lineStr, 265, y + (lineIdx * lineHeight));
-                });
-
-                y += (row.lines.length * lineHeight) + rowGap;
-
-                if (idx < preparedRows.length - 1) {
-                    ctx.strokeStyle = "rgba(148, 163, 184, 0.15)";
-                    ctx.lineWidth = 1;
-                    ctx.beginPath();
-                    ctx.moveTo(48, y - (rowGap / 2) - 6);
-                    ctx.lineTo(canvas.width - 48, y - (rowGap / 2) - 6);
-                    ctx.stroke();
-                }
-            });
-
-            // Footer Bar
-            ctx.fillStyle = "#cbd5e1";
-            ctx.font = "600 14px Inter, Arial, sans-serif";
-            ctx.fillText("N'RTECH Client Portal • Receiver: m.me/ramirez.technician", 48, canvas.height - 46);
-
-            // Convert Canvas to Blob / File
-            const blob = await new Promise(resolve => canvas.toBlob(resolve, "image/png"));
-            const file = new File([blob], fileName, { type: "image/png" });
-
-            // Try Native Mobile Share Sheet first (direct tap to Messenger with image + text attached)
-            if (navigator.canShare && navigator.canShare({ files: [file] })) {
-                try {
-                    await navigator.share({
-                        files: [file],
-                        title: title,
-                        text: textFallbackSummary
-                    });
-                    showToast("Ready to send in Messenger!", "success");
-                    return;
-                } catch (err) {
-                    // User dismissed share sheet -> proceed to download + open m.me/ramirez.technician
-                }
-            }
-
-            // Auto-download PNG card and open https://m.me/ramirez.technician
-            const link = document.createElement("a");
-            link.download = fileName;
-            link.href = URL.createObjectURL(blob);
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-
-            showToast("Card saved! Opening m.me/ramirez.technician...", "success");
-            setTimeout(() => {
-                window.open(MESSENGER_DIRECT_URL, "_blank");
-            }, 900);
-        }
-
-        // 1. Send Proof of Payment -> Detailed Card + Open https://m.me/ramirez.technician
-        function submitProofOfPayment() {
-            const refNum = document.getElementById('popReferenceNum').value.trim();
-            const payNotes = document.getElementById('popPaymentNotes').value.trim();
-
-            if (!refNum) {
-                showToast("Please provide your GCash payment reference number.", "warning");
-                return;
-            }
-
-            const timestamp = new Date().toLocaleString();
-            const details = [
-                { label: "Receiver", value: "m.me/ramirez.technician", highlight: true },
-                { label: "Subscriber", value: sessionClientName, highlight: true },
-                { label: "Account No", value: sessionClientAcc, highlight: true },
-                { label: "Address", value: sessionClientAddress },
-                { label: "Current Plan", value: `${sessionCurrentPlanName || 'N/A'} (${sessionCurrentPlanSpeed})` },
-                { label: "Due Date", value: sessionDueDateStr },
-                { label: "Amount Due", value: sessionUpcomingBillStr, highlight: true },
-                { label: "GCash Ref No", value: refNum, highlight: true },
-                { label: "Payment Note", value: payNotes || "Standard Monthly Subscription Payment" },
-                { label: "Submitted At", value: timestamp }
-            ];
-
-            const fallbackText = `N'RTECH PROOF OF PAYMENT\nReceiver: m.me/ramirez.technician\nSubscriber: ${sessionClientName}\nAccount No: ${sessionClientAcc}\nPlan: ${sessionCurrentPlanName} (${sessionCurrentPlanSpeed})\nAmount Due: ${sessionUpcomingBillStr}\nGCash Ref No: ${refNum}\nNote: ${payNotes || 'Standard Payment'}\nTime: ${timestamp}`;
-
-            closeProofModal();
-            generateAndShareRequestImage(
-                "GCASH PAYMENT VERIFICATION SLIP",
-                "Receiver: N'RTECH (m.me/ramirez.technician)",
-                "#0084ff",
-                details,
-                `NRTECH-Payment-${sessionClientAcc}.png`,
-                fallbackText
-            );
-        }
-
-        // 2. Report Technical Issue -> Detailed Card + Open https://m.me/ramirez.technician
-        function submitSupportTicket() {
-            const category = document.getElementById('issueCategory').value;
-            const description = document.getElementById('issueDescription').value.trim();
-            const timestamp = new Date().toLocaleString();
-
-            const details = [
-                { label: "Receiver", value: "m.me/ramirez.technician", highlight: true },
-                { label: "Subscriber", value: sessionClientName, highlight: true },
-                { label: "Account No", value: sessionClientAcc, highlight: true },
-                { label: "Address", value: sessionClientAddress },
-                { label: "Account Status", value: sessionAccountStatus },
-                { label: "Plan & Speed", value: `${sessionCurrentPlanName || 'N/A'} (${sessionCurrentPlanSpeed})` },
-                { label: "Issue Category", value: category, highlight: true },
-                { label: "Issue Details", value: description || "Subscriber requested technical inspection." },
-                { label: "Reported At", value: timestamp }
-            ];
-
-            const fallbackText = `N'RTECH TECHNICAL SUPPORT TICKET\nReceiver: m.me/ramirez.technician\nSubscriber: ${sessionClientName}\nAccount No: ${sessionClientAcc}\nAddress: ${sessionClientAddress}\nPlan: ${sessionCurrentPlanName} (${sessionCurrentPlanSpeed})\nIssue: ${category}\nDetails: ${description || 'None provided'}\nTime: ${timestamp}`;
-
-            closeSupportModal();
-            generateAndShareRequestImage(
-                "TECHNICAL SUPPORT DISPATCH TICKET",
-                "Receiver: N'RTECH (m.me/ramirez.technician)",
-                "#8b5cf6",
-                details,
-                `NRTECH-Support-${sessionClientAcc}.png`,
-                fallbackText
-            );
-        }
-
-        // 3. Submit Plan Upgrade Order -> Detailed Card + Open https://m.me/ramirez.technician
-        function submitUpgradeRequest() {
-            if (!selectedUpgradePackage.name) {
-                showToast("Please choose a subscription package tier first.", "warning");
-                return;
-            }
-            const notes = document.getElementById('upgradeNotes').value.trim();
-            const timestamp = new Date().toLocaleString();
-
-            const details = [
-                { label: "Receiver", value: "m.me/ramirez.technician", highlight: true },
-                { label: "Subscriber", value: sessionClientName, highlight: true },
-                { label: "Account No", value: sessionClientAcc, highlight: true },
-                { label: "Address", value: sessionClientAddress },
-                { label: "Current Plan", value: `${sessionCurrentPlanName || 'N/A'} (${sessionCurrentPlanSpeed} • ₱${sessionCurrentPlanFee}/mo)` },
-                { label: "New Plan Tier", value: `${selectedUpgradePackage.name} (${selectedUpgradePackage.speed})`, highlight: true },
-                { label: "New Monthly Fee", value: `${selectedUpgradePackage.price}/mo`, highlight: true },
-                { label: "Client Notes", value: notes || "Activate as soon as available." },
-                { label: "Requested At", value: timestamp }
-            ];
-
-            const fallbackText = `N'RTECH PLAN UPGRADE ORDER\nReceiver: m.me/ramirez.technician\nSubscriber: ${sessionClientName}\nAccount No: ${sessionClientAcc}\nCurrent Plan: ${sessionCurrentPlanName} (${sessionCurrentPlanSpeed})\nNew Plan: ${selectedUpgradePackage.name} (${selectedUpgradePackage.speed})\nNew Price: ${selectedUpgradePackage.price}/mo\nNotes: ${notes || 'None provided'}\nTime: ${timestamp}`;
-
-            closeUpgradeModal();
-            generateAndShareRequestImage(
-                "SUBSCRIPTION PLAN UPGRADE ORDER",
-                "Receiver: N'RTECH (m.me/ramirez.technician)",
-                "#d49a37",
-                details,
-                `NRTECH-Upgrade-${sessionClientAcc}.png`,
-                fallbackText
-            );
-        }
-
-        // 4. Mini UPS Inquiry -> Detailed Card + Open https://m.me/ramirez.technician
-        function submitUpsRequest() {
-            if (!selectedUpsPackage.model) {
-                showToast("Please select a UPS backup model capacity first.", "warning");
-                return;
-            }
-            const notes = document.getElementById('upsNotes').value.trim();
-            const timestamp = new Date().toLocaleString();
-
-            const details = [
-                { label: "Receiver", value: "m.me/ramirez.technician", highlight: true },
-                { label: "Subscriber", value: sessionClientName, highlight: true },
-                { label: "Account No", value: sessionClientAcc, highlight: true },
-                { label: "Address", value: sessionClientAddress },
-                { label: "Current Plan", value: `${sessionCurrentPlanName || 'N/A'} (${sessionCurrentPlanSpeed})` },
-                { label: "Selected Model", value: `N'RTECH Mini UPS (${selectedUpsPackage.model})`, highlight: true },
-                { label: "Form Factor", value: selectedUpsPackage.design },
-                { label: "Client Notes", value: notes || "Requesting unit price, availability, and installation schedule." },
-                { label: "Inquired At", value: timestamp }
-            ];
-
-            const fallbackText = `N'RTECH MINI UPS INQUIRY\nReceiver: m.me/ramirez.technician\nSubscriber: ${sessionClientName}\nAccount No: ${sessionClientAcc}\nAddress: ${sessionClientAddress}\nModel: Mini UPS ${selectedUpsPackage.model}\nDesign: ${selectedUpsPackage.design}\nNotes: ${notes || 'Requesting unit price & availability'}\nTime: ${timestamp}`;
-
-            closeUpsModal();
-            generateAndShareRequestImage(
-                "MINI UPS BACKUP PRICE & ORDER INQUIRY",
-                "Receiver: N'RTECH (m.me/ramirez.technician)",
-                "#f59e0b",
-                details,
-                `NRTECH-MiniUPS-${sessionClientAcc}.png`,
-                fallbackText
-            );
         }
     </script>
 </body>
